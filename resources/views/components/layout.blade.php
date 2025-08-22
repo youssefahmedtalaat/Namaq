@@ -1,3 +1,5 @@
+@props(['has_breadcrumb'])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -54,7 +56,7 @@
             @include('partials._header', ['has_breadcrumb' => $has_breadcrumb ?? false])
 
             <!-- view content -->
-            @yield('content')
+            {{ $slot }}
 
             <!-- footer -->
             @include('partials._footer')

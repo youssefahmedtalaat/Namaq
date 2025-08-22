@@ -1,6 +1,4 @@
-@extends('layout', ['has_breadcrumb' => true])
-@section('content')
-
+<x-layout :has_breadcrumb="true">
     <!-- error-page-start -->
     <section class="bs-error-page-area pt-160 pb-160">
         <div class="container bs-container-1">
@@ -25,5 +23,4 @@
         </div>
     </section>
     <!-- error-page-end -->
-
-@endsection
+</x-layout>

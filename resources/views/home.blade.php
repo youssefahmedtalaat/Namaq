@@ -1,8 +1,4 @@
-@extends('layout')
-@section('content')
-
-
-
+<x-layout>
     <!-- hero-start -->
     <section class="bs-hero-1-area pt-135 pb-35 wa-p-relative wa-fix" data-background="{{ asset('assets/img/hero/h1-bg.png') }}">
         <div class="bs-hero-1-bg-shape"></div>
@@ -2424,4 +2420,4 @@
     </section>
     <!-- office-end -->
 
-@endsection
+</x-layout>
