@@ -39,10 +39,377 @@
 
 
     <body class="bs-home-1">
-
-        <!-- main-wrapper -->
         <div class="main-wrapper wa-fix">
+            <!-- start preloader -->
+            <div class="lw-preloader">
+                <div class="lw-preloader-content">
+                    <div class="bs-preloader-logo">
+                        <img src="assets/img/logo/logo-2.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- end preloader -->
+
+            <!-- header-start -->
+            <header class="bs-header-1-area ">
+                <div class="bs-header-1-row d-flex align-items-center justify-content-between">
+
+                    <!-- logo -->
+                    <a href="/" aria-label="name" class="bs-header-logo-1">
+                        <img src="assets/img/logo/logo-1.svg" alt="">
+                    </a>
+
+                    <!-- action-link -->
+                    <div class="bs-header-1-action-link d-flex align-items-center ">
+
+                        <!-- phone-btn -->
+                        <a href="tel:1697875256" aria-label="name" class="bs-h-1 bs-elm-phone">
+                            <i class="fa-solid fa-phone"></i>
+                            Call Us: (+88) 169 787 5256
+                        </a>
+
+                        <!-- pr-btn -->
+                        <a href="/contact-us" aria-label="name" class="bs-btn-1 header-btn">
+                            <span class="text">
+                                contact us
+                            </span>
+                            <span class="shape"></span>
+                        </a>
+                        
+                        <!-- offcanvas-btn -->
+                        <button type="button" aria-label="name" class="bs-offcanvas-btn-1 btn-span offcanvas_toggle">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="shape"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </header>
+            <!-- header-end -->
+
+            <!-- view content -->
             @yield('content')
+
+            <!-- footer-start -->
+            <footer class="bs-footer-1-area wa-fix wa-p-relative pt-80">
+                <div class="bs-footer-1-bg-img">
+                    <img src="assets/img/footer/f1-img-1.png" alt="">
+                </div>
+                <div class="container bs-container-1">
+                    <div class="bs-footer-1-wrap mb-40">
+
+                        <!-- single-widget -->
+                        <div class="bs-footer-1-widget">
+                            <a href="/" aria-label="name" class="bs-footer-1-logo" data-cursor="-opaque">
+                                <img src="assets/img/logo/logo-2.svg" alt="">
+                            </a>
+                            <p class="bs-p-1 bs-footer-1-disc">A profound design process eventually makes the patron, the architect, and every occasiona
+                                process eventually makes the patron</p>
+                        </div>
+
+                        <!-- single-widget -->
+                        <div class="bs-footer-1-widget">
+                            <h5 class="bs-footer-1-widget-title">about</h5>
+                            <ul class="bs-footer-1-menu wa-list-style-none">
+                                <li>
+                                    <a href="about.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        who we are
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="work-process.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        what we do
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="career-page.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        After Care
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Sustainability
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Welbeng
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="services.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Delivery and Aftersales policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- single-widget -->
+                        <div class="bs-footer-1-widget">
+                            <h5 class="bs-footer-1-widget-title">products</h5>
+                            <ul class="bs-footer-1-menu wa-list-style-none">
+                                <li>
+                                    <a href="services-2.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        All Products
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="projects-2.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        New designs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="projects-3.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        CAD Blocks
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="project-details.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Moodboards
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="projects-2.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Finishes
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- single-widget -->
+                        <div class="bs-footer-1-widget">
+                            <h5 class="bs-footer-1-widget-title">inspiration</h5>
+                            <ul class="bs-footer-1-menu wa-list-style-none">
+                                <li>
+                                    <a href="projects.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Projects
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blog.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="testimonial.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Videos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="projects-3.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Specification Guide
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="project-details.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Bamboo Configurator
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="project-details.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Colony Configurator
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- single-widget -->
+                        <div class="bs-footer-1-widget">
+                            <h5 class="bs-footer-1-widget-title">contact</h5>
+                            <ul class="bs-footer-1-menu wa-list-style-none">
+                                <li>
+                                    <a href="project-details.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        United Kingdom
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="project-details.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        North America
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="project-details.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Frovi Showeooms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="career-page.html">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Careers
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- copyright -->
+                    <div class="bs-footer-1-copyright">
+                        <p class="bs-p-1 bs-footer-1-copyright-text">copyright <span class="copyright-year" ></span> barsi</p>
+
+                        <ul class="bs-footer-1-copyright-menu wa-list-style-none">
+                            <li>
+                                <a href="#" aria-label="name">uk terms & conditions</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="name">North America Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="name">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer-end -->
+
+            <!-- offcanvas-start -->
+            <div class="wa-offcanvas-area  offcanvas_box_active lenis lenis-smooth">
+                <div class="wa-offcanvas-wrap ">
+
+                    <!-- top -->
+                    <div class="wa-offcanvas-top">
+
+                        <!-- logo -->
+                        <a href="/" aria-label="name" class="wa-offcanvas-top-logo">
+                            <img src="assets/img/logo/logo-2.svg" alt="">
+                        </a>
+
+                        <!-- close-btn -->
+                        <button class="wa-offcanvas-close offcanvas_box_close" aria-label="name" >
+                            <span></span>
+                            <span></span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- mobile-menu-list -->
+                    <nav class="mobile-main-navigation mb-50">
+                        <ul  class="navbar-nav">
+                            <li>
+                                <a href="/">home</a>
+                            </li>
+
+                            <li>
+                                <a href="/publicabout">about us</a>
+                            </li>
+
+                            <li>
+                                <a href="/projects">projects</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#">pages</a>
+                                <ul class="dropdown-menu clearfix">
+
+                                    <li class="dropdown">
+                                        <a href="services.html">services</a>
+                                        <ul class="dropdown-menu clearfix">
+                                            <li><a href="services.html">services one</a></li>
+                                            <li><a href="services-2.html">services two</a></li>
+                                            <li><a href="services-3.html">services three</a></li>
+                                            <li><a href="services-4.html">services four</a></li>
+                                            <li><a href="services-details.html">service details</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="team.html">team</a>
+                                        <ul class="dropdown-menu clearfix">
+                                            <li><a href="team.html">team one</a></li>
+                                            <li><a href="team-2.html">team two</a></li>
+                                            <li><a href="team-3.html">team three</a></li>
+                                            <li><a href="team-4.html">team four</a></li>
+                                            <li><a href="team-details.html">team details</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="career-page.html">career page</a>
+                                        <ul class="dropdown-menu clearfix">
+                                            <li><a href="career-page.html">career page</a></li>
+                                            <li><a href="career-single.html">career single</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="price.html">price page</a></li>
+                                    <li><a href="choose-us.html">choose us</a></li>
+                                    <li><a href="testimonial.html">testimonial</a></li>
+                                    <li><a href="work-process.html">work process</a></li>
+                                    <li><a href="faqs.html">FAQs page</a></li>
+                                    <li><a href="404.html">404</a></li>
+                                    
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="/blog">news</a>
+                                <ul class="dropdown-menu clearfix">
+                            </li>
+
+                            <li>
+                                <a href="/contact-us">Contact </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                    <!-- social -->
+                    <div class="wa-offcanvas-social">
+                        <h6 class="wa-offcanvas-social-title bs-h-1 ">we're on social media:</h6>
+
+                        <div class="wa-offcanvas-social-flex d-flex flex-wrap">
+                            <a href="#" class="wa-offcanvas-social-link " aria-label="name">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="wa-offcanvas-social-link " aria-label="name">
+                                <i class="fa-brands fa-facebook-f"></i> 
+                            </a>
+                            <a href="#" class="wa-offcanvas-social-link " aria-label="name">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="#" class="wa-offcanvas-social-link" aria-label="name">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="wa-overly"></div>
+            <!-- offcanvas-end -->
+
+            <!-- back-to-top-button-start -->            
+            <div class="wa-back-to-top ">
+                <span class="wa-back-to-top-text">Top</span>
+            </div>
+            <!-- back-to-top-button-end -->
         </div>
 
 
