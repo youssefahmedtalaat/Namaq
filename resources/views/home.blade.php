@@ -51,9 +51,9 @@
 
                     <!-- btn -->
                     <div class="btn-wrap">
-                        <a href="projects.html" aria-label="name" class="bs-btn-1">
+                        <a href="/projects" aria-label="name" class="bs-btn-1">
                             <span class="text">
-                                Manage my project
+                                View our projects
                             </span>
                             <span class="icon">
                                 <i class="fa-solid fa-right-long"></i>

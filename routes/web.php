@@ -1,16 +1,16 @@
 <?php
 
+use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::any('{catchall}', function () {
-    return response()->view('404', [], 404);
-})->where('catchall', '.*');
+Route::get('/projects', function () {
+    return view('projects');
+});
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/projects{project}', function (Project $project) {
+    return view('project_details', ['project' => $project]);
+});

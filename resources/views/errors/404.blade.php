@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout', ['has_breadcrumb' => true])
 @section('content')
 
     <!-- error-page-start -->
