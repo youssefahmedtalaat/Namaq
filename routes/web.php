@@ -10,4 +10,4 @@ Route::get('/', function () {
 
 Route::get('/projects', [ProjectController::class, 'index']);
 
-Route::get('/projects{project}', [ProjectController::class, 'show']);
+Route::get('/projects/{project}', [ProjectController::class, 'show']);

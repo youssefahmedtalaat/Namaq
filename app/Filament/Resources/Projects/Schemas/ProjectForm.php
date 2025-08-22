@@ -27,11 +27,13 @@ class ProjectForm
                 FileUpload::make('main_image')
                     ->image()
                     ->required()
+                ->disk('public')
                     ->columnSpanFull(),
                 FileUpload::make('gallery_images')
                     ->image()
                     ->multiple()
                     ->required()
+                ->disk('public')
                     ->columnSpanFull(),
                 MarkdownEditor::make('description')
                     ->required()

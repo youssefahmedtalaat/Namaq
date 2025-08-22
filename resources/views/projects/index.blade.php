@@ -25,7 +25,7 @@
     <!-- breadcrumb-end -->
 
     <!-- project-start -->
-    <section class="bs-project-5-area pt-135 pb-140 wa-fix">
+    {{-- <section class="bs-project-5-area pt-135 pb-140 wa-fix">
         <div class="container bs-container-2">
             <h2 class="bs-project-5-sec-title wa-split-right wa-capitalize">Recent <span>Case Studies</span></h2>
 
@@ -34,12 +34,12 @@
                 <!-- single-project -->
                 <div class="bs-project-5-item">
                     <div class="main-img wa-fix wa-img-cover">
-                        <a href="/project-details/1" data-cursor-text="View">
+                        <a href="/projects/1" data-cursor-text="View">
                             <img src="{{ asset('assets/img/projects/p5-img-1.png') }}" alt="">
                         </a>
                     </div>
                     <h5 class="bs-h-4 title">
-                        <a href="/project-details/1" aria-label="name">the luxurious sky penthouse.</a>
+                        <a href="/projects/1" aria-label="name">the luxurious sky penthouse.</a>
                     </h5>
                     <ul class="item-list wa-list-style-none">
                         <li class="bs-p-4" >house</li>
@@ -51,12 +51,12 @@
                 <!-- single-project -->
                 <div class="bs-project-5-item  height-2">
                     <div class="main-img wa-fix wa-img-cover">
-                        <a href="/project-details/1" data-cursor-text="View">
+                        <a href="/projects/1" data-cursor-text="View">
                             <img src="{{ asset('assets/img/projects/p5-img-2.png') }}" alt="">
                         </a>
                     </div>
                     <h5 class="bs-h-4 title">
-                        <a href="/project-details/1" aria-label="name">Times Square in the Heart of Kuala Lumpur, Malaysia.</a>
+                        <a href="/projects/1" aria-label="name">Times Square in the Heart of Kuala Lumpur, Malaysia.</a>
                     </h5>
                     <ul class="item-list wa-list-style-none">
                         <li class="bs-p-4" >Building</li>
@@ -71,12 +71,12 @@
                 <!-- single-project -->
                 <div class="bs-project-5-item height-3">
                     <div class="main-img wa-fix wa-img-cover">
-                        <a href="/project-details/1" data-cursor-text="View">
+                        <a href="/projects/1" data-cursor-text="View">
                             <img src="{{ asset('assets/img/projects/p5-img-3.png') }}" alt="">
                         </a>
                     </div>
                     <h5 class="bs-h-4 title">
-                        <a href="/project-details/1" aria-label="name">Contemporary Interior Design - Design Your Dream Home</a>
+                        <a href="/projects/1" aria-label="name">Contemporary Interior Design - Design Your Dream Home</a>
                     </h5>
                     <ul class="item-list wa-list-style-none">
                         <li class="bs-p-4" >Building</li>
@@ -92,12 +92,12 @@
                 <!-- single-project -->
                 <div class="bs-project-5-item height-4">
                     <div class="main-img wa-fix wa-img-cover">
-                        <a href="/project-details/1" data-cursor-text="View">
+                        <a href="/projects/1" data-cursor-text="View">
                             <img src="{{ asset('assets/img/projects/p5-img-4.png') }}" alt="">
                         </a>
                     </div>
                     <h5 class="bs-h-4 title">
-                        <a href="/project-details/1" aria-label="name">Residential Construction Site in San Francisco, CA</a>
+                        <a href="/projects/1" aria-label="name">Residential Construction Site in San Francisco, CA</a>
                     </h5>
                     <ul class="item-list wa-list-style-none">
                         <li class="bs-p-4" >Building</li>
@@ -109,12 +109,12 @@
                 <!-- single-project -->
                 <div class="bs-project-5-item height-5">
                     <div class="main-img wa-fix wa-img-cover">
-                        <a href="/project-details/1" data-cursor-text="View">
+                        <a href="/projects/1" data-cursor-text="View">
                             <img src="{{ asset('assets/img/projects/p5-img-5.png') }}" alt="">
                         </a>
                     </div>
                     <h5 class="bs-h-4 title">
-                        <a href="/project-details/1" aria-label="name">Azure Beachfront Villa</a>
+                        <a href="/projects/1" aria-label="name">Azure Beachfront Villa</a>
                     </h5>
                     <ul class="item-list wa-list-style-none">
                         <li class="bs-p-4" >Building</li>
@@ -144,6 +144,133 @@
                     <i class="fa-solid fa-angles-right"></i>
                 </a>
             </div>
+        </div>
+    </section> --}}
+
+    <section class="bs-project-5-area pt-135 pb-140 wa-fix">
+        <div class="container bs-container-2">
+            <h2 class="bs-project-5-sec-title wa-split-right wa-capitalize">Recent <span>Case Studies</span></h2>
+
+            @foreach($projects as $project)
+                @if ($loop->index === 0)
+                    <div class="bs-project-5-wrap wa-p-relative">
+                        <!-- single-project -->
+                        <div class="bs-project-5-item">
+                            <div class="main-img wa-fix wa-img-cover">
+                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
+                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                </a>
+                            </div>
+                            <h5 class="bs-h-4 title">
+                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
+                            </h5>
+                            <ul class="item-list wa-list-style-none">
+                                <li class="bs-p-4">{{ $project->region }}</li>
+                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
+                                <li class="bs-p-4">{{ $project->date }}</li>
+                            </ul>
+                        </div>
+                        
+                @elseif ($loop->index === 1)
+                        <!-- single-project -->
+                        <div class="bs-project-5-item  height-2">
+                            <div class="main-img wa-fix wa-img-cover">
+                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
+                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                </a>
+                            </div>
+                            <h5 class="bs-h-4 title">
+                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
+                            </h5>
+                            <ul class="item-list wa-list-style-none">
+                                <li class="bs-p-4">{{ $project->region }}</li>
+                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
+                                <li class="bs-p-4">{{ $project->date }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                @elseif ($loop->index === 2)
+                    <div class="bs-project-5-wrap-2 wa-p-relative">
+                        <!-- single-project -->
+                        <div class="bs-project-5-item height-3">
+                            <div class="main-img wa-fix wa-img-cover">
+                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
+                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                </a>
+                            </div>
+                            <h5 class="bs-h-4 title">
+                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
+                            </h5>
+                            <ul class="item-list wa-list-style-none">
+                                <li class="bs-p-4">{{ $project->region }}</li>
+                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
+                                <li class="bs-p-4">{{ $project->date }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                @elseif ($loop->index === 3)
+                    <div class="bs-project-5-wrap-3 mb-60  wa-p-relative">
+                        <!-- single-project -->
+                        <div class="bs-project-5-item height-4">
+                            <div class="main-img wa-fix wa-img-cover">
+                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
+                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                </a>
+                            </div>
+                            <h5 class="bs-h-4 title">
+                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
+                            </h5>
+                            <ul class="item-list wa-list-style-none">
+                                <li class="bs-p-4">{{ $project->region }}</li>
+                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
+                                <li class="bs-p-4">{{ $project->date }}</li>
+                            </ul>
+                        </div>
+                        
+                @elseif ($loop->index === 4)
+                        <!-- single-project -->
+                        <div class="bs-project-5-item  height-5">
+                            <div class="main-img wa-fix wa-img-cover">
+                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
+                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                </a>
+                            </div>
+                            <h5 class="bs-h-4 title">
+                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
+                            </h5>
+                            <ul class="item-list wa-list-style-none">
+                                <li class="bs-p-4">{{ $project->region }}</li>
+                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
+                                <li class="bs-p-4">{{ $project->date }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                @else
+                    <div class="bs-project-5-wrap-2 wa-p-relative">
+                        <!-- single-project -->
+                        <div class="bs-project-5-item height-3">
+                            <div class="main-img wa-fix wa-img-cover">
+                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
+                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                </a>
+                            </div>
+                            <h5 class="bs-h-4 title">
+                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
+                            </h5>
+                            <ul class="item-list wa-list-style-none">
+                                <li class="bs-p-4">{{ $project->region }}</li>
+                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
+                                <li class="bs-p-4">{{ $project->date }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                @endif
+
+            @endforeach
         </div>
     </section>
     <!-- project-end -->            

@@ -7,8 +7,11 @@
                     <i class="fa-solid fa-angle-left"></i>
                     Back to Projects Page
                 </a>
-                <h1 class="breadcrumb-title wa-split-right wa-capitalize" data-split-delay="1.1s" >The Luxurious Sky <br>
-                    Penthouse.</h1>
+                <h1 class="breadcrumb-title wa-split-right wa-capitalize" data-split-delay="1.1s" >
+                    {{-- The Luxurious Sky <br>
+                    Penthouse. --}}
+                    {{ $project->title }}
+                </h1>
 
                 <div class="breadcrumb-bg-shape">
                     <img src="{{ asset('assets/img/breadcrumb/breadcrumb-shape-2.png') }}" alt="">
@@ -24,7 +27,8 @@
 
             <!-- img -->
             <div class="bs-project-details-img wa-fix wa-img-cover">
-                <img src="{{ asset('assets/img/projects/pd-img-1.png') }}" alt="">
+                {{-- <img src="{{ asset('assets/img/projects/pd-img-1.png') }}" alt=""> --}}
+                <img src="{{ Storage::url($project->main_image) }}" alt="">
             </div>
 
             <ul class="bs-project-details-meta">
@@ -37,7 +41,7 @@
 
             <div class="bs-project-details-content">
 
-                <p><span class="big-letter" >T</span>he Luxurious Sky Penthouse is a breathtaking architectural marvel that redefines luxury living. Perched high above the city, this exclusive residence offers unparalleled panoramic views through expansive floor-to-ceiling windows. Every element of the design showcases sophistication, from the bespoke interiors and premium finishes to state-of-the-art smart home technology. Residents can indulge in private amenities, including a rooftop infinity pool, a fully equipped gym, and a home theater, creating the ultimate retreat in the sky.</p>
+                {{-- <p><span class="big-letter" >T</span>he Luxurious Sky Penthouse is a breathtaking architectural marvel that redefines luxury living. Perched high above the city, this exclusive residence offers unparalleled panoramic views through expansive floor-to-ceiling windows. Every element of the design showcases sophistication, from the bespoke interiors and premium finishes to state-of-the-art smart home technology. Residents can indulge in private amenities, including a rooftop infinity pool, a fully equipped gym, and a home theater, creating the ultimate retreat in the sky.</p>
 
                 <p>The innovative design seamlessly blends modern aesthetics with sustainable materials, ensuring a timeless yet eco-friendly living space. With private elevator access, dedicated parking, and 24/7 concierge services, privacy and convenience are paramount. Strategically located for easy access to urban landmarks, this penthouse combines the vibrancy of city life with serene exclusivity. The Luxurious Sky Penthouse is not just a home—it’s a statement of elegance and refinement.</p>
 
@@ -72,12 +76,14 @@
                 <h2>Project Results</h2>
 
 
-                <p>Project results reflect the successful execution of a vision, blending design, functionality, and innovation. Each project is meticulously completed, meeting the client’s expectations and enhancing their space’s aesthetic and practical value. The outcome is a seamless integration of creative concepts with real-world application, ensuring long-lasting impact and satisfaction. </p>
+                <p>Project results reflect the successful execution of a vision, blending design, functionality, and innovation. Each project is meticulously completed, meeting the client’s expectations and enhancing their space’s aesthetic and practical value. The outcome is a seamless integration of creative concepts with real-world application, ensuring long-lasting impact and satisfaction. </p> --}}
                 
+                @markdown($project->description)
+
                 <h2>Gallery</h2>
 
                 <div class="bs-project-details-content-gallery">
-                    <div class="row-1">
+                    {{-- <div class="row-1">
                         <div class="img-elm">
                             <img src="{{ asset('assets/img/projects/pd-g-img-1.png') }}" alt="">
                         </div>
@@ -95,7 +101,31 @@
                         <div class="img-elm">
                             <img src="{{ asset('assets/img/projects/pd-g-img-5.png') }}" alt="">
                         </div>
+                    </div> --}}
+
+                    @php
+                        $images = $project->gallery_images;
+                        $imagesInRow1 = array_slice($images, 0, 2);
+                        $imagesInRow2 = array_slice($images, 2);
+                    @endphp
+
+                    <div class="row-1">
+                        @foreach($imagesInRow1 as $image)
+                            <div class="img-elm">
+                                <img src="{{ Storage::url($image) }}" alt="">
+                            </div>
+                        @endforeach
                     </div>
+
+                    @if (count($imagesInRow2) > 0)
+                        <div class="row-2">
+                            @foreach($imagesInRow2 as $image)
+                                <div class="img-elm">
+                                    <img src="{{ Storage::url($image) }}" alt="">
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
                 </div>
                 
             </div>
