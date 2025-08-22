@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Namaq</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -55,7 +55,7 @@
                 <div class="bs-header-1-row d-flex align-items-center justify-content-between">
 
                     <!-- logo -->
-                    <a href="index.html" aria-label="name" class="bs-header-logo-1">
+                    <a href="/" aria-label="name" class="bs-header-logo-1">
                         <img src="assets/img/logo/logo-1.svg" alt="">
                     </a>
 
@@ -2519,7 +2519,7 @@
 
                         <!-- single-widget -->
                         <div class="bs-footer-1-widget">
-                            <a href="index.html" aria-label="name" class="bs-footer-1-logo" data-cursor="-opaque">
+                            <a href="/" aria-label="name" class="bs-footer-1-logo" data-cursor="-opaque">
                                 <img src="assets/img/logo/logo-2.svg" alt="">
                             </a>
                             <p class="bs-p-1 bs-footer-1-disc">A profound design process eventually makes the patron, the architect, and every occasiona
@@ -2712,7 +2712,7 @@
                     <div class="wa-offcanvas-top">
 
                         <!-- logo -->
-                        <a href="index.html" aria-label="name" class="wa-offcanvas-top-logo">
+                        <a href="/" aria-label="name" class="wa-offcanvas-top-logo">
                             <img src="assets/img/logo/logo-2.svg" alt="">
                         </a>
 
@@ -2728,21 +2728,12 @@
                     <!-- mobile-menu-list -->
                     <nav class="mobile-main-navigation mb-50">
                         <ul  class="navbar-nav">
-                            <li class="dropdown">
-                                <a href="#">home</a>
-                                <ul class="dropdown-menu clearfix">
-                                    <li><a href="index.html">home One</a></li>
-                                    <li><a href="index-2.html">home Two</a></li>
-                                    <li><a href="index-3.html">home three</a></li>
-                                    <li><a href="index-4.html">home four</a></li>
-                                    <li><a href="index-5.html">home five</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="/">home</a></li>
 
-                            <li><a href="about.html">about me</a></li>
+                            <li><a href="/publicabout">about us</a></li>
 
                             <li class="dropdown">
-                                <a href="projects.html">project</a>
+                                <a href="/projects">projects</a>
                                 <ul class="dropdown-menu clearfix">
                                     <li><a href="projects.html">projects one</a></li>
                                     <li><a href="projects-2.html">projects two</a></li>
