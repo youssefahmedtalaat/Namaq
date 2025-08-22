@@ -12,5 +12,5 @@ Route::get('/projects', function () {
 });
 
 Route::get('/projects{project}', function (Project $project) {
-    return view('project_details', ['project' => $project]);
+    return view('project-details', ['project' => $project]);
 });

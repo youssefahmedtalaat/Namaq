@@ -4,7 +4,7 @@
 
 
     <!-- hero-start -->
-    <section class="bs-hero-1-area pt-135 pb-35 wa-p-relative wa-fix" data-background="assets/img/hero/h1-bg.png">
+    <section class="bs-hero-1-area pt-135 pb-35 wa-p-relative wa-fix" data-background="{{ asset('assets/img/hero/h1-bg.png') }}">
         <div class="bs-hero-1-bg-shape"></div>
         <div class="container bs-container-1">
             <div class="bs-hero-1-wrap mb-75">
@@ -16,7 +16,7 @@
                     <!-- success -->
                     <div class="bs-hero-1-success mb-40">
                         <div class="success-img">
-                            <img data-cursor="-opaque" src="assets/img/hero/h1-img-1.png" alt="">
+                            <img data-cursor="-opaque" src="{{ asset('assets/img/hero/h1-img-1.png') }}" alt="">
                         </div>
                         <div class="content">
                             <h6 class="bs-h-1 title " data-cursor="-opaque">We’re investing SINCE 1990</h6>
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="bs-hero-1-success-counter-item">
                                     <div class="shape">
-                                        <img src="assets/img/illus/star-shape.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="bs-hero-1-success-counter-item">
@@ -70,7 +70,7 @@
 
                     <!-- img -->
                     <div class="bs-hero-1-img wa-img-cover wa-fix "  >
-                        <img data-cursor="-opaque"  src="assets/img/hero/h1-img-2.png" alt="">
+                        <img data-cursor="-opaque"  src="{{ asset('assets/img/hero/h1-img-2.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 <!-- single-item -->
                 <div class="bs-core-features-1-item">
                     <div class="icon">
-                        <img src="assets/img/core-features/cf-icon-1.png" alt="">
+                        <img src="{{ asset('assets/img/core-features/cf-icon-1.png') }}" alt="">
                     </div>
                     <div class="content">
                         <h5 class="bs-h-1 item-title">
@@ -104,13 +104,13 @@
                 </div>
 
                 <div class="shape">
-                    <img src="assets/img/illus/star-shape.png" alt="">
+                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                 </div>
 
                 <!-- single-item -->
                 <div class="bs-core-features-1-item">
                     <div class="icon">
-                        <img src="assets/img/core-features/cf-icon-2.png" alt="">
+                        <img src="{{ asset('assets/img/core-features/cf-icon-2.png') }}" alt="">
                     </div>
                     <div class="content">
                         <h5 class="bs-h-1 item-title">
@@ -122,13 +122,13 @@
                 </div>
 
                 <div class="shape">
-                    <img src="assets/img/illus/star-shape.png" alt="">
+                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                 </div>
 
                 <!-- single-item -->
                 <div class="bs-core-features-1-item">
                     <div class="icon">
-                        <img src="assets/img/core-features/cf-icon-3.png" alt="">
+                        <img src="{{ asset('assets/img/core-features/cf-icon-3.png') }}" alt="">
                     </div>
                     <div class="content">
                         <h5 class="bs-h-1 item-title">
@@ -140,13 +140,13 @@
                 </div>
 
                 <div class="shape">
-                    <img src="assets/img/illus/star-shape.png" alt="">
+                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                 </div>
 
                 <!-- single-item -->
                 <div class="bs-core-features-1-item">
                     <div class="icon">
-                        <img src="assets/img/core-features/cf-icon-4.png" alt="">
+                        <img src="{{ asset('assets/img/core-features/cf-icon-4.png') }}" alt="">
                     </div>
                     <div class="content">
                         <h5 class="bs-h-1 item-title">
@@ -169,7 +169,7 @@
             <div class="bs-about-1-sec-title mb-30">
                 <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                     <span class="icon">
-                        <img src="assets/img/illus/star-shape.png" alt="">
+                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                     </span>
                     we're investing SINCE 1990
                 </h6>
@@ -184,8 +184,8 @@
                         <!-- single-slide -->
                         <div class="swiper-slide">
                             <div class="bs-about-1-item wa-fix ">
-                                <a href="assets/img/about/a1-img-1.png" class="popup-img wa-img-cover">
-                                    <img src="assets/img/about/a1-img-1.png" alt="">
+                                <a href="{{ asset('assets/img/about/a1-img-1.png') }}" class="popup-img wa-img-cover">
+                                    <img src="{{ asset('assets/img/about/a1-img-1.png') }}" alt="">
                                 </a>
                                 
                             </div>
@@ -194,8 +194,8 @@
                         <!-- single-slide -->
                         <div class="swiper-slide">
                             <div class="bs-about-1-item wa-fix ">
-                                <a href="assets/img/about/a1-img-2.png" class="popup-img wa-img-cover">
-                                    <img src="assets/img/about/a1-img-2.png" alt="">
+                                <a href="{{ asset('assets/img/about/a1-img-2.png') }}" class="popup-img wa-img-cover">
+                                    <img src="{{ asset('assets/img/about/a1-img-2.png') }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -203,8 +203,8 @@
                         <!-- single-slide -->
                         <div class="swiper-slide">
                             <div class="bs-about-1-item wa-fix ">
-                                <a href="assets/img/about/a1-img-3.png" class="popup-img wa-img-cover">
-                                    <img src="assets/img/about/a1-img-3.png" alt="">
+                                <a href="{{ asset('assets/img/about/a1-img-3.png') }}" class="popup-img wa-img-cover">
+                                    <img src="{{ asset('assets/img/about/a1-img-3.png') }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -212,8 +212,8 @@
                         <!-- single-slide -->
                         <div class="swiper-slide">
                             <div class="bs-about-1-item wa-fix ">
-                                <a href="assets/img/about/a1-img-4.png" class="popup-img wa-img-cover">
-                                    <img src="assets/img/about/a1-img-4.png" alt="">
+                                <a href="{{ asset('assets/img/about/a1-img-4.png') }}" class="popup-img wa-img-cover">
+                                    <img src="{{ asset('assets/img/about/a1-img-4.png') }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -259,7 +259,7 @@
             <div class="bs-projects-1-sec-title mb-40">
                 <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                     <span class="icon">
-                        <img src="assets/img/illus/star-shape.png" alt="">
+                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                     </span>
                     our services
                 </h6>
@@ -277,10 +277,10 @@
 
                         <span class="year">2014</span>
                         <span class="img">
-                            <img src="assets/img/projects/p1-btn-img-1.png" alt="">
+                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
                         </span>
                         <span class="right-arrow">
-                            <img src="assets/img/illus/long-right-arrow.png" alt="">
+                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
                         </span>
                     </button>
 
@@ -289,10 +289,10 @@
                         European Lard Station
                         <span class="year">2014</span>
                         <span class="img">
-                            <img src="assets/img/projects/p1-btn-img-1.png" alt="">
+                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
                         </span>
                         <span class="right-arrow">
-                            <img src="assets/img/illus/long-right-arrow.png" alt="">
+                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
                         </span>
                     </button>
 
@@ -301,10 +301,10 @@
                         Dalbourne Villa
                         <span class="year">2014</span>
                         <span class="img">
-                            <img src="assets/img/projects/p1-btn-img-1.png" alt="">
+                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
                         </span>
                         <span class="right-arrow">
-                            <img src="assets/img/illus/long-right-arrow.png" alt="">
+                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
                         </span>
                     </button>
 
@@ -313,10 +313,10 @@
                         Music Theatre
                         <span class="year">2014</span>
                         <span class="img">
-                            <img src="assets/img/projects/p1-btn-img-1.png" alt="">
+                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
                         </span>
                         <span class="right-arrow">
-                            <img src="assets/img/illus/long-right-arrow.png" alt="">
+                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
                         </span>
                     </button>
 
@@ -330,7 +330,7 @@
                     <div class="tab-pane fade " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="bs-projects-1-tabs-item">
                             <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="assets/img/projects/p1-img-1.png" alt="">
+                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-1.png') }}" alt="">
                             </div>
                             <div class="bs-projects-1-tabs-item-table">
                                 <div class="start">
@@ -369,7 +369,7 @@
                     <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div class="bs-projects-1-tabs-item">
                             <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="assets/img/projects/p1-img-2.png" alt="">
+                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-2.png') }}" alt="">
                             </div>
                             <div class="bs-projects-1-tabs-item-table">
                                 <div class="start">
@@ -408,7 +408,7 @@
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                         <div class="bs-projects-1-tabs-item">
                             <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="assets/img/projects/p1-img-3.png" alt="">
+                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-3.png') }}" alt="">
                             </div>
                             <div class="bs-projects-1-tabs-item-table">
                                 <div class="start">
@@ -447,7 +447,7 @@
                     <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab2">
                         <div class="bs-projects-1-tabs-item">
                             <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="assets/img/projects/p1-img-4.png" alt="">
+                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-4.png') }}" alt="">
                             </div>
                             <div class="bs-projects-1-tabs-item-table">
                                 <div class="start">
@@ -489,7 +489,7 @@
 
         <!-- bg-img -->
         <div class="bs-projects-1-bg-img">
-            <img src="assets/img/projects/p1-bg-img-1.png" alt="">
+            <img src="{{ asset('assets/img/projects/p1-bg-img-1.png') }}" alt="">
         </div>
     </section>
     <!-- projects-end -->
@@ -498,7 +498,7 @@
     <div class="bs-video-1-area wa-fix">
         <div class="bs-video-1-content wa-p-relative">
             <div class="bs-video-1-content-img wa-p-relative wa-fix wa-img-cover">
-                <img class="wa-parallax-img" src="assets/img/video/v1-img-1.png" alt="">
+                <img class="wa-parallax-img" src="{{ asset('assets/img/video/v1-img-1.png') }}" alt="">
 
                 <div class="bs-video-1-play-btn">
                     <a href="https://www.youtube.com/watch?v=TdTudAOl37s" aria-label="name" class="bs-play-btn-3 wa-magnetic popup-video">
@@ -512,7 +512,7 @@
                 luxury
                 <div class="bs-video-1-content-list">
                     <div class="main-img wa-fix wa-img-cover">
-                        <img src="assets/img/video/v1-img-2.png" alt="">
+                        <img src="{{ asset('assets/img/video/v1-img-2.png') }}" alt="">
                     </div>
                     <ul class="list">
                         <li>
@@ -541,7 +541,7 @@
                 <div class="left">
                     <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                         <span class="icon">
-                            <img src="assets/img/illus/star-shape.png" alt="">
+                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                         </span>
                         recent work
                     </h6>
@@ -556,7 +556,7 @@
                         <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
                         all
                         <span class="bg-shape">
-                            <img src="assets/img/services/s1-btn-shape.png" alt="">
+                            <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
                         </span>
                         </button>
                     </li>
@@ -566,7 +566,7 @@
                         <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
                             culture
                             <span class="bg-shape">
-                                <img src="assets/img/services/s1-btn-shape.png" alt="">
+                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
                             </span>
                         </button>
                     </li>
@@ -576,7 +576,7 @@
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
                             events
                             <span class="bg-shape">
-                                <img src="assets/img/services/s1-btn-shape.png" alt="">
+                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
                             </span>
                         </button>
                     </li>
@@ -586,7 +586,7 @@
                         <button class="nav-link" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact2" type="button" role="tab" aria-controls="contact2" aria-selected="false">
                             news
                             <span class="bg-shape">
-                                <img src="assets/img/services/s1-btn-shape.png" alt="">
+                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
                             </span>
                         </button>
                     </li>
@@ -596,7 +596,7 @@
                         <button class="nav-link" id="contact-tab3" data-bs-toggle="tab" data-bs-target="#contact3" type="button" role="tab" aria-controls="contact3" aria-selected="false">
                             research
                             <span class="bg-shape">
-                                <img src="assets/img/services/s1-btn-shape.png" alt="">
+                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
                             </span>
                         </button>
                     </li>
@@ -619,12 +619,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-5.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-5.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -645,12 +645,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-2.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Optimal Alignment</h5>
@@ -671,12 +671,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-3.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Strategic Positioning</h5>
@@ -697,12 +697,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-4.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Advantageous Direction</h5>
@@ -723,12 +723,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Successful Placement</h5>
@@ -759,12 +759,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -785,12 +785,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-2.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -811,12 +811,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-3.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -837,12 +837,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-4.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -863,12 +863,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -899,12 +899,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -925,12 +925,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-2.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -951,12 +951,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-3.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -977,12 +977,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-4.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1003,12 +1003,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1039,12 +1039,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1065,12 +1065,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-2.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1091,12 +1091,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-3.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1117,12 +1117,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-4.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1143,12 +1143,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1179,12 +1179,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1205,12 +1205,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-2.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1231,12 +1231,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-3.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1257,12 +1257,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-4.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1283,12 +1283,12 @@
                                 <div class="bs-services-1-item">
                                     <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
                                         <a href="project-details.html" aria-label="name">
-                                            <img src="assets/img/services/s1-img-1.png" alt="">
+                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="content-wrap">
                                         <div class="shape">
-                                            <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
                                         </div>
                                         <div class="content">
                                             <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
@@ -1328,16 +1328,16 @@
                                 <div class="bs-testimonial-1-item">
                                     <div class="bs-testimonial-1-item-author">
                                         <div class="main-img wa-fix wa-img-cover">
-                                            <img src="assets/img/testimonial/t1-author-1.png" alt="">
+                                            <img src="{{ asset('assets/img/testimonial/t1-author-1.png') }}" alt="">
                                         </div>
                                         <h5 class="name bs-h-1">daniel smith</h5>
                                         <p class="bio bs-p-1">
-                                            <img src="assets/img/illus/star-shape.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                                             chef executive
                                         </p>
                                     </div>
                                     <div class="item-img wa-fix wa-img-cover" data-cursor="-opaque">
-                                        <img src="assets/img/testimonial/t1-img-1.png" alt="">
+                                        <img src="{{ asset('assets/img/testimonial/t1-img-1.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -1347,16 +1347,16 @@
                                 <div class="bs-testimonial-1-item">
                                     <div class="bs-testimonial-1-item-author">
                                         <div class="main-img wa-fix wa-img-cover">
-                                            <img src="assets/img/testimonial/t1-author-2.png" alt="">
+                                            <img src="{{ asset('assets/img/testimonial/t1-author-2.png') }}" alt="">
                                         </div>
                                         <h5 class="name bs-h-1">jhenko danial</h5>
                                         <p class="bio bs-p-1">
-                                            <img src="assets/img/illus/star-shape.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                                             marketing manager
                                         </p>
                                     </div>
                                     <div class="item-img wa-fix wa-img-cover" data-cursor="-opaque">
-                                        <img src="assets/img/testimonial/t1-img-2.png" alt="">
+                                        <img src="{{ asset('assets/img/testimonial/t1-img-2.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -1366,16 +1366,16 @@
                                 <div class="bs-testimonial-1-item">
                                     <div class="bs-testimonial-1-item-author">
                                         <div class="main-img wa-fix wa-img-cover">
-                                            <img src="assets/img/testimonial/t1-author-1.png" alt="">
+                                            <img src="{{ asset('assets/img/testimonial/t1-author-1.png') }}" alt="">
                                         </div>
                                         <h5 class="name bs-h-1">daniel smith</h5>
                                         <p class="bio bs-p-1">
-                                            <img src="assets/img/illus/star-shape.png" alt="">
+                                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                                             chef executive
                                         </p>
                                     </div>
                                     <div class="item-img wa-fix wa-img-cover" data-cursor="-opaque">
-                                        <img src="assets/img/testimonial/t1-img-1.png" alt="">
+                                        <img src="{{ asset('assets/img/testimonial/t1-img-1.png') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -1402,7 +1402,7 @@
                             </div>
                         </div>
                         <p class="disc bs-p-1">
-                            <img src="assets/img/testimonial/t1-star-shape.png" alt="">
+                            <img src="{{ asset('assets/img/testimonial/t1-star-shape.png') }}" alt="">
                             Our professionals manage every 
                             phase of the project From start to 
                             finish. Save time, reduces
@@ -1468,7 +1468,7 @@
             <div class="bs-contact-1-sec-title text-center mb-45">
                 <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize ">
                     <span class="icon">
-                        <img src="assets/img/illus/star-shape.png" alt="">
+                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                     </span>
                     contact us
                 </h6>
@@ -1482,12 +1482,12 @@
 
                     <!-- img -->
                     <div class="bs-contact-1-img wa-fix wa-img-cover" data-cursor="-opaque">
-                        <img class="wa-parallax-img" src="assets/img/contact/c1-img-1.png" alt="">
+                        <img class="wa-parallax-img" src="{{ asset('assets/img/contact/c1-img-1.png') }}" alt="">
                     </div>
 
                     <div class="bs-contact-1-video wa-clip-top-bottom">
                         <div class="bg-img wa-fix wa-img-cover">
-                            <img src="assets/img/contact/c1-shape-1.png" alt="">
+                            <img src="{{ asset('assets/img/contact/c1-shape-1.png') }}" alt="">
                         </div>
                         <a href="https://www.youtube.com/watch?v=TdTudAOl37s" aria-label="name" class="bs-play-btn-2 wa-magnetic-btn bs-p-1 popup-video">
                             <span class="icon">
@@ -1506,16 +1506,16 @@
 
 
                         <div class="bs-form-1-item">
-                            <label class="bs-form-1-item-label" for="name"><img src="assets/img/contact/c1-star.png" alt="">name*</label>
+                            <label class="bs-form-1-item-label" for="name"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">name*</label>
                             <input id="name" class="bs-form-1-item-input wa-clip-left-right"  type="text" aria-label="name" >
                         </div>
                         
                         <div class="bs-form-1-item">
-                            <label class="bs-form-1-item-label" for="email"><img src="assets/img/contact/c1-star.png" alt="">email*</label>
+                            <label class="bs-form-1-item-label" for="email"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">email*</label>
                             <input id="email" class="bs-form-1-item-input wa-clip-left-right" type="email" aria-label="name" >
                         </div>
                         <div class="bs-form-1-item has-full-width">
-                            <label class="bs-form-1-item-label" for="message"><img src="assets/img/contact/c1-star.png" alt="">message*</label>
+                            <label class="bs-form-1-item-label" for="message"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">message*</label>
                             <textarea id="message" class="bs-form-1-item-input wa-clip-left-right" name="message" ></textarea>
                         </div>
                         <div class="bs-form-1-item has-no-after has-full-width wa-clip-left-right">
@@ -1546,7 +1546,7 @@
                         </div>
                         <div class="bs-contact-1-counter-item">
                             <div class="shape">
-                                <img src="assets/img/illus/star-shape.png" alt="">
+                                <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                             </div>
                         </div>
                         <div class="bs-contact-1-counter-item">
@@ -1570,7 +1570,7 @@
             <div class="bs-team-1-sec-title text-center mb-30">
                 <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                     <span class="icon">
-                        <img src="assets/img/illus/star-shape.png" alt="">
+                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                     </span>
                     our team
                 </h6>
@@ -1586,7 +1586,7 @@
                         <div class="swiper-slide">
                             <div class="bs-team-1-item">
                                 <div class="item-img wa-fix wa-img-cover">
-                                    <img src="assets/img/team/t1-img-1.png" alt="">
+                                    <img src="{{ asset('assets/img/team/t1-img-1.png') }}" alt="">
                                 </div>
                                 <div class="content-wrap">
                                     <div class="left">
@@ -1611,7 +1611,7 @@
                         <div class="swiper-slide">
                             <div class="bs-team-1-item">
                                 <div class="item-img wa-fix wa-img-cover">
-                                    <img src="assets/img/team/t1-img-2.png" alt="">
+                                    <img src="{{ asset('assets/img/team/t1-img-2.png') }}" alt="">
                                 </div>
                                 <div class="content-wrap">
                                     <div class="left">
@@ -1636,7 +1636,7 @@
                         <div class="swiper-slide">
                             <div class="bs-team-1-item">
                                 <div class="item-img wa-fix wa-img-cover">
-                                    <img src="assets/img/team/t1-img-3.png" alt="">
+                                    <img src="{{ asset('assets/img/team/t1-img-3.png') }}" alt="">
                                 </div>
                                 <div class="content-wrap">
                                     <div class="left">
@@ -1661,7 +1661,7 @@
                         <div class="swiper-slide">
                             <div class="bs-team-1-item">
                                 <div class="item-img wa-fix wa-img-cover">
-                                    <img src="assets/img/team/t1-img-4.png" alt="">
+                                    <img src="{{ asset('assets/img/team/t1-img-4.png') }}" alt="">
                                 </div>
                                 <div class="content-wrap">
                                     <div class="left">
@@ -1686,7 +1686,7 @@
                         <div class="swiper-slide">
                             <div class="bs-team-1-item">
                                 <div class="item-img wa-fix wa-img-cover">
-                                    <img src="assets/img/team/t1-img-5.png" alt="">
+                                    <img src="{{ asset('assets/img/team/t1-img-5.png') }}" alt="">
                                 </div>
                                 <div class="content-wrap">
                                     <div class="left">
@@ -1711,7 +1711,7 @@
                         <div class="swiper-slide">
                             <div class="bs-team-1-item">
                                 <div class="item-img wa-fix wa-img-cover">
-                                    <img src="assets/img/team/t1-img-6.png" alt="">
+                                    <img src="{{ asset('assets/img/team/t1-img-6.png') }}" alt="">
                                 </div>
                                 <div class="content-wrap">
                                     <div class="left">
@@ -1760,48 +1760,48 @@
 
                 <!-- single-logo -->
                 <div class="bs-sponsor-1-item">
-                    <img src="assets/img/sponsor/s1-logo-1.png" alt="">
-                    <img src="assets/img/sponsor/s1-logo-1.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-1.png') }}" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-1.png') }}" alt="">
                 </div>
 
                 <div class="shape">
-                    <img src="assets/img/sponsor/s1-start-1.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-start-1.png') }}" alt="">
                 </div>
 
                 <!-- single-logo -->
                 <div class="bs-sponsor-1-item">
-                    <img src="assets/img/sponsor/s1-logo-2.png" alt="">
-                    <img src="assets/img/sponsor/s1-logo-2.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-2.png') }}" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-2.png') }}" alt="">
                 </div>
 
                 <div class="shape">
-                    <img src="assets/img/sponsor/s1-start-1.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-start-1.png') }}" alt="">
                 </div>
 
                 <!-- single-logo -->
                 <div class="bs-sponsor-1-item">
-                    <img src="assets/img/sponsor/s1-logo-3.png" alt="">
-                    <img src="assets/img/sponsor/s1-logo-3.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-3.png') }}" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-3.png') }}" alt="">
                 </div>
 
                 <div class="shape">
-                    <img src="assets/img/sponsor/s1-start-1.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-start-1.png') }}" alt="">
                 </div>
 
                 <!-- single-logo -->
                 <div class="bs-sponsor-1-item">
-                    <img src="assets/img/sponsor/s1-logo-4.png" alt="">
-                    <img src="assets/img/sponsor/s1-logo-4.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-4.png') }}" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-4.png') }}" alt="">
                 </div>
 
                 <div class="shape">
-                    <img src="assets/img/sponsor/s1-start-1.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-start-1.png') }}" alt="">
                 </div>
 
                 <!-- single-logo -->
                 <div class="bs-sponsor-1-item">
-                    <img src="assets/img/sponsor/s1-logo-5.png" alt="">
-                    <img src="assets/img/sponsor/s1-logo-5.png" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-5.png') }}" alt="">
+                    <img src="{{ asset('assets/img/sponsor/s1-logo-5.png') }}" alt="">
                 </div>
 
             </div>
@@ -1813,7 +1813,7 @@
     <section class="bs-faq-1-area pt-100 pb-80 wa-p-relative">
 
         <div class="bs-faq-1-bg-img wa-img-cover wa-fix">
-            <img src="assets/img/faq/f1-bg-img-1.png" alt="">
+            <img src="{{ asset('assets/img/faq/f1-bg-img-1.png') }}" alt="">
         </div>
 
         <div class="container bs-container-1">
@@ -1822,7 +1822,7 @@
             <div class="bs-faq-1-sec-title text-center mb-35">
                 <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                     <span class="icon">
-                        <img src="assets/img/illus/star-shape.png" alt="">
+                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                     </span>
                     FAQs
                 </h6>
@@ -1866,7 +1866,7 @@
                             <div class="item-header" id="heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Capturing the Essence of Home
                                     <span class="icon">
@@ -1888,7 +1888,7 @@
                             <div class="item-header" id="heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Reinventing Reclaimed Wood
                                     <span class="icon">
@@ -1910,7 +1910,7 @@
                             <div class="item-header" id="heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Inspiring Presence of Design
                                     <span class="icon">
@@ -1932,7 +1932,7 @@
                             <div class="item-header" id="heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Great Architecture is the Design
                                     <span class="icon">
@@ -1962,7 +1962,7 @@
                             <div class="item-header" id="2heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse1" aria-expanded="false" aria-controls="2collapse1">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Capturing the Essence of Home
                                     <span class="icon">
@@ -1984,7 +1984,7 @@
                             <div class="item-header" id="2heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse2" aria-expanded="false" aria-controls="2collapse2">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Reinventing Reclaimed Wood
                                     <span class="icon">
@@ -2006,7 +2006,7 @@
                             <div class="item-header" id="2heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse3" aria-expanded="false" aria-controls="2collapse3">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Inspiring Presence of Design
                                     <span class="icon">
@@ -2028,7 +2028,7 @@
                             <div class="item-header" id="2heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse4" aria-expanded="false" aria-controls="2collapse4">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Great Architecture is the Design
                                     <span class="icon">
@@ -2058,7 +2058,7 @@
                             <div class="item-header" id="3heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse1" aria-expanded="false" aria-controls="3collapse1">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Capturing the Essence of Home
                                     <span class="icon">
@@ -2080,7 +2080,7 @@
                             <div class="item-header" id="3heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse2" aria-expanded="false" aria-controls="3collapse2">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Reinventing Reclaimed Wood
                                     <span class="icon">
@@ -2102,7 +2102,7 @@
                             <div class="item-header" id="3heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse3" aria-expanded="false" aria-controls="3collapse3">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Inspiring Presence of Design
                                     <span class="icon">
@@ -2124,7 +2124,7 @@
                             <div class="item-header" id="3heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse4" aria-expanded="false" aria-controls="3collapse4">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Great Architecture is the Design
                                     <span class="icon">
@@ -2154,7 +2154,7 @@
                             <div class="item-header" id="4heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse1" aria-expanded="false" aria-controls="4collapse1">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Capturing the Essence of Home
                                     <span class="icon">
@@ -2176,7 +2176,7 @@
                             <div class="item-header" id="4heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse2" aria-expanded="false" aria-controls="4collapse2">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Reinventing Reclaimed Wood
                                     <span class="icon">
@@ -2198,7 +2198,7 @@
                             <div class="item-header" id="4heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse3" aria-expanded="false" aria-controls="4collapse3">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Inspiring Presence of Design
                                     <span class="icon">
@@ -2220,7 +2220,7 @@
                             <div class="item-header" id="4heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse4" aria-expanded="false" aria-controls="4collapse4">
                                     <span class="shape">
-                                        <img src="assets/img/illus/faq-1-icon-1.png" alt="">
+                                        <img src="{{ asset('assets/img/illus/faq-1-icon-1.png') }}" alt="">
                                     </span>
                                     Great Architecture is the Design
                                     <span class="icon">
@@ -2257,7 +2257,7 @@
             <div class="bs-blog-1-sec-title text-center mb-40">
                 <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                     <span class="icon">
-                        <img src="assets/img/illus/star-shape.png" alt="">
+                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                     </span>
                     our recent blog
                 </h6>
@@ -2269,7 +2269,7 @@
                 <div class="bs-blog-1-item wa-3dUp">
                     <div class="item-img wa-fix wa-img-cover">
                         <a href="blog-details.html" aria-label="name" data-cursor-text="View">
-                            <img src="assets/img/blog/b1-img-1.png" alt="">
+                            <img src="{{ asset('assets/img/blog/b1-img-1.png') }}" alt="">
                         </a>
                     </div>
                     <p class="item-date bs-p-1">
@@ -2313,7 +2313,7 @@
                 <div class="bs-blog-1-item wa-3dUp">
                     <div class="item-img wa-fix wa-img-cover">
                         <a href="blog-details.html" aria-label="name" data-cursor-text="View">
-                            <img src="assets/img/blog/b1-img-2.png" alt="">
+                            <img src="{{ asset('assets/img/blog/b1-img-2.png') }}" alt="">
                         </a>
                     </div>
                     <p class="item-date bs-p-1">
@@ -2370,7 +2370,7 @@
                     <div class="bs-faq-1-sec-title mb-35">
                         <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                             <span class="icon">
-                                <img src="assets/img/illus/star-shape.png" alt="">
+                                <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                             </span>
                             we're investing SINCE 1990
                         </h6>
@@ -2383,7 +2383,7 @@
                         <!-- single-card -->
                         <div class="bs-office-1-card wa-clip-left-right">
                             <div class="card-img wa-fix wa-img-cover">
-                                <img src="assets/img/office/o1-img-1.png" alt="">
+                                <img src="{{ asset('assets/img/office/o1-img-1.png') }}" alt="">
                             </div>
                             <h5 class="bs-h-1 title">lyon</h5>
                             <p class="bs-p-1 disc">25,Rue Saint Jermoe 89883 Lyon . France </p>
@@ -2394,7 +2394,7 @@
                         <!-- single-card -->
                         <div class="bs-office-1-card wa-clip-left-right">
                             <div class="card-img wa-fix wa-img-cover">
-                                <img src="assets/img/office/o1-img-2.png" alt="">
+                                <img src="{{ asset('assets/img/office/o1-img-2.png') }}" alt="">
                             </div>
                             <h5 class="bs-h-1 title">Culture</h5>
                             <p class="bs-p-1 disc">81 Sierra Street Kings Mountain, NC 28086</p>
@@ -2405,7 +2405,7 @@
                         <!-- single-card -->
                         <div class="bs-office-1-card wa-clip-left-right">
                             <div class="card-img wa-fix wa-img-cover">
-                                <img src="assets/img/office/o1-img-3.png" alt="">
+                                <img src="{{ asset('assets/img/office/o1-img-3.png') }}" alt="">
                             </div>
                             <h5 class="bs-h-1 title">Architectural </h5>
                             <p class="bs-p-1 disc">9828 Myrtle Drive Gainesville, VA 20155</p>
@@ -2416,7 +2416,7 @@
                 </div>
 
                 <div class="bs-office-1-bg-img wa-fix">
-                    <img class="wa-slideInUp" src="assets/img/office/o1-bg-img-1.png" alt="">
+                    <img class="wa-slideInUp" src="{{ asset('assets/img/office/o1-bg-img-1.png') }}" alt="">
                 </div>
 
             </div>

@@ -1,7 +1,7 @@
 <!-- footer-start -->
 <footer class="bs-footer-1-area wa-fix wa-p-relative pt-80">
     <div class="bs-footer-1-bg-img">
-        <img src="assets/img/footer/f1-img-1.png" alt="">
+        <img src="{{ asset('assets/img/footer/f1-img-1.png') }}" alt="">
     </div>
     <div class="container bs-container-1">
         <div class="bs-footer-1-wrap mb-40">
@@ -9,7 +9,7 @@
             <!-- single-widget -->
             <div class="bs-footer-1-widget">
                 <a href="/" aria-label="name" class="bs-footer-1-logo" data-cursor="-opaque">
-                    <img src="assets/img/logo/logo-2.svg" alt="">
+                    <img src="{{ asset('assets/img/logo/logo-2.svg') }}" alt="">
                 </a>
                 <p class="bs-p-1 bs-footer-1-disc">A profound design process eventually makes the patron, the architect, and every occasiona
                     process eventually makes the patron</p>

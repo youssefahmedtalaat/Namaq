@@ -4,7 +4,7 @@
     <!-- error-page-start -->
     <section class="bs-error-page-area pt-160 pb-160">
         <div class="container bs-container-1">
-            <div class="bs-error-page-wrap" data-background="assets/img/illus/404-img.png">
+            <div class="bs-error-page-wrap" data-background="{{ asset('assets/img/illus/404-img.png') }}">
                 <div class="bs-error-page-content">
                     <h4 class="bs-h-4 title-1 ">Oops!</h4>
                     <h4 class="bs-h-4 title-2 ">404 Error!</h4>

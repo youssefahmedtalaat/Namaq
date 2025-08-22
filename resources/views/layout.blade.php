@@ -23,15 +23,15 @@
         @endif
 
         <!-- Theme Styles -->
-        <link rel="stylesheet" href="assets/css/all.min.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon_barsi.css">
-        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/css/nice-select.css">
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/flaticon_barsi.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
 
     </head>
 
@@ -44,7 +44,7 @@
             <div class="lw-preloader">
                 <div class="lw-preloader-content">
                     <div class="bs-preloader-logo">
-                        <img src="assets/img/logo/logo-2.svg" alt="">
+                        <img src="{{ asset('assets/img/logo/logo-2.svg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
             @include('partials._footer')
 
             <!-- offcanvas menu -->
-            @include('partials._offcanvas_menu')
+            @include('partials._offcanvas')
 
             <!-- back-to-top-button-start -->            
             <div class="wa-back-to-top ">
@@ -71,22 +71,22 @@
 
 
 		<!-- all-JS-link-here -->
-        <script src="assets/js/jquery-3.7.1.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <script src="assets/js/wow.js"></script>
-        <script src="assets/js/magiccursor.js"></script>
-        <script src="assets/js/nice-select.min.js"></script>
-        <script src="assets/js/marquee.min.js"></script>
-        <script src="assets/js/magnific-popup.min.js"></script>
-        <script src="assets/js/SplitText.min.js"></script>
-        <script src="assets/js/gsap.min.js"></script>
-        <script src="assets/js/CustomEase.min.js"></script>
-        <script src="assets/js/counterup.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
-        <script src="assets/js/lenis.min.js"></script>
-        <script src="assets/js/ScrollTrigger.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/js/wow.js') }}"></script>
+        <script src="{{ asset('assets/js/magiccursor.js') }}"></script>
+        <script src="{{ asset('assets/js/nice-select.min.js') }}"></script>
+        <script src="{{ asset('assets/js/marquee.min.js') }}"></script>
+        <script src="{{ asset('assets/js/magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('assets/js/SplitText.min.js') }}"></script>
+        <script src="{{ asset('assets/js/gsap.min.js') }}"></script>
+        <script src="{{ asset('assets/js/CustomEase.min.js') }}"></script>
+        <script src="{{ asset('assets/js/counterup.min.js') }}"></script>
+        <script src="{{ asset('assets/js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('assets/js/lenis.min.js') }}"></script>
+        <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
     </body>
 
 

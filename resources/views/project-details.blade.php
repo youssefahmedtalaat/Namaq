@@ -13,7 +13,7 @@
                 Penthouse.</h1>
 
             <div class="breadcrumb-bg-shape">
-                <img src="assets/img/breadcrumb/breadcrumb-shape-2.png" alt="">
+                <img src="{{ asset('assets/img/breadcrumb/breadcrumb-shape-2.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
 
         <!-- img -->
         <div class="bs-project-details-img wa-fix wa-img-cover">
-            <img src="assets/img/projects/pd-img-1.png" alt="">
+            <img src="{{ asset('assets/img/projects/pd-img-1.png') }}" alt="">
         </div>
 
         <ul class="bs-project-details-meta">
@@ -60,7 +60,7 @@
             <p>Preliminary designs or layouts serve as the foundation for any architectural project, offering a visual representation of the space's flow and structure. These initial plans focus on the arrangement of rooms, circulation paths, and functional zones to ensure optimal use of space. They provide a clear direction for the design, allowing clients to visualize the project’s potential before finalizing details. Based on feedback, these layouts can be adjusted to better align with the client’s needs, style preferences, and practical requirements. Preliminary designs set the tone for the overall vision and are crucial in achieving a successful architectural outcome.</p>
 
             <div class="inner-img">
-                <img src="assets/img/projects/pd-img-2.png" alt="">
+                <img src="{{ asset('assets/img/projects/pd-img-2.png') }}" alt="">
             </div>
 
             <h2>Creative Process</h2>
@@ -81,21 +81,21 @@
             <div class="bs-project-details-content-gallery">
                 <div class="row-1">
                     <div class="img-elm">
-                        <img src="assets/img/projects/pd-g-img-1.png" alt="">
+                        <img src="{{ asset('assets/img/projects/pd-g-img-1.png') }}" alt="">
                     </div>
                     <div class="img-elm">
-                        <img src="assets/img/projects/pd-g-img-2.png" alt="">
+                        <img src="{{ asset('assets/img/projects/pd-g-img-2.png') }}" alt="">
                     </div>
                 </div>
                 <div class="row-2">
                     <div class="img-elm">
-                        <img src="assets/img/projects/pd-g-img-3.png" alt="">
+                        <img src="{{ asset('assets/img/projects/pd-g-img-3.png') }}" alt="">
                     </div>
                     <div class="img-elm">
-                        <img src="assets/img/projects/pd-g-img-4.png" alt="">
+                        <img src="{{ asset('assets/img/projects/pd-g-img-4.png') }}" alt="">
                     </div>
                     <div class="img-elm">
-                        <img src="assets/img/projects/pd-g-img-5.png" alt="">
+                        <img src="{{ asset('assets/img/projects/pd-g-img-5.png') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                 <div class="bs-faq-1-sec-title mb-35">
                     <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                         <span class="icon">
-                            <img src="assets/img/illus/star-shape.png" alt="">
+                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                         </span>
                         we're investing SINCE 1990
                     </h6>
@@ -129,7 +129,7 @@
                     <!-- single-card -->
                     <div class="bs-office-1-card wa-clip-left-right">
                         <div class="card-img wa-fix wa-img-cover">
-                            <img src="assets/img/office/o1-img-1.png" alt="">
+                            <img src="{{ asset('assets/img/office/o1-img-1.png') }}" alt="">
                         </div>
                         <h5 class="bs-h-1 title">lyon</h5>
                         <p class="bs-p-1 disc">25,Rue Saint Jermoe 89883 Lyon . France </p>
@@ -140,7 +140,7 @@
                     <!-- single-card -->
                     <div class="bs-office-1-card wa-clip-left-right">
                         <div class="card-img wa-fix wa-img-cover">
-                            <img src="assets/img/office/o1-img-2.png" alt="">
+                            <img src="{{ asset('assets/img/office/o1-img-2.png') }}" alt="">
                         </div>
                         <h5 class="bs-h-1 title">Culture</h5>
                         <p class="bs-p-1 disc">81 Sierra Street Kings Mountain, NC 28086</p>
@@ -151,7 +151,7 @@
                     <!-- single-card -->
                     <div class="bs-office-1-card wa-clip-left-right">
                         <div class="card-img wa-fix wa-img-cover">
-                            <img src="assets/img/office/o1-img-3.png" alt="">
+                            <img src="{{ asset('assets/img/office/o1-img-3.png') }}" alt="">
                         </div>
                         <h5 class="bs-h-1 title">Architectural </h5>
                         <p class="bs-p-1 disc">9828 Myrtle Drive Gainesville, VA 20155</p>
@@ -162,7 +162,7 @@
             </div>
 
             <div class="bs-office-1-bg-img wa-fix">
-                <img class="wa-slideInUp" src="assets/img/office/o1-bg-img-1.png" alt="">
+                <img class="wa-slideInUp" src="{{ asset('assets/img/office/o1-bg-img-1.png') }}" alt="">
             </div>
 
         </div>

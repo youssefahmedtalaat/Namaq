@@ -4,7 +4,7 @@
 <!-- breadcrumb-start -->
 <section class="breadcrumb-area wa-p-relative" >
     <div class="breadcrumb-bg-img wa-fix wa-img-cover">
-        <img class="wa-parallax-img" src="assets/img/breadcrumb/breadcrumb-img.png" alt="">
+        <img class="wa-parallax-img" src="{{ asset('assets/img/breadcrumb/breadcrumb-img.png') }}" alt="">
     </div>
 
     <div class="container bs-container-1">
@@ -35,12 +35,12 @@
             <!-- single-project -->
             <div class="bs-project-5-item">
                 <div class="main-img wa-fix wa-img-cover">
-                    <a href="/project_details/1" data-cursor-text="View">
-                        <img src="assets/img/projects/p5-img-1.png" alt="">
+                    <a href="/project-details/1" data-cursor-text="View">
+                        <img src="{{ asset('assets/img/projects/p5-img-1.png') }}" alt="">
                     </a>
                 </div>
                 <h5 class="bs-h-4 title">
-                    <a href="/project_details/1" aria-label="name">the luxurious sky penthouse.</a>
+                    <a href="/project-details/1" aria-label="name">the luxurious sky penthouse.</a>
                 </h5>
                 <ul class="item-list wa-list-style-none">
                     <li class="bs-p-4" >house</li>
@@ -52,12 +52,12 @@
             <!-- single-project -->
             <div class="bs-project-5-item  height-2">
                 <div class="main-img wa-fix wa-img-cover">
-                    <a href="/project_details/1" data-cursor-text="View">
-                        <img src="assets/img/projects/p5-img-2.png" alt="">
+                    <a href="/project-details/1" data-cursor-text="View">
+                        <img src="{{ asset('assets/img/projects/p5-img-2.png') }}" alt="">
                     </a>
                 </div>
                 <h5 class="bs-h-4 title">
-                    <a href="/project_details/1" aria-label="name">Times Square in the Heart of Kuala Lumpur, Malaysia.</a>
+                    <a href="/project-details/1" aria-label="name">Times Square in the Heart of Kuala Lumpur, Malaysia.</a>
                 </h5>
                 <ul class="item-list wa-list-style-none">
                     <li class="bs-p-4" >Building</li>
@@ -72,12 +72,12 @@
             <!-- single-project -->
             <div class="bs-project-5-item height-3">
                 <div class="main-img wa-fix wa-img-cover">
-                    <a href="/project_details/1" data-cursor-text="View">
-                        <img src="assets/img/projects/p5-img-3.png" alt="">
+                    <a href="/project-details/1" data-cursor-text="View">
+                        <img src="{{ asset('assets/img/projects/p5-img-3.png') }}" alt="">
                     </a>
                 </div>
                 <h5 class="bs-h-4 title">
-                    <a href="/project_details/1" aria-label="name">Contemporary Interior Design - Design Your Dream Home</a>
+                    <a href="/project-details/1" aria-label="name">Contemporary Interior Design - Design Your Dream Home</a>
                 </h5>
                 <ul class="item-list wa-list-style-none">
                     <li class="bs-p-4" >Building</li>
@@ -93,12 +93,12 @@
             <!-- single-project -->
             <div class="bs-project-5-item height-4">
                 <div class="main-img wa-fix wa-img-cover">
-                    <a href="/project_details/1" data-cursor-text="View">
-                        <img src="assets/img/projects/p5-img-4.png" alt="">
+                    <a href="/project-details/1" data-cursor-text="View">
+                        <img src="{{ asset('assets/img/projects/p5-img-4.png') }}" alt="">
                     </a>
                 </div>
                 <h5 class="bs-h-4 title">
-                    <a href="/project_details/1" aria-label="name">Residential Construction Site in San Francisco, CA</a>
+                    <a href="/project-details/1" aria-label="name">Residential Construction Site in San Francisco, CA</a>
                 </h5>
                 <ul class="item-list wa-list-style-none">
                     <li class="bs-p-4" >Building</li>
@@ -110,12 +110,12 @@
             <!-- single-project -->
             <div class="bs-project-5-item height-5">
                 <div class="main-img wa-fix wa-img-cover">
-                    <a href="/project_details/1" data-cursor-text="View">
-                        <img src="assets/img/projects/p5-img-5.png" alt="">
+                    <a href="/project-details/1" data-cursor-text="View">
+                        <img src="{{ asset('assets/img/projects/p5-img-5.png') }}" alt="">
                     </a>
                 </div>
                 <h5 class="bs-h-4 title">
-                    <a href="/project_details/1" aria-label="name">Azure Beachfront Villa</a>
+                    <a href="/project-details/1" aria-label="name">Azure Beachfront Villa</a>
                 </h5>
                 <ul class="item-list wa-list-style-none">
                     <li class="bs-p-4" >Building</li>
@@ -160,7 +160,7 @@
         <div class="bs-contact-1-sec-title text-center mb-45">
             <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize ">
                 <span class="icon">
-                    <img src="assets/img/illus/star-shape.png" alt="">
+                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                 </span>
                 contact us
             </h6>
@@ -174,12 +174,12 @@
 
                 <!-- img -->
                 <div class="bs-contact-1-img wa-fix wa-img-cover" data-cursor="-opaque">
-                    <img class="wa-parallax-img" src="assets/img/contact/c1-img-1.png" alt="">
+                    <img class="wa-parallax-img" src="{{ asset('assets/img/contact/c1-img-1.png') }}" alt="">
                 </div>
 
                 <div class="bs-contact-1-video wa-clip-top-bottom">
                     <div class="bg-img wa-fix wa-img-cover">
-                        <img src="assets/img/contact/c1-shape-1.png" alt="">
+                        <img src="{{ asset('assets/img/contact/c1-shape-1.png') }}" alt="">
                     </div>
                     <a href="https://www.youtube.com/watch?v=TdTudAOl37s" aria-label="name" class="bs-play-btn-2 wa-magnetic-btn bs-p-1 popup-video">
                         <span class="icon">
@@ -198,16 +198,16 @@
 
 
                     <div class="bs-form-1-item">
-                        <label class="bs-form-1-item-label" for="name"><img src="assets/img/contact/c1-star.png" alt="">name*</label>
+                        <label class="bs-form-1-item-label" for="name"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">name*</label>
                         <input id="name" class="bs-form-1-item-input wa-clip-left-right" type="text" aria-label="name" >
                     </div>
                     
                     <div class="bs-form-1-item">
-                        <label class="bs-form-1-item-label" for="email"><img src="assets/img/contact/c1-star.png" alt="">email*</label>
+                        <label class="bs-form-1-item-label" for="email"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">email*</label>
                         <input id="email" class="bs-form-1-item-input wa-clip-left-right" type="email" aria-label="name" >
                     </div>
                     <div class="bs-form-1-item has-full-width">
-                        <label class="bs-form-1-item-label" for="message"><img src="assets/img/contact/c1-star.png" alt="">message*</label>
+                        <label class="bs-form-1-item-label" for="message"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">message*</label>
                         <textarea class="bs-form-1-item-input wa-clip-left-right" name="message" id="message"></textarea>
                     </div>
                     <div class="bs-form-1-item has-no-after has-full-width wa-clip-left-right">
@@ -238,7 +238,7 @@
                     </div>
                     <div class="bs-contact-1-counter-item">
                         <div class="shape">
-                            <img src="assets/img/illus/star-shape.png" alt="">
+                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                         </div>
                     </div>
                     <div class="bs-contact-1-counter-item">
@@ -265,7 +265,7 @@
                 <div class="bs-faq-1-sec-title mb-35">
                     <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                         <span class="icon">
-                            <img src="assets/img/illus/star-shape.png" alt="">
+                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
                         </span>
                         we're investing SINCE 1990
                     </h6>
@@ -278,7 +278,7 @@
                     <!-- single-card -->
                     <div class="bs-office-1-card wa-clip-left-right">
                         <div class="card-img wa-fix wa-img-cover">
-                            <img src="assets/img/office/o1-img-1.png" alt="">
+                            <img src="{{ asset('assets/img/office/o1-img-1.png') }}" alt="">
                         </div>
                         <h5 class="bs-h-1 title">lyon</h5>
                         <p class="bs-p-1 disc">25,Rue Saint Jermoe 89883 Lyon . France </p>
@@ -289,7 +289,7 @@
                     <!-- single-card -->
                     <div class="bs-office-1-card wa-clip-left-right">
                         <div class="card-img wa-fix wa-img-cover">
-                            <img src="assets/img/office/o1-img-2.png" alt="">
+                            <img src="{{ asset('assets/img/office/o1-img-2.png') }}" alt="">
                         </div>
                         <h5 class="bs-h-1 title">Culture</h5>
                         <p class="bs-p-1 disc">81 Sierra Street Kings Mountain, NC 28086</p>
@@ -300,7 +300,7 @@
                     <!-- single-card -->
                     <div class="bs-office-1-card wa-clip-left-right">
                         <div class="card-img wa-fix wa-img-cover">
-                            <img src="assets/img/office/o1-img-3.png" alt="">
+                            <img src="{{ asset('assets/img/office/o1-img-3.png') }}" alt="">
                         </div>
                         <h5 class="bs-h-1 title">Architectural </h5>
                         <p class="bs-p-1 disc">9828 Myrtle Drive Gainesville, VA 20155</p>
@@ -311,7 +311,7 @@
             </div>
 
             <div class="bs-office-1-bg-img wa-fix">
-                <img class="wa-slideInUp" src="assets/img/office/o1-bg-img-1.png" alt="">
+                <img class="wa-slideInUp" src="{{ asset('assets/img/office/o1-bg-img-1.png') }}" alt="">
             </div>
 
         </div>
