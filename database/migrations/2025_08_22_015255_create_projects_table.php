@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('main_image');
             $table->json('gallery_images');
             $table->integer('size_sqm');
-            $table->text('description');
+            $table->longText('description');
         });
     }
 
