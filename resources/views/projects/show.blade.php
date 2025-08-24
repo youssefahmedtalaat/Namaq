@@ -32,11 +32,11 @@
             </div>
 
             <ul class="bs-project-details-meta">
-                <li><b>Client:</b>Cameron Williamson</li>
-                <li><b>Category:</b>business consulting</li>
-                <li><b>Start Date:</b>20 March, 2023</li>
-                <li><b>End Date:</b>30 March, 2024</li>
-                <li><b>Budgets:</b>$20,000.00 USD</li>
+                <li><b>Project ID:</b>{{'#' . $project->id }}</li>
+                <li><b>Release Date:</b>{{ $project->date }}</li>
+                <li><b>Project Region:</b>{{ $project->region }}</li>
+                <li><b>Project Size:</b>{{ $project->size_sqm }} m<sup>2</sup></li>
+                <li><b>Status:</b>Completed</li>
             </ul>                    
 
             <div class="bs-project-details-content">
@@ -83,26 +83,6 @@
                 <h2>Gallery</h2>
 
                 <div class="bs-project-details-content-gallery">
-                    {{-- <div class="row-1">
-                        <div class="img-elm">
-                            <img src="{{ asset('assets/img/projects/pd-g-img-1.png') }}" alt="">
-                        </div>
-                        <div class="img-elm">
-                            <img src="{{ asset('assets/img/projects/pd-g-img-2.png') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="row-2">
-                        <div class="img-elm">
-                            <img src="{{ asset('assets/img/projects/pd-g-img-3.png') }}" alt="">
-                        </div>
-                        <div class="img-elm">
-                            <img src="{{ asset('assets/img/projects/pd-g-img-4.png') }}" alt="">
-                        </div>
-                        <div class="img-elm">
-                            <img src="{{ asset('assets/img/projects/pd-g-img-5.png') }}" alt="">
-                        </div>
-                    </div> --}}
-
                     @php
                         $images = $project->gallery_images;
                         $imagesInRow1 = array_slice($images, 0, 2);

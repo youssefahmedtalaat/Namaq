@@ -147,133 +147,118 @@
         </div>
     </section> --}}
 
-    <section class="bs-project-5-area pt-135 pb-140 wa-fix">
+    <!-- recent-projects-start -->
+    <section class="bs-project-4-area pt-125 wa-fix">
         <div class="container bs-container-2">
-            <h2 class="bs-project-5-sec-title wa-split-right wa-capitalize">Recent <span>Case Studies</span></h2>
 
-            @foreach($projects as $project)
-                @if ($loop->index === 0)
-                    <div class="bs-project-5-wrap wa-p-relative">
-                        <!-- single-project -->
-                        <div class="bs-project-5-item">
-                            <div class="main-img wa-fix wa-img-cover">
-                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
-                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
-                                </a>
-                            </div>
-                            <h5 class="bs-h-4 title">
-                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
-                            </h5>
-                            <ul class="item-list wa-list-style-none">
-                                <li class="bs-p-4">{{ $project->region }}</li>
-                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
-                                <li class="bs-p-4">{{ $project->date }}</li>
-                            </ul>
-                        </div>
-                        
-                @elseif ($loop->index === 1)
-                        <!-- single-project -->
-                        <div class="bs-project-5-item  height-2">
-                            <div class="main-img wa-fix wa-img-cover">
-                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
-                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
-                                </a>
-                            </div>
-                            <h5 class="bs-h-4 title">
-                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
-                            </h5>
-                            <ul class="item-list wa-list-style-none">
-                                <li class="bs-p-4">{{ $project->region }}</li>
-                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
-                                <li class="bs-p-4">{{ $project->date }}</li>
-                            </ul>
-                        </div>
+            <div class="bs-project-4-height">
+
+                <div class="bs-project-4-content wa-fix ">
+                    <h3 class="bs-h-4 big-title title " >recent</h3>
+                    <h3 class="bs-h-4 title title-2">
+                        <span class="left-text">wo</span>
+                        <span class="right-text">rks</span>
+                    </h3>
+                </div>
+
+                <div class="bs-project-4-card-pin">
+                    <div class="bs-project-4-card">
+                        @foreach($projects as $project)
+                            <!-- single-card -->
+                            @if ( $loop->index < 4 )
+                                <div class="bs-project-4-card-single has-card-{{ $loop->index + 1 }}">
+                                    <div class="card-img wa-fix wa-img-cover">
+                                        <a href="{{'/projects/' . $project->id }}" aria-label="name" data-cursor-text="View">
+                                            <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="bs-h-4 title">
+                                            <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
+                                        </h5>
+                                        <ul class="card-details wa-list-style-none">
+                                            <li class="bs-p-4">
+                                                <span>date:</span>
+                                                {{ $project->date }}
+                                            </li>
+                                            <li class="bs-p-4">
+                                                <span>region:</span>
+                                                {{ $project->region }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
+                </div>
+            </div>
 
-                @elseif ($loop->index === 2)
-                    <div class="bs-project-5-wrap-2 wa-p-relative">
-                        <!-- single-project -->
-                        <div class="bs-project-5-item height-3">
-                            <div class="main-img wa-fix wa-img-cover">
-                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
-                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
-                                </a>
-                            </div>
-                            <h5 class="bs-h-4 title">
-                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
-                            </h5>
-                            <ul class="item-list wa-list-style-none">
-                                <li class="bs-p-4">{{ $project->region }}</li>
-                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
-                                <li class="bs-p-4">{{ $project->date }}</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                @elseif ($loop->index === 3)
-                    <div class="bs-project-5-wrap-3 mb-60  wa-p-relative">
-                        <!-- single-project -->
-                        <div class="bs-project-5-item height-4">
-                            <div class="main-img wa-fix wa-img-cover">
-                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
-                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
-                                </a>
-                            </div>
-                            <h5 class="bs-h-4 title">
-                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
-                            </h5>
-                            <ul class="item-list wa-list-style-none">
-                                <li class="bs-p-4">{{ $project->region }}</li>
-                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
-                                <li class="bs-p-4">{{ $project->date }}</li>
-                            </ul>
-                        </div>
-                        
-                @elseif ($loop->index === 4)
-                        <!-- single-project -->
-                        <div class="bs-project-5-item  height-5">
-                            <div class="main-img wa-fix wa-img-cover">
-                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
-                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
-                                </a>
-                            </div>
-                            <h5 class="bs-h-4 title">
-                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
-                            </h5>
-                            <ul class="item-list wa-list-style-none">
-                                <li class="bs-p-4">{{ $project->region }}</li>
-                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
-                                <li class="bs-p-4">{{ $project->date }}</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                @else
-                    <div class="bs-project-5-wrap-2 wa-p-relative">
-                        <!-- single-project -->
-                        <div class="bs-project-5-item height-3">
-                            <div class="main-img wa-fix wa-img-cover">
-                                <a href="{{'/projects/' . $project->id }}" data-cursor-text="View">
-                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
-                                </a>
-                            </div>
-                            <h5 class="bs-h-4 title">
-                                <a href="{{'/projects/' . $project->id }}" aria-label="{{ $project->title }}">{{ $project->title }}</a>
-                            </h5>
-                            <ul class="item-list wa-list-style-none">
-                                <li class="bs-p-4">{{ $project->region }}</li>
-                                <li class="bs-p-4">{{ $project->size_sqm . ' m^2' }}</li>
-                                <li class="bs-p-4">{{ $project->date }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                
-                @endif
-
-            @endforeach
         </div>
     </section>
-    <!-- project-end -->            
+    <!-- recent-projects-end -->
+
+    <!-- all-project-start -->
+    <section class="bs-services-1-area wa-fix pt-0 pb-130  lg:mt-[-200px]">
+        <div class="container bs-container-1">
+            <!-- section-title -->
+            <div class="bs-services-1-sec-title mb-40">
+
+                <div class="left">
+                    <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
+                        <span class="icon">
+                            <img src="assets/img/illus/star-shape.png" alt="">
+                        </span>
+                        all projects
+                    </h6>
+                    <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">Interior Design with Different Approach</h2>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="tab-content bs-services-1-tabs-pane ">
+            <!-- single-pane -->
+            <div class="tab-pane fade fadeInUp animated show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="bs-services-1-slider">
+                    <div class="swiper-container wa-fix bs-s1-active">
+                        <div class="swiper-wrapper">
+                            @foreach($projects as $project)
+                                <!-- single-item -->
+                                <div class="swiper-slide">
+                                    <div class="bs-services-1-item">
+                                        <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
+                                            <a href="{{'/projects/' . $project->id }}" aria-label="name">
+                                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                            </a>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <div class="shape">
+                                                <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="bs-h-1 subtitle">{{ $project->region }}</h5>
+                                                <h3 class="bs-h-1 title">
+                                                    <a href="{{'/projects/' . $project->id }}" aria-label="name">{{ $project->title }}</a>
+                                                </h3>
+
+                                                <a class="item-btn wa-magnetic-btn" href="{{'/projects/' . $project->id }}" aria-label="name">
+                                                    <i class="fa-solid fa-link"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- all-projects-end -->          
 
     <!-- contact-start -->
     <section class="bs-contact-1-area pt-130 pb-50 wa-p-relative">
