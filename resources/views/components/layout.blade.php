@@ -46,7 +46,7 @@
             <div class="lw-preloader">
                 <div class="lw-preloader-content">
                     <div class="bs-preloader-logo">
-                        <img src="{{ asset('assets/img/logo/logo-2.svg') }}" alt="">
+                        <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="">
                     </div>
                 </div>
             </div>

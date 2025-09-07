@@ -65,13 +65,13 @@
                     <h2 class="bs-h-1 bs-hero-1-title-2 wa-split-right wa-capitalize" data-split-delay="1.8s" data-cursor="-opaque">We invested $430 Millions every Renovative projects</h2>
 
                     <!-- img -->
-                    <div class="bs-hero-1-img wa-img-cover wa-fix "  >
-                        <img data-cursor="-opaque"  src="{{ asset('assets/img/hero/h1-img-2.png') }}" alt="">
+                    <div class="bs-hero-1-img wa-img-cover wa-fix ">
+                        <img data-cursor="-opaque" src="{{ asset('assets/img/hero/h1-img-2.png') }}" alt="">
                     </div>
                 </div>
             </div>
             <div class="bs-hero-1-play-btn">
-                <a href="https://www.youtube.com/watch?v=TdTudAOl37s" aria-label="name" class="bs-play-btn bs-h-1 popup-video" >
+                <a href="https://www.youtube.com/watch?v=TdTudAOl37s" aria-label="name" class="bs-play-btn bs-h-1 popup-video">
                     <i class="fa-solid fa-circle-play"></i>
                     company video
                 </a>
@@ -148,7 +148,7 @@
                         <h5 class="bs-h-1 item-title">
                             <a href="services-details.html" aria-label="name">Natural Light Home</a>
                         </h5>
-                        <p class="bs-p-1 item-disc">Bright, Airy,  Tranquil</p>
+                        <p class="bs-p-1 item-disc">Bright, Airy, Tranquil</p>
                     </div>
                 </div>
 
@@ -176,72 +176,45 @@
             <div class="bs-about-1-slider mb-40 wa-p-relative">
                 <div class="swiper-container wa-fix bs-a1-active">
                     <div class="swiper-wrapper">
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-1.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-1.png') }}" alt="">
-                                </a>
-                                
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-2.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-2.png') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-3.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-3.png') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-4.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-4.png') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-
+                        @foreach($projects as $project)
+                            @if ( $loop->index < 4 )
+                                <!-- single-slide -->
+                                <div class="swiper-slide">
+                                    <div class="bs-about-1-item wa-fix ">
+                                        <a href="{{'/projects/' . $project->id }}" class="popup-img wa-img-cover">
+                                            <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
+                                        </a>
+                                    </div>
+                                </div> 
+                            @endif
+                        @endforeach
                     </div>
                 </div>
 
                 <div class="bs-about-1-slider-drag bs-p-1">drag</div>
-
             </div>
 
-            <!-- content -->
-            <div class="bs-about-1-content">
-                <p class="bs-p-1 disc wa-split-y wa-capitalize">
-                    Our professionals manage every phase of the project 
-                    From start to finish. <b>Save time, reduces stress & ensure</b> a 
-                    cohesive look throughout your space.
-                </p>
-                <div class="btn-wrap wa-fadeInRight">
-                    <a href="about.html" aria-label="name" class="bs-btn-1">
-                        <span class="text">
-                            learn more about
-                        </span>
-                        <span class="icon">
-                            <i class="fa-solid fa-right-long"></i>
-                            <i class="fa-solid fa-right-long"></i>
-                        </span>
+        <!-- content -->
+        <div class="bs-about-1-content">
+            <p class="bs-p-1 disc wa-split-y wa-capitalize">
+                Our professionals manage every phase of the project
+                From start to finish. <b>Save time, reduces stress & ensure</b> a
+                cohesive look throughout your space.
+            </p>
+            <div class="btn-wrap wa-fadeInRight">
+                <a href="about.html" aria-label="name" class="bs-btn-1">
+                    <span class="text">
+                        learn more about
+                    </span>
+                    <span class="icon">
+                        <i class="fa-solid fa-right-long"></i>
+                        <i class="fa-solid fa-right-long"></i>
+                    </span>
 
-                        <span class="shape"></span>
-                    </a>
-                </div>
+                    <span class="shape"></span>
+                </a>
             </div>
+        </div>
 
         </div>
     </section>
@@ -261,222 +234,78 @@
                 </h6>
                 <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">Luxury Interiors <br> That Redefine Your Space</h2>
             </div>
-        
+
             <div class="bs-projects-1-wrap">
-            
+
                 <!-- tabs-btn -->
                 <div class="bs-projects-1-tabs-btn" role="tablist">
 
-                    <!-- single-btn -->
-                    <button class="nav-link  wa-fadeInUp" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-                        Poolscape Villa
+                    @foreach($projects as $project)
+                        @if ( $loop->index < 4 ) 
+                            <!-- single-btn -->
+                            <button class="nav-link wa-fadeInUp {{ $loop->index == 0 ? "active" : "" }}" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-{{ $project->id }}" type="button" role="tab" aria-controls="nav-{{ $project->id }}" aria-selected="true">
+                                {{ $project->title }}
 
-                        <span class="year">2014</span>
-                        <span class="img">
-                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
-                        </span>
-                        <span class="right-arrow">
-                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
-                        </span>
-                    </button>
-
-                    <!-- single-btn -->
-                    <button class="nav-link wa-fadeInUp active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-                        European Lard Station
-                        <span class="year">2014</span>
-                        <span class="img">
-                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
-                        </span>
-                        <span class="right-arrow">
-                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
-                        </span>
-                    </button>
-
-                    <!-- single-btn -->
-                    <button class="nav-link wa-fadeInUp" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                        Dalbourne Villa
-                        <span class="year">2014</span>
-                        <span class="img">
-                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
-                        </span>
-                        <span class="right-arrow">
-                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
-                        </span>
-                    </button>
-
-                    <!-- single-btn -->
-                    <button class="nav-link wa-fadeInUp" id="nav-contact-tab2" data-bs-toggle="tab" data-bs-target="#nav-contact2" type="button" role="tab" aria-controls="nav-contact2" aria-selected="false">
-                        Music Theatre
-                        <span class="year">2014</span>
-                        <span class="img">
-                            <img src="{{ asset('assets/img/projects/p1-btn-img-1.png') }}" alt="">
-                        </span>
-                        <span class="right-arrow">
-                            <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
-                        </span>
-                    </button>
+                                <span class="year">{{ $project->date }}</span>
+                                <span class="img">
+                                    <img src="{{ Storage::url($project->main_image) }}" alt="" style="height: 80px !important; width: 120px !important;">
+                                </span>
+                                <span class="right-arrow">
+                                    <img src="{{ asset('assets/img/illus/long-right-arrow.png') }}" alt="">
+                                </span>
+                            </button>
+                        @endif
+                    @endforeach
 
                 </div>
 
 
                 <!-- tabs-content -->
-                <div class="bs-projects-1-tabs-pane tab-content" >
+                <div class="bs-projects-1-tabs-pane tab-content">
 
-                    <!-- single-pane -->
-                    <div class="tab-pane fade " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <div class="bs-projects-1-tabs-item">
-                            <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-1.png') }}" alt="">
-                            </div>
-                            <div class="bs-projects-1-tabs-item-table">
-                                <div class="start">
-                                    <h6 class="bs-h-1 title">start & completed</h6>
-                                    <div class="wrap">
-                                        <p class="bs-p-1 disc">jan 02, 2025</p>
-                                        <p class="bs-p-1 disc">aug 02, 2025</p>
+                    @foreach($projects as $project)
+                        @if ( $loop->index < 4 )
+                             <!-- single-pane -->
+                            <div class="tab-pane fade {{ $loop->index == 0 ? "active show" : "" }}" id="nav-{{ $project->id }}" role="tabpanel" aria-labelledby="nav-{{ $project->id }}-tab">
+                                <div class="bs-projects-1-tabs-item">
+                                    <div class="main-img wa-img-cover wa-fix">
+                                        <img data-cursor="-opaque" src="{{ Storage::url($project->main_image) }}" alt="" style="height: 447px !important;">
+                                    </div>
+                                    <div class="bs-projects-1-tabs-item-table">
+                                        <div class="start">
+                                            <h6 class="bs-h-1 title">project size & date</h6>
+                                            <div class="wrap">
+                                                <p class="bs-p-1 disc">{{ $project->size_sqm }} m<sup>2</sup> </p>
+                                                <p class="bs-p-1 disc">{{ $project->date }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="location">
+                                            <h6 class="bs-h-1 title">Location</h6>
+                                            <p class="bs-p-1 disc">{{ $project->region }}</p>
+                                        </div>
+                                        <div class="share">
+                                            <h6 class="bs-h-1 title-2">share project</h6>
+                                            <div class="bs-social-link-1">
+                                                <a href="#" aria-label="name" class="item-link">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </a>
+                                                <a href="#" aria-label="name" class="item-link">
+                                                    <i class="fa-brands fa-x-twitter"></i>
+                                                </a>
+                                                <a href="#" aria-label="name" class="item-link">
+                                                    <i class="fa-brands fa-linkedin-in"></i>
+                                                </a>
+                                                <a href="#" aria-label="name" class="item-link">
+                                                    <i class="fa-brands fa-pinterest-p"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="location">
-                                    <h6 class="bs-h-1 title">Location</h6>
-                                    <p class="bs-p-1 disc">Colonial Rd, Brooklyn, NY 3399</p>
-                                </div>
-                                <div class="share">
-                                    <h6 class="bs-h-1 title-2">share project</h6>
-                                    <div class="bs-social-link-1">
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-pinterest-p"></i>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- single-pane -->
-                    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <div class="bs-projects-1-tabs-item">
-                            <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-2.png') }}" alt="">
-                            </div>
-                            <div class="bs-projects-1-tabs-item-table">
-                                <div class="start">
-                                    <h6 class="bs-h-1 title">start & completed</h6>
-                                    <div class="wrap">
-                                        <p class="bs-p-1 disc">jan 02, 2025</p>
-                                        <p class="bs-p-1 disc">aug 02, 2025</p>
-                                    </div>
-                                </div>
-                                <div class="location">
-                                    <h6 class="bs-h-1 title">Location</h6>
-                                    <p class="bs-p-1 disc">Colonial Rd, Brooklyn, NY 3399</p>
-                                </div>
-                                <div class="share">
-                                    <h6 class="bs-h-1 title-2">share project</h6>
-                                    <div class="bs-social-link-1">
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-pinterest-p"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single-pane -->
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <div class="bs-projects-1-tabs-item">
-                            <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-3.png') }}" alt="">
-                            </div>
-                            <div class="bs-projects-1-tabs-item-table">
-                                <div class="start">
-                                    <h6 class="bs-h-1 title">start & completed</h6>
-                                    <div class="wrap">
-                                        <p class="bs-p-1 disc">jan 02, 2025</p>
-                                        <p class="bs-p-1 disc">aug 02, 2025</p>
-                                    </div>
-                                </div>
-                                <div class="location">
-                                    <h6 class="bs-h-1 title">Location</h6>
-                                    <p class="bs-p-1 disc">Colonial Rd, Brooklyn, NY 3399</p>
-                                </div>
-                                <div class="share">
-                                    <h6 class="bs-h-1 title-2">share project</h6>
-                                    <div class="bs-social-link-1">
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-pinterest-p"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- single-pane -->
-                    <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab2">
-                        <div class="bs-projects-1-tabs-item">
-                            <div class="main-img wa-img-cover wa-fix">
-                                <img data-cursor="-opaque" src="{{ asset('assets/img/projects/p1-img-4.png') }}" alt="">
-                            </div>
-                            <div class="bs-projects-1-tabs-item-table">
-                                <div class="start">
-                                    <h6 class="bs-h-1 title">start & completed</h6>
-                                    <div class="wrap">
-                                        <p class="bs-p-1 disc">jan 02, 2025</p>
-                                        <p class="bs-p-1 disc">aug 02, 2025</p>
-                                    </div>
-                                </div>
-                                <div class="location">
-                                    <h6 class="bs-h-1 title">Location</h6>
-                                    <p class="bs-p-1 disc">Colonial Rd, Brooklyn, NY 3399</p>
-                                </div>
-                                <div class="share">
-                                    <h6 class="bs-h-1 title-2">share project</h6>
-                                    <div class="bs-social-link-1">
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                        <a href="#" aria-label="name" class="item-link">
-                                            <i class="fa-brands fa-pinterest-p"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @endif
+                    @endforeach
 
                 </div>
 
@@ -484,14 +313,14 @@
         </div>
 
         <!-- bg-img -->
-        <div class="bs-projects-1-bg-img">
+        {{-- <div class="bs-projects-1-bg-img">
             <img src="{{ asset('assets/img/projects/p1-bg-img-1.png') }}" alt="">
-        </div>
+        </div> --}}
     </section>
     <!-- projects-end -->
 
     <!-- video-start -->
-    <div class="bs-video-1-area wa-fix">
+    {{-- <div class="bs-video-1-area wa-fix">
         <div class="bs-video-1-content wa-p-relative">
             <div class="bs-video-1-content-img wa-p-relative wa-fix wa-img-cover">
                 <img class="wa-parallax-img" src="{{ asset('assets/img/video/v1-img-1.png') }}" alt="">
@@ -524,790 +353,70 @@
                 architectural
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- video-end -->
 
-    <!-- services-start -->
-    <section class="bs-services-1-area wa-fix pt-170 pb-100">
+    <!-- all-project-start -->
+    <section class="bs-services-1-area wa-fix pb-100">
         <div class="container bs-container-1">
             <!-- section-title -->
             <div class="bs-services-1-sec-title mb-40">
 
-                <!-- left-title -->
                 <div class="left">
                     <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
                         <span class="icon">
-                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
+                            <img src="assets/img/illus/star-shape.png" alt="">
                         </span>
-                        recent work
+                        all projects
                     </h6>
                     <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">Interior Design with Different Approach</h2>
                 </div>
 
-                <!-- right-tabs-btn -->
-
-                <ul class="bs-services-1-tabs-btn wa-list-style-none wa-fadeInRight" role="tablist">
-                    <!-- single-btn -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
-                        all
-                        <span class="bg-shape">
-                            <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
-                        </span>
-                        </button>
-                    </li>
-
-                    <!-- single-btn -->                            
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
-                            culture
-                            <span class="bg-shape">
-                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
-                            </span>
-                        </button>
-                    </li>
-
-                    <!-- single-btn -->                            
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
-                            events
-                            <span class="bg-shape">
-                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
-                            </span>
-                        </button>
-                    </li>
-
-                    <!-- single-btn -->                            
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact2" type="button" role="tab" aria-controls="contact2" aria-selected="false">
-                            news
-                            <span class="bg-shape">
-                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
-                            </span>
-                        </button>
-                    </li>
-
-                    <!-- single-btn -->                            
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab3" data-bs-toggle="tab" data-bs-target="#contact3" type="button" role="tab" aria-controls="contact3" aria-selected="false">
-                            research
-                            <span class="bg-shape">
-                                <img src="{{ asset('assets/img/services/s1-btn-shape.png') }}" alt="">
-                            </span>
-                        </button>
-                    </li>
-
-                </ul>
             </div>
         </div>
 
         <!-- content -->
         <div class="tab-content bs-services-1-tabs-pane ">
-
             <!-- single-pane -->
             <div class="tab-pane fade fadeInUp animated show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="bs-services-1-slider">
                     <div class="swiper-container wa-fix bs-s1-active">
                         <div class="swiper-wrapper">
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-5.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
+                            @foreach($projects as $project)
+                                <!-- single-item -->
+                                <div class="swiper-slide">
+                                    <div class="bs-services-1-item">
+                                        <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
+                                            <a href="{{'/projects/' . $project->id }}" aria-label="name">
+                                                    <img src="{{ Storage::url($project->main_image) }}" alt="{{ $project->title }}">
                                             </a>
+                                        </div>
+                                        <div class="content-wrap">
+                                            <div class="shape">
+                                                <img src="assets/img/illus/star-shape-color.png" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="bs-h-1 subtitle">{{ $project->region }}</h5>
+                                                <h3 class="bs-h-1 title">
+                                                    <a href="{{'/projects/' . $project->id }}" aria-label="name">{{ $project->title }}</a>
+                                                </h3>
+
+                                                <a class="item-btn wa-magnetic-btn" href="{{'/projects/' . $project->id }}" aria-label="name">
+                                                    <i class="fa-solid fa-link"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Optimal Alignment</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">Luxury Retreat</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Strategic Positioning</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">Serene Escape</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Advantageous Direction</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">Aqua Haven</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Successful Placement</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">Tranquil Oasis</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single-pane -->
-            <div class="tab-pane fade fadeInUp animated" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="bs-services-1-slider">
-                    <div class="swiper-container wa-fix bs-s1-active">
-                        <div class="swiper-wrapper">
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single-pane -->
-            <div class="tab-pane fade fadeInUp animated" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                <div class="bs-services-1-slider">
-                    <div class="swiper-container wa-fix bs-s1-active">
-                        <div class="swiper-wrapper">
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single-pane -->
-            <div class="tab-pane fade fadeInUp animated" id="contact2" role="tabpanel" aria-labelledby="contact-tab2">
-                <div class="bs-services-1-slider">
-                    <div class="swiper-container wa-fix bs-s1-active">
-                        <div class="swiper-wrapper">
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single-pane -->
-            <div class="tab-pane fade fadeInUp animated" id="contact3" role="tabpanel" aria-labelledby="contact-tab3">
-                <div class="bs-services-1-slider">
-                    <div class="swiper-container wa-fix bs-s1-active">
-                        <div class="swiper-wrapper">
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img  wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-2.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-3.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-4.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-services-1-item">
-                                    <div class="main-img wa-fix wa-img-cover" data-cursor-text="View">
-                                        <a href="project-details.html" aria-label="name">
-                                            <img src="{{ asset('assets/img/services/s1-img-1.png') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content-wrap">
-                                        <div class="shape">
-                                            <img src="{{ asset('assets/img/illus/star-shape-color.png') }}" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="bs-h-1 subtitle">Favorable orientation</h5>
-                                            <h3 class="bs-h-1 title">
-                                                <a href="project-details.html" aria-label="name">poolscape villa</a>
-                                            </h3>
-
-                                            <a class="item-btn wa-magnetic-btn" href="project-details.html" aria-label="name">
-                                                <i class="fa-solid fa-link"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-
     </section>
-    <!-- services-end -->
+    <!-- all-projects-end -->    
 
     <!-- testimonial-start -->
     <section class="bs-testimonial-1-area pt-115 pb-190">
@@ -1399,8 +508,8 @@
                         </div>
                         <p class="disc bs-p-1">
                             <img src="{{ asset('assets/img/testimonial/t1-star-shape.png') }}" alt="">
-                            Our professionals manage every 
-                            phase of the project From start to 
+                            Our professionals manage every
+                            phase of the project From start to
                             finish. Save time, reduces
                         </p>
                     </div>
@@ -1412,10 +521,10 @@
                                 <!-- single-slider -->
                                 <div class="swiper-slide">
                                     <p class="bs-p-1 bs-testimonial-1-item-comment" data-cursor="-opaque">
-                                        Our professionals manage every 
-                                        <i>phase of the project</i> From start to 
-                                        finish. Save time, reduces stress 
-                                        & ensure a <i>cohesive look throughout</i> 
+                                        Our professionals manage every
+                                        <i>phase of the project</i> From start to
+                                        finish. Save time, reduces stress
+                                        & ensure a <i>cohesive look throughout</i>
                                         your space.
                                     </p>
                                 </div>
@@ -1423,10 +532,10 @@
                                 <!-- single-slider -->
                                 <div class="swiper-slide">
                                     <p class="bs-p-1 bs-testimonial-1-item-comment" data-cursor="-opaque">
-                                        Our professionals manage every 
-                                        <i>phase of the project</i> From start to 
-                                        finish. Save time, reduces stress 
-                                        & ensure a <i>cohesive look throughout</i> 
+                                        Our professionals manage every
+                                        <i>phase of the project</i> From start to
+                                        finish. Save time, reduces stress
+                                        & ensure a <i>cohesive look throughout</i>
                                         your space.
                                     </p>
                                 </div>
@@ -1434,10 +543,10 @@
                                 <!-- single-slider -->
                                 <div class="swiper-slide">
                                     <p class="bs-p-1 bs-testimonial-1-item-comment" data-cursor="-opaque">
-                                        Our professionals manage every 
-                                        <i>phase of the project</i> From start to 
-                                        finish. Save time, reduces stress 
-                                        & ensure a <i>cohesive look throughout</i> 
+                                        Our professionals manage every
+                                        <i>phase of the project</i> From start to
+                                        finish. Save time, reduces stress
+                                        & ensure a <i>cohesive look throughout</i>
                                         your space.
                                     </p>
                                 </div>
@@ -1503,16 +612,16 @@
 
                         <div class="bs-form-1-item">
                             <label class="bs-form-1-item-label" for="name"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">name*</label>
-                            <input id="name" class="bs-form-1-item-input wa-clip-left-right"  type="text" aria-label="name" >
+                            <input id="name" class="bs-form-1-item-input wa-clip-left-right" type="text" aria-label="name">
                         </div>
-                        
+
                         <div class="bs-form-1-item">
                             <label class="bs-form-1-item-label" for="email"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">email*</label>
-                            <input id="email" class="bs-form-1-item-input wa-clip-left-right" type="email" aria-label="name" >
+                            <input id="email" class="bs-form-1-item-input wa-clip-left-right" type="email" aria-label="name">
                         </div>
                         <div class="bs-form-1-item has-full-width">
                             <label class="bs-form-1-item-label" for="message"><img src="{{ asset('assets/img/contact/c1-star.png') }}" alt="">message*</label>
-                            <textarea id="message" class="bs-form-1-item-input wa-clip-left-right" name="message" ></textarea>
+                            <textarea id="message" class="bs-form-1-item-input wa-clip-left-right" name="message"></textarea>
                         </div>
                         <div class="bs-form-1-item has-no-after has-full-width wa-clip-left-right">
                             <div class="bs-form-1-item-checkbox">
@@ -1858,7 +967,7 @@
                     <div class="bs-accordion" id="accordionExample_31">
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item wa-fadeInUp"  >
+                        <div class="bs-accordion-item wa-fadeInUp">
                             <div class="item-header" id="heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                                     <span class="shape">
@@ -1880,7 +989,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item wa-fadeInUp "  >
+                        <div class="bs-accordion-item wa-fadeInUp ">
                             <div class="item-header" id="heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                     <span class="shape">
@@ -1902,7 +1011,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  wa-fadeInUp"  >
+                        <div class="bs-accordion-item  wa-fadeInUp">
                             <div class="item-header" id="heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                     <span class="shape">
@@ -1924,7 +1033,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  wa-fadeInUp" >
+                        <div class="bs-accordion-item  wa-fadeInUp">
                             <div class="item-header" id="heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                     <span class="shape">
@@ -1954,7 +1063,7 @@
                     <div class="bs-accordion" id="accordionExample_32">
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item "  >
+                        <div class="bs-accordion-item ">
                             <div class="item-header" id="2heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse1" aria-expanded="false" aria-controls="2collapse1">
                                     <span class="shape">
@@ -1976,7 +1085,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  "  >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="2heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse2" aria-expanded="false" aria-controls="2collapse2">
                                     <span class="shape">
@@ -1998,7 +1107,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  "  >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="2heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse3" aria-expanded="false" aria-controls="2collapse3">
                                     <span class="shape">
@@ -2020,7 +1129,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  " >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="2heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#2collapse4" aria-expanded="false" aria-controls="2collapse4">
                                     <span class="shape">
@@ -2050,7 +1159,7 @@
                     <div class="bs-accordion" id="accordionExample_33">
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item "  >
+                        <div class="bs-accordion-item ">
                             <div class="item-header" id="3heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse1" aria-expanded="false" aria-controls="3collapse1">
                                     <span class="shape">
@@ -2072,7 +1181,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  "  >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="3heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse2" aria-expanded="false" aria-controls="3collapse2">
                                     <span class="shape">
@@ -2094,7 +1203,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  "  >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="3heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse3" aria-expanded="false" aria-controls="3collapse3">
                                     <span class="shape">
@@ -2116,7 +1225,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  " >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="3heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#3collapse4" aria-expanded="false" aria-controls="3collapse4">
                                     <span class="shape">
@@ -2146,7 +1255,7 @@
                     <div class="bs-accordion" id="accordionExample_34">
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item "  >
+                        <div class="bs-accordion-item ">
                             <div class="item-header" id="4heading1">
                                 <button class="item-title bs-h-1" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse1" aria-expanded="false" aria-controls="4collapse1">
                                     <span class="shape">
@@ -2168,7 +1277,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  "  >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="4heading2">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse2" aria-expanded="false" aria-controls="4collapse2">
                                     <span class="shape">
@@ -2190,7 +1299,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  "  >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="4heading3">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse3" aria-expanded="false" aria-controls="4collapse3">
                                     <span class="shape">
@@ -2212,7 +1321,7 @@
                         </div>
 
                         <!-- single-team -->
-                        <div class="bs-accordion-item  " >
+                        <div class="bs-accordion-item  ">
                             <div class="item-header" id="4heading4">
                                 <button class="item-title bs-h-1 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#4collapse4" aria-expanded="false" aria-controls="4collapse4">
                                     <span class="shape">
@@ -2286,8 +1395,8 @@
                                 02 Comments
                             </span>
                         </p>
-                        <p class="bs-p-1 item-disc">We are 100+ professional software engineers with more 
-                            than 10 years of experience in delivering superior oftware 
+                        <p class="bs-p-1 item-disc">We are 100+ professional software engineers with more
+                            than 10 years of experience in delivering superior oftware
                             engineers with more than 10 years of </p>
 
                         <div class="item-btn">
@@ -2348,7 +1457,7 @@
                 </div>
             </div>
 
-            <p class="bs-p-1 bs-blog-1-all-btn text-center wa-fadeInUp">We turn your ideas to reality. We don’t stop until you’re 
+            <p class="bs-p-1 bs-blog-1-all-btn text-center wa-fadeInUp">We turn your ideas to reality. We don’t stop until you’re
                 <a href="blog.html" aria-label="name">More Updates</a>
             </p>
         </div>

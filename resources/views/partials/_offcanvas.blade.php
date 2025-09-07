@@ -7,7 +7,7 @@
 
             <!-- logo -->
             <a href="/" aria-label="name" class="wa-offcanvas-top-logo">
-                <img src="{{ asset('assets/img/logo/logo-2.svg') }}" alt="">
+                <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="">
             </a>
 
             <!-- close-btn -->

@@ -4,7 +4,7 @@
 
         <!-- logo -->
         <a href="/" aria-label="name" class="bs-header-logo-1">
-            <img src="{{ asset('assets/img/logo/logo-1.svg') }}" alt="">
+            <img src="{{ asset('assets/img/logo/logo-1.png') }}" alt="">
         </a>
 
         <!-- action-link -->

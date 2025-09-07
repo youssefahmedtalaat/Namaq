@@ -9,7 +9,7 @@
             <!-- single-widget -->
             <div class="bs-footer-1-widget">
                 <a href="/" aria-label="name" class="bs-footer-1-logo" data-cursor="-opaque">
-                    <img src="{{ asset('assets/img/logo/logo-2.svg') }}" alt="">
+                    <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="">
                 </a>
                 <p class="bs-p-1 bs-footer-1-disc">A profound design process eventually makes the patron, the architect, and every occasiona
                     process eventually makes the patron</p>
