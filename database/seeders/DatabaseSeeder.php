@@ -14,11 +14,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
+        
+        User::truncate();
 
         User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@namaq.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('nexus_Namaq_2025@26000')
         ]);
     }
 }

@@ -35,22 +35,68 @@
         <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
 
+        <style> 
+            #preloader { 
+                position: fixed; 
+                inset: 0; 
+                background: black; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                z-index: 9999; 
+            } 
+    
+            #content { 
+                display: none; 
+            } 
+    
+            video { 
+                width: 100%; 
+                height: 100%; 
+                object-fit: cover; 
+            } 
+        </style>
     </head>
 
 
 
 
     <body class="bs-home-1">
-        <div class="main-wrapper wa-fix">
-            <!-- start preloader -->
-            <div class="lw-preloader">
-                <div class="lw-preloader-content">
-                    <div class="bs-preloader-logo">
-                        <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="">
-                    </div>
-                </div>
+        <!-- Preloader --> 
+        <div id="preloader"> 
+            <video id="introVideo" autoplay muted playsinline> 
+                <source src="{{ asset('videos/intro-white.mp4') }}" type="video/mp4"> 
+            </video> 
+            <div id="videoError" style="display:none; color: white; position: absolute; text-align: center;">
+                Video playback error.<br>Please check console.
             </div>
-            <!-- end preloader -->
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var video = document.getElementById('introVideo');
+                var errorMsg = document.getElementById('videoError');
+                
+                // Debug video events
+                video.addEventListener('error', function(e) {
+                    console.error('Video Error:', video.error);
+                    errorMsg.style.display = 'block';
+                }, true);
+
+                // Check if video is actually playing
+                setTimeout(function() {
+                    if (video.paused && video.currentTime === 0) {
+                        console.warn('Video stuck at 0s, possibly format issue');
+                        // Optional: force end preloader if video fails
+                        // document.getElementById('preloader').style.display = 'none';
+                        // document.getElementById('content').style.display = 'block';
+                    }
+                }, 3000);
+            });
+        </script>
+
+        <div id="content">
+            <div class="main-wrapper wa-fix">
 
             <!-- header -->
             @include('partials._header', ['has_breadcrumb' => $has_breadcrumb ?? false])
@@ -70,6 +116,7 @@
             </div>
             <!-- back-to-top-button-end -->
         </div>
+    </div>
 
 
 		<!-- all-JS-link-here -->
@@ -89,6 +136,17 @@
         <script src="{{ asset('assets/js/lenis.min.js') }}"></script>
         <script src="{{ asset('assets/js/ScrollTrigger.min.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
+
+        <script> 
+            const video = document.getElementById('introVideo'); 
+            const preloader = document.getElementById('preloader'); 
+            const content = document.getElementById('content'); 
+        
+            video.onended = function () { 
+                preloader.style.display = "none"; 
+                content.style.display = "block"; 
+            }; 
+        </script>
     </body>
 
 

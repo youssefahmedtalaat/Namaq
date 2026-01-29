@@ -28,7 +28,6 @@ class ProjectsTable
                 TextColumn::make('region')
                     ->searchable(),
                 TextColumn::make('date')
-                    ->date()
                     ->sortable(),
                 ImageColumn::make('main_image'),
                 TextColumn::make('size_sqm')

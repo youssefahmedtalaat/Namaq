@@ -11,3 +11,11 @@ Route::get('/', function () {
 Route::get('/projects', [ProjectController::class, 'index']);
 
 Route::get('/projects/{project}', [ProjectController::class, 'show']);
+
+
+// Route::get('/artisan/{command}', function ($command) {
+//     Artisan::call($command);
+//     return nl2br(Artisan::output());
+// });
+
+require __DIR__.'/debug_config.php';

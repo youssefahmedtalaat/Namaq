@@ -1513,8 +1513,10 @@ award5bg.from(".bs-award-5-area", {
 	about-1-slider-activation
 */
 if($('.bs-a1-active').length) {
+	let slideCount = $('.bs-a1-active .swiper-slide').length;
+    console.log('About Slider Count:', slideCount);
 	let slider = new Swiper('.bs-a1-active', {
-		loop: true,
+		loop: slideCount > 4,
 		spaceBetween: 25,
 		speed: 1000,
 		slidesPerView: 3,
@@ -1657,9 +1659,9 @@ if($('.bs-t1-comment-active').length) {
 	team-1-slider-activation
 */
 if($('.bs-team1-active').length) {
-
+	let slideCount = $('.bs-team1-active .swiper-slide').length;
 	let slider = new Swiper('.bs-team1-active', {
-		loop: true,
+		loop: slideCount > 5,
 		speed: 1000,
 		spaceBetween: 18,
 		centeredSlides: true,

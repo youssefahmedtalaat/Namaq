@@ -6,6 +6,7 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Schemas\Schema;
 
@@ -18,8 +19,21 @@ class ProjectForm
                 TextInput::make('title')
                     ->required(),
                 TextInput::make('region')
+                    ->label('Location')
                     ->required(),
-                DatePicker::make('date')
+                Select::make('date')
+                    ->label('Year')
+                    ->options(array_combine(range(date('Y'), 1950), range(date('Y'), 1950)))
+                    ->searchable()
+                    ->required(),
+                Select::make('category')
+                    ->options([
+                        'Commercial' => 'Commercial',
+                        'Architectural' => 'Architectural',
+                        'Administrative' => 'Administrative',
+                        'Interior' => 'Interior',
+                        'Exterior' => 'Exterior',
+                    ])
                     ->required(),
                 TextInput::make('size_sqm')
                     ->required()

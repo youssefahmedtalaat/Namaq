@@ -1352,181 +1352,181 @@
     <!-- faq-end -->
 
     <!-- blog-start -->
-    <section class="bs-blog-1-area wa-p-relative pt-185 pb-80">
+    <!--<section class="bs-blog-1-area wa-p-relative pt-185 pb-80">-->
 
-        <div class="bs-blog-1-bg-color"></div>
+    <!--    <div class="bs-blog-1-bg-color"></div>-->
 
-        <div class="container bs-container-1">
+    <!--    <div class="container bs-container-1">-->
 
             <!-- section-title -->
-            <div class="bs-blog-1-sec-title text-center mb-40">
-                <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
-                    <span class="icon">
-                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                    </span>
-                    our recent blog
-                </h6>
-                <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">Smoother Journey</h2>
-            </div>
+    <!--        <div class="bs-blog-1-sec-title text-center mb-40">-->
+    <!--            <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">-->
+    <!--                <span class="icon">-->
+    <!--                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">-->
+    <!--                </span>-->
+    <!--                our recent blog-->
+    <!--            </h6>-->
+    <!--            <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">Smoother Journey</h2>-->
+    <!--        </div>-->
 
-            <div class="bs-blog-1-wrap mb-50">
+    <!--        <div class="bs-blog-1-wrap mb-50">-->
                 <!-- single-blog -->
-                <div class="bs-blog-1-item wa-3dUp">
-                    <div class="item-img wa-fix wa-img-cover">
-                        <a href="blog-details.html" aria-label="name" data-cursor-text="View">
-                            <img src="{{ asset('assets/img/blog/b1-img-1.png') }}" alt="">
-                        </a>
-                    </div>
-                    <p class="item-date bs-p-1">
-                        <span>22</span>
-                        <span>agu</span>
-                    </p>
-                    <div class="content">
-                        <h5 class="bs-h-1 item-title">
-                            <a href="blog-details.html" aria-label="name">The Best Customers Says About Agencium</a>
-                        </h5>
-                        <p class="blog-meta bs-p-1">
-                            <span>
-                                <i class="fa-regular fa-user"></i>
-                                by nolie jona
-                            </span>
-                            <span>
-                                <i class="fa-regular fa-comment"></i>
-                                02 Comments
-                            </span>
-                        </p>
-                        <p class="bs-p-1 item-disc">We are 100+ professional software engineers with more
-                            than 10 years of experience in delivering superior oftware
-                            engineers with more than 10 years of </p>
+    <!--            <div class="bs-blog-1-item wa-3dUp">-->
+    <!--                <div class="item-img wa-fix wa-img-cover">-->
+    <!--                    <a href="blog-details.html" aria-label="name" data-cursor-text="View">-->
+    <!--                        <img src="{{ asset('assets/img/blog/b1-img-1.png') }}" alt="">-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <p class="item-date bs-p-1">-->
+    <!--                    <span>22</span>-->
+    <!--                    <span>agu</span>-->
+    <!--                </p>-->
+    <!--                <div class="content">-->
+    <!--                    <h5 class="bs-h-1 item-title">-->
+    <!--                        <a href="blog-details.html" aria-label="name">The Best Customers Says About Agencium</a>-->
+    <!--                    </h5>-->
+    <!--                    <p class="blog-meta bs-p-1">-->
+    <!--                        <span>-->
+    <!--                            <i class="fa-regular fa-user"></i>-->
+    <!--                            by nolie jona-->
+    <!--                        </span>-->
+    <!--                        <span>-->
+    <!--                            <i class="fa-regular fa-comment"></i>-->
+    <!--                            02 Comments-->
+    <!--                        </span>-->
+    <!--                    </p>-->
+    <!--                    <p class="bs-p-1 item-disc">We are 100+ professional software engineers with more-->
+    <!--                        than 10 years of experience in delivering superior oftware-->
+    <!--                        engineers with more than 10 years of </p>-->
 
-                        <div class="item-btn">
-                            <a href="blog-details.html" aria-label="name" class="bs-btn-1">
-                                <span class="text">
-                                    read more
-                                </span>
-                                <span class="icon">
-                                    <i class="fa-solid fa-right-long"></i>
-                                    <i class="fa-solid fa-right-long"></i>
-                                </span>
-                                <span class="shape"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <!--                    <div class="item-btn">-->
+    <!--                        <a href="blog-details.html" aria-label="name" class="bs-btn-1">-->
+    <!--                            <span class="text">-->
+    <!--                                read more-->
+    <!--                            </span>-->
+    <!--                            <span class="icon">-->
+    <!--                                <i class="fa-solid fa-right-long"></i>-->
+    <!--                                <i class="fa-solid fa-right-long"></i>-->
+    <!--                            </span>-->
+    <!--                            <span class="shape"></span>-->
+    <!--                        </a>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
 
                 <!-- single-blog -->
-                <div class="bs-blog-1-item wa-3dUp">
-                    <div class="item-img wa-fix wa-img-cover">
-                        <a href="blog-details.html" aria-label="name" data-cursor-text="View">
-                            <img src="{{ asset('assets/img/blog/b1-img-2.png') }}" alt="">
-                        </a>
-                    </div>
-                    <p class="item-date bs-p-1">
-                        <span>22</span>
-                        <span>agu</span>
-                    </p>
-                    <div class="content">
-                        <h5 class="bs-h-1 item-title">
-                            <a href="blog-details.html" aria-label="name">Real Clients Share Thoughts on Agencium</a>
-                        </h5>
-                        <p class="blog-meta bs-p-1">
-                            <span>
-                                <i class="fa-regular fa-user"></i>
-                                by nolie jona
-                            </span>
-                            <span>
-                                <i class="fa-regular fa-comment"></i>
-                                02 Comments
-                            </span>
-                        </p>
-                        <p class="bs-p-1 item-disc">Our team consists of 100+ expert software engineers, each with over a decade of experience in delivering high-quality solutions.
-                        </p>
-                        <div class="btn-wrap">
-                            <a href="blog-details.html" aria-label="name" class="bs-btn-1">
-                                <span class="text">
-                                    read more
-                                </span>
-                                <span class="icon">
-                                    <i class="fa-solid fa-right-long"></i>
-                                    <i class="fa-solid fa-right-long"></i>
-                                </span>
-                                <span class="shape"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!--            <div class="bs-blog-1-item wa-3dUp">-->
+    <!--                <div class="item-img wa-fix wa-img-cover">-->
+    <!--                    <a href="blog-details.html" aria-label="name" data-cursor-text="View">-->
+    <!--                        <img src="{{ asset('assets/img/blog/b1-img-2.png') }}" alt="">-->
+    <!--                    </a>-->
+    <!--                </div>-->
+    <!--                <p class="item-date bs-p-1">-->
+    <!--                    <span>22</span>-->
+    <!--                    <span>agu</span>-->
+    <!--                </p>-->
+    <!--                <div class="content">-->
+    <!--                    <h5 class="bs-h-1 item-title">-->
+    <!--                        <a href="blog-details.html" aria-label="name">Real Clients Share Thoughts on Agencium</a>-->
+    <!--                    </h5>-->
+    <!--                    <p class="blog-meta bs-p-1">-->
+    <!--                        <span>-->
+    <!--                            <i class="fa-regular fa-user"></i>-->
+    <!--                            by nolie jona-->
+    <!--                        </span>-->
+    <!--                        <span>-->
+    <!--                            <i class="fa-regular fa-comment"></i>-->
+    <!--                            02 Comments-->
+    <!--                        </span>-->
+    <!--                    </p>-->
+    <!--                    <p class="bs-p-1 item-disc">Our team consists of 100+ expert software engineers, each with over a decade of experience in delivering high-quality solutions.-->
+    <!--                    </p>-->
+    <!--                    <div class="btn-wrap">-->
+    <!--                        <a href="blog-details.html" aria-label="name" class="bs-btn-1">-->
+    <!--                            <span class="text">-->
+    <!--                                read more-->
+    <!--                            </span>-->
+    <!--                            <span class="icon">-->
+    <!--                                <i class="fa-solid fa-right-long"></i>-->
+    <!--                                <i class="fa-solid fa-right-long"></i>-->
+    <!--                            </span>-->
+    <!--                            <span class="shape"></span>-->
+    <!--                        </a>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
 
-            <p class="bs-p-1 bs-blog-1-all-btn text-center wa-fadeInUp">We turn your ideas to reality. We don’t stop until you’re
-                <a href="blog.html" aria-label="name">More Updates</a>
-            </p>
-        </div>
-    </section>
+    <!--        <p class="bs-p-1 bs-blog-1-all-btn text-center wa-fadeInUp">We turn your ideas to reality. We don’t stop until you’re-->
+    <!--            <a href="blog.html" aria-label="name">More Updates</a>-->
+    <!--        </p>-->
+    <!--    </div>-->
+    <!--</section>-->
     <!-- blog-end -->
 
     <!-- office-start -->
-    <section class="bs-office-1-area wa-fix">
-        <div class="container bs-container-1">
-            <div class="bs-office-1-wrap">
+    <!--<section class="bs-office-1-area wa-fix">-->
+    <!--    <div class="container bs-container-1">-->
+    <!--        <div class="bs-office-1-wrap">-->
 
-                <div class="bs-office-1-left">
+    <!--            <div class="bs-office-1-left">-->
 
                     <!-- section-title -->
-                    <div class="bs-faq-1-sec-title mb-35">
-                        <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
-                            <span class="icon">
-                                <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                            </span>
-                            we're investing SINCE 1990
-                        </h6>
-                        <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">as a national leader</h2>
-                    </div>
+    <!--                <div class="bs-faq-1-sec-title mb-35">-->
+    <!--                    <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">-->
+    <!--                        <span class="icon">-->
+    <!--                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">-->
+    <!--                        </span>-->
+    <!--                        we're investing SINCE 1990-->
+    <!--                    </h6>-->
+    <!--                    <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">as a national leader</h2>-->
+    <!--                </div>-->
 
                     <!-- card -->
-                    <div class="bs-office-1-item">
+    <!--                <div class="bs-office-1-item">-->
 
                         <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-1.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">lyon</h5>
-                            <p class="bs-p-1 disc">25,Rue Saint Jermoe 89883 Lyon . France </p>
-                            <a href="#" class="link bs-p-1">+22 (0)3 789 41 41</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
-                        </div>
+    <!--                    <div class="bs-office-1-card wa-clip-left-right">-->
+    <!--                        <div class="card-img wa-fix wa-img-cover">-->
+    <!--                            <img src="{{ asset('assets/img/office/o1-img-1.png') }}" alt="">-->
+    <!--                        </div>-->
+    <!--                        <h5 class="bs-h-1 title">lyon</h5>-->
+    <!--                        <p class="bs-p-1 disc">25,Rue Saint Jermoe 89883 Lyon . France </p>-->
+    <!--                        <a href="#" class="link bs-p-1">+22 (0)3 789 41 41</a>-->
+    <!--                        <a href="#" class="link bs-p-1">see on maps</a>-->
+    <!--                    </div>-->
 
                         <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-2.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">Culture</h5>
-                            <p class="bs-p-1 disc">81 Sierra Street Kings Mountain, NC 28086</p>
-                            <a href="#" class="link bs-p-1">+28 (0)3 978 41 97</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
-                        </div>
+    <!--                    <div class="bs-office-1-card wa-clip-left-right">-->
+    <!--                        <div class="card-img wa-fix wa-img-cover">-->
+    <!--                            <img src="{{ asset('assets/img/office/o1-img-2.png') }}" alt="">-->
+    <!--                        </div>-->
+    <!--                        <h5 class="bs-h-1 title">Culture</h5>-->
+    <!--                        <p class="bs-p-1 disc">81 Sierra Street Kings Mountain, NC 28086</p>-->
+    <!--                        <a href="#" class="link bs-p-1">+28 (0)3 978 41 97</a>-->
+    <!--                        <a href="#" class="link bs-p-1">see on maps</a>-->
+    <!--                    </div>-->
 
                         <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-3.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">Architectural </h5>
-                            <p class="bs-p-1 disc">9828 Myrtle Drive Gainesville, VA 20155</p>
-                            <a href="#" class="link bs-p-1">+22 (0)5 100 80 77</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
-                        </div>
-                    </div>
-                </div>
+    <!--                    <div class="bs-office-1-card wa-clip-left-right">-->
+    <!--                        <div class="card-img wa-fix wa-img-cover">-->
+    <!--                            <img src="{{ asset('assets/img/office/o1-img-3.png') }}" alt="">-->
+    <!--                        </div>-->
+    <!--                        <h5 class="bs-h-1 title">Architectural </h5>-->
+    <!--                        <p class="bs-p-1 disc">9828 Myrtle Drive Gainesville, VA 20155</p>-->
+    <!--                        <a href="#" class="link bs-p-1">+22 (0)5 100 80 77</a>-->
+    <!--                        <a href="#" class="link bs-p-1">see on maps</a>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
 
-                <div class="bs-office-1-bg-img wa-fix">
-                    <img class="wa-slideInUp" src="{{ asset('assets/img/office/o1-bg-img-1.png') }}" alt="">
-                </div>
+    <!--            <div class="bs-office-1-bg-img wa-fix">-->
+    <!--                <img class="wa-slideInUp" src="{{ asset('assets/img/office/o1-bg-img-1.png') }}" alt="">-->
+    <!--            </div>-->
 
-            </div>
-        </div>
-    </section>
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
     <!-- office-end -->
 
 </x-layout>
