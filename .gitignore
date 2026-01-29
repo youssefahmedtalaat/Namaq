@@ -22,3 +22,40 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+# Compressed files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Laravel specific
+/node_modules/
+/vendor/
+.env
+.env.example
+.env.testing
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cache and logs
+/storage/*.key
+/storage/logs/*
+!storage/logs/.gitkeep
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build directories
+/public/hot
+/public/storage
