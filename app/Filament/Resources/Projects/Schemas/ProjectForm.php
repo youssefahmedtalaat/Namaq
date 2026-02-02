@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Projects\Schemas;
 
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Select;
@@ -52,6 +53,17 @@ class ProjectForm
                 MarkdownEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
+                Section::make('SEO Details')
+                    ->schema([
+                        TextInput::make('meta_title')
+                            ->maxLength(255),
+                        Textarea::make('meta_description')
+                            ->rows(3),
+                        Textarea::make('meta_keywords')
+                            ->rows(2)
+                            ->helperText('Separate keywords with commas'),
+                    ])
+                    ->collapsible(),
             ]);
     }
 }

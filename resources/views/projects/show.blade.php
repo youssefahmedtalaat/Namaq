@@ -1,4 +1,4 @@
-<x-layout :has_breadcrumb="true">
+<x-layout :has_breadcrumb="true" :seo="$project">
     <!-- breadcrumb-start -->
     <section class="breadcrumb-area has-2 wa-p-relative" >
         <div class="container bs-container-1">

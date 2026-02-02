@@ -1,4 +1,17 @@
-@props(['has_breadcrumb'])
+@props(['has_breadcrumb', 'seo' => null, 'body_class' => 'bs-home-1'])
+
+@php
+    if (!$seo) {
+        $pageId = request()->route()?->getName() ?? request()->path();
+        if ($pageId === '/') $pageId = 'home';
+        $seo = \App\Models\SeoSetting::where('page_identifier', $pageId)->first();
+    }
+    
+    $metaTitle = $seo?->meta_title ?? 'Namaq';
+    $metaDescription = $seo?->meta_description ?? '';
+    $metaKeywords = $seo?->meta_keywords ?? '';
+    $ogImage = $seo?->og_image ?? ($seo instanceof \App\Models\Project ? $seo->main_image : null);
+@endphp
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -6,7 +19,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Namaq</title>
+        <title>{{ $metaTitle ?? $generalSettings?->site_title }}</title>
+        <meta name="description" content="{{ $metaDescription }}">
+        <meta name="keywords" content="{{ $metaKeywords }}">
+        <link rel="canonical" href="{{ url()->current() }}">
+        @if($ogImage)
+            <meta property="og:image" content="{{ asset('storage/' . $ogImage) }}">
+        @endif
+        <meta property="og:title" content="{{ $metaTitle }}">
+        <meta property="og:description" content="{{ $metaDescription }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -28,14 +49,25 @@
         <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/flaticon_barsi.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/flaticon_namaq.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
 
+        <script>
+            // Check if preloader has already run in this session
+            if (sessionStorage.getItem('preloaderShown')) {
+                document.write('<style>#preloader { display: none !important; } #content { display: block !important; }</style>');
+            }
+        </script>
+
         <style> 
+            :root {
+                --primary-color: {{ $generalSettings->primary_color ?? '#F16319' }};
+                --secondary-color: {{ $generalSettings->secondary_color ?? '#1a1a1a' }};
+            }
             #preloader { 
                 position: fixed; 
                 inset: 0; 
@@ -61,7 +93,7 @@
 
 
 
-    <body class="bs-home-1">
+    <body class="{{ $body_class }}">
         <!-- Preloader --> 
         <div id="preloader"> 
             <video id="introVideo" autoplay muted playsinline> 
@@ -142,10 +174,21 @@
             const preloader = document.getElementById('preloader'); 
             const content = document.getElementById('content'); 
         
-            video.onended = function () { 
-                preloader.style.display = "none"; 
-                content.style.display = "block"; 
-            }; 
+            // Check if we should skip preloader
+            if (sessionStorage.getItem('preloaderShown')) {
+                preloader.style.display = "none";
+                content.style.display = "block";
+                if (video) video.pause();
+            } else {
+                // First time visit
+                if (video) {
+                    video.onended = function () { 
+                        preloader.style.display = "none"; 
+                        content.style.display = "block"; 
+                        sessionStorage.setItem('preloaderShown', 'true');
+                    }; 
+                }
+            }
         </script>
     </body>
 

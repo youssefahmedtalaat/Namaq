@@ -21,6 +21,9 @@ class Project extends Model
         'gallery_images',
         'size_sqm',
         'description',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
     ];
 
     /**

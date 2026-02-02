@@ -34,58 +34,31 @@
                     <a href="/projects">projects</a>
                 </li>
 
-                <li class="dropdown">
-                    <a href="#">pages</a>
-                    <ul class="dropdown-menu clearfix">
-
-                        <li class="dropdown">
-                            <a href="services.html">services</a>
-                            <ul class="dropdown-menu clearfix">
-                                <li><a href="services.html">services one</a></li>
-                                <li><a href="services-2.html">services two</a></li>
-                                <li><a href="services-3.html">services three</a></li>
-                                <li><a href="services-4.html">services four</a></li>
-                                <li><a href="services-details.html">service details</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown">
-                            <a href="team.html">team</a>
-                            <ul class="dropdown-menu clearfix">
-                                <li><a href="team.html">team one</a></li>
-                                <li><a href="team-2.html">team two</a></li>
-                                <li><a href="team-3.html">team three</a></li>
-                                <li><a href="team-4.html">team four</a></li>
-                                <li><a href="team-details.html">team details</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown">
-                            <a href="career-page.html">career page</a>
-                            <ul class="dropdown-menu clearfix">
-                                <li><a href="career-page.html">career page</a></li>
-                                <li><a href="career-single.html">career single</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="price.html">price page</a></li>
-                        <li><a href="choose-us.html">choose us</a></li>
-                        <li><a href="testimonial.html">testimonial</a></li>
-                        <li><a href="work-process.html">work process</a></li>
-                        <li><a href="faqs.html">FAQs page</a></li>
-                        <li><a href="404.html">404</a></li>
-                        
-                    </ul>
-                </li>
-
                 <li>
-                    <a href="/blog">news</a>
-                    <ul class="dropdown-menu clearfix">
+                    <a href="/team">team</a>
                 </li>
 
                 <li>
                     <a href="/contact-us">Contact </a>
                 </li>
+                @auth
+                    <li>
+                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                    </li>
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                        </form>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('register') }}">Register</a>
+                    </li>
+                @endauth
             </ul>
         </nav>
 

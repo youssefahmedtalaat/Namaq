@@ -4,11 +4,28 @@
 
         <!-- logo -->
         <a href="/" aria-label="name" class="bs-header-logo-1">
-            <img src="{{ asset('assets/img/logo/logo-1.png') }}" alt="">
+            @if($generalSettings?->logo)
+                <img src="{{ asset('storage/' . $generalSettings->logo) }}" alt="{{ $generalSettings->site_title }}" style="max-height: 50px;">
+            @else
+                <img src="{{ asset('assets/img/logo/logo-1.png') }}" alt="" style="filter: brightness(0);">
+            @endif
         </a>
 
         <!-- action-link -->
         <div class="bs-header-1-action-link d-flex align-items-center ">
+
+            @auth
+                <a href="{{ url('/dashboard') }}" class="bs-h-1" style="margin-right: 20px;">Dashboard</a>
+                <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+                    @csrf
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();" class="bs-h-1" style="margin-right: 20px;">
+                        Logout
+                    </a>
+                </form>
+            @else
+                <a href="{{ route('login') }}" class="bs-h-1" style="margin-right: 20px;">Login</a>
+                <a href="{{ route('register') }}" class="bs-h-1" style="margin-right: 20px;">Register</a>
+            @endauth
 
             <!-- phone-btn -->
             <a href="tel:1697875256" aria-label="name" class="bs-h-1 bs-elm-phone">
