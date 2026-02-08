@@ -7,7 +7,7 @@
 
             <!-- logo -->
             <a href="/" aria-label="name" class="wa-offcanvas-top-logo">
-                <img src="{{ asset('assets/img/logo/logo-2.png') }}" alt="">
+                <img src="{{ asset('assets/img/logo/logo-1.png') }}" alt="" style="max-height: 50px;">
             </a>
 
             <!-- close-btn -->
@@ -23,42 +23,24 @@
         <nav class="mobile-main-navigation mb-50">
             <ul  class="navbar-nav">
                 <li>
-                    <a href="/">home</a>
+                    <a href="{{ route('home') }}">home</a>
                 </li>
 
                 <li>
-                    <a href="/about">about us</a>
+                    <a href="{{ route('about') }}">about us</a>
                 </li>
 
                 <li>
-                    <a href="/projects">projects</a>
+                    <a href="{{ route('projects.index') }}">projects</a>
                 </li>
 
                 <li>
-                    <a href="/team">team</a>
+                    <a href="{{ route('team') }}">team</a>
                 </li>
 
                 <li>
-                    <a href="/contact-us">Contact </a>
+                    <a href="{{ route('contact') }}">Contact </a>
                 </li>
-                @auth
-                    <li>
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
-                    </li>
-                    <li>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
-                        </form>
-                    </li>
-                @else
-                    <li>
-                        <a href="{{ route('login') }}">Login</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('register') }}">Register</a>
-                    </li>
-                @endauth
             </ul>
         </nav>
 

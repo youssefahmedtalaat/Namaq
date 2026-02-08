@@ -1,180 +1,118 @@
-<x-layout :has_breadcrumb="true" :seo="$project">
-    <!-- breadcrumb-start -->
-    <section class="breadcrumb-area has-2 wa-p-relative" >
-        <div class="container bs-container-1">
-            <div class="breadcrumb-wrap">
-                <a href="/projects" aria-label="name" class="breadcrumb-back-page-btn">
-                    <i class="fa-solid fa-angle-left"></i>
-                    Back to Projects Page
-                </a>
-                <h1 class="breadcrumb-title wa-split-right wa-capitalize" data-split-delay="1.1s" >
-                    {{-- The Luxurious Sky <br>
-                    Penthouse. --}}
-                    {{ $project->title }}
-                </h1>
-
-                <div class="breadcrumb-bg-shape">
-                    <img src="{{ asset('assets/img/breadcrumb/breadcrumb-shape-2.png') }}" alt="">
+<x-layout :seo="$project">
+    <!-- section begin -->
+    <section id="section-welcome" class="full-height text-light" data-bgimage="url({{ Storage::url($project->main_image) }})">
+        <div class="center-y">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="spacer-double"></div>
+                        <h2 class="style-3">{{ $project->title }}</h2>
+                        <div class="spacer-double"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- breadcrumb-end -->
+    <!-- section close -->
 
-    <!-- project-details-start -->
-    <section class="bs-project-details-area pb-100 wa-p-relative">
-        <div class="container bs-container-1">
-
-            <!-- img -->
-            <div class="bs-project-details-img wa-fix wa-img-cover">
-                {{-- <img src="{{ asset('assets/img/projects/pd-img-1.png') }}" alt=""> --}}
-                <img src="{{ Storage::url($project->main_image) }}" alt="">
-            </div>
-
-            <ul class="bs-project-details-meta">
-                <li><b>Project ID:</b>{{'#' . $project->id }}</li>
-                <li><b>Release Date:</b>{{ $project->date }}</li>
-                <li><b>Project Region:</b>{{ $project->region }}</li>
-                <li><b>Project Size:</b>{{ $project->size_sqm }} m<sup>2</sup></li>
-                <li><b>Status:</b>Completed</li>
-            </ul>                    
-
-            <div class="bs-project-details-content">
-
-                {{-- <p><span class="big-letter" >T</span>he Luxurious Sky Penthouse is a breathtaking architectural marvel that redefines luxury living. Perched high above the city, this exclusive residence offers unparalleled panoramic views through expansive floor-to-ceiling windows. Every element of the design showcases sophistication, from the bespoke interiors and premium finishes to state-of-the-art smart home technology. Residents can indulge in private amenities, including a rooftop infinity pool, a fully equipped gym, and a home theater, creating the ultimate retreat in the sky.</p>
-
-                <p>The innovative design seamlessly blends modern aesthetics with sustainable materials, ensuring a timeless yet eco-friendly living space. With private elevator access, dedicated parking, and 24/7 concierge services, privacy and convenience are paramount. Strategically located for easy access to urban landmarks, this penthouse combines the vibrancy of city life with serene exclusivity. The Luxurious Sky Penthouse is not just a home—it’s a statement of elegance and refinement.</p>
-
-                <h2>What We've Done</h2>
-
-                <p>We've developed the Modern HR Platform to revolutionize human resource management, incorporating advanced features like automated payroll, real-time analytics, and AI-driven recruitment tools. Our platform enhances efficiency and accuracy in HR tasks, supports remote and hybrid work models, and ensures robust data security. It facilitates seamless integration with other business systems and offers intuitive</p>
-
-                <ul>
-                    <li>Strategic Discovery</li>
-                    <li>Web application redesign & optimization</li>
-                    <li>Mobile application redesign & optimization</li>
-                    <li>Landing page redesign & optimization</li>
-                    <li>Product Design Sprints to explore new functionality</li>
-                </ul>
-
-                <h2>Preliminary Designs or Layouts</h2>
-
-                <p>Preliminary designs or layouts serve as the foundation for any architectural project, offering a visual representation of the space's flow and structure. These initial plans focus on the arrangement of rooms, circulation paths, and functional zones to ensure optimal use of space. They provide a clear direction for the design, allowing clients to visualize the project’s potential before finalizing details. Based on feedback, these layouts can be adjusted to better align with the client’s needs, style preferences, and practical requirements. Preliminary designs set the tone for the overall vision and are crucial in achieving a successful architectural outcome.</p>
-
-                <div class="inner-img">
-                    <img src="{{ asset('assets/img/projects/pd-img-2.png') }}" alt="">
-                </div>
-
-                <h2>Creative Process</h2>
-
-                <p>The creative process in architecture involves a blend of inspiration, exploration, and iteration to transform concepts into reality. It begins with understanding the client's needs and the project's context, followed by brainstorming ideas, sketching, and refining designs. Through collaboration and feedback, the vision evolves, integrating aesthetic, functional, and sustainable elements. This dynamic process ensures that each project is unique, innovative, and thoughtfully crafted to meet both the practical and emotional needs of its occupants.</p>
-
-                <h2>Building A Successful Client-Architecture Relationship</h2>
-
-                <p>Building a successful client-architecture relationship begins with clear communication and mutual trust. By actively listening to the client’s needs and understanding their vision, architects can create tailored solutions that align with their goals. Regular collaboration, transparency, and responsiveness throughout the design process ensure that both parties remain aligned and confident in the project’s direction. This strong partnership fosters a positive experience and results in a space that truly reflects the client’s desires and aspirations.</p>
-
-                <h2>Project Results</h2>
-
-
-                <p>Project results reflect the successful execution of a vision, blending design, functionality, and innovation. Each project is meticulously completed, meeting the client’s expectations and enhancing their space’s aesthetic and practical value. The outcome is a seamless integration of creative concepts with real-world application, ensuring long-lasting impact and satisfaction. </p> --}}
-                
-                @markdown($project->description)
-
-                <h2>Gallery</h2>
-
-                <div class="bs-project-details-content-gallery">
-                    @php
-                        $images = $project->gallery_images;
-                        $imagesInRow1 = array_slice($images, 0, 2);
-                        $imagesInRow2 = array_slice($images, 2);
-                    @endphp
-
-                    <div class="row-1">
-                        @foreach($imagesInRow1 as $image)
-                            <div class="img-elm">
-                                <img src="{{ Storage::url($image) }}" alt="">
-                            </div>
-                        @endforeach
-                    </div>
-
-                    @if (count($imagesInRow2) > 0)
-                        <div class="row-2">
-                            @foreach($imagesInRow2 as $image)
-                                <div class="img-elm">
-                                    <img src="{{ Storage::url($image) }}" alt="">
-                                </div>
-                            @endforeach
-                        </div>
-                    @endif
+    <section id="section-gallery-carousel" aria-label="section" class="no-top no-bottom text-light bg-color">
+        <div class="container-fluid">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-3 text-center">
+                    <div class="spacer-single"></div>
+                    <h3 class="mb-3">Project Gallery</h3>
+                    <div class="spacer-single"></div>
                 </div>
                 
-            </div>
-        </div>
-    </section>
-    <!-- service-details-end -->
-
-    <!-- office-start -->
-    <section class="bs-office-1-area wa-fix ">
-        <div class="container bs-container-1">
-            <div class="bs-office-1-wrap">
-
-                <div class="bs-office-1-left">
-
-                    <!-- section-title -->
-                    <div class="bs-faq-1-sec-title mb-35">
-                        <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
-                            <span class="icon">
-                                <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                            </span>
-                            we're investing SINCE 1990
-                        </h6>
-                        <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">as a national leader</h2>
-                    </div>
-
-                    <!-- card -->
-                    <div class="bs-office-1-item">
-
-                        <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-1.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">lyon</h5>
-                            <p class="bs-p-1 disc">25,Rue Saint Jermoe 89883 Lyon . France </p>
-                            <a href="#" class="link bs-p-1">+22 (0)3 789 41 41</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
+                <div class="col-md-9">
+                    <div class="owl-custom-nav menu-float" data-target="#gallery-carousel-3">
+                        <div id="gallery-carousel-3" class="owl-carousel owl-theme owl-slide">
+                            @if($project->gallery_images)
+                                @foreach($project->gallery_images as $image)
+                                    <div class="item s2">
+                                        <div class="picframe">
+                                            <a class="image-popup-no-margins" href="{{ Storage::url($image) }}">
+                                                <span class="overlay-v">
+                                                    <span class="pf_text">
+                                                        <span class="project-name"><i class="icon_plus_alt2"></i></span>
+                                                    </span>
+                                                </span>
+                                                <img src="{{ Storage::url($image) }}" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
-
-                        <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-2.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">Culture</h5>
-                            <p class="bs-p-1 disc">81 Sierra Street Kings Mountain, NC 28086</p>
-                            <a href="#" class="link bs-p-1">+28 (0)3 978 41 97</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
-                        </div>
-
-                        <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-3.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">Architectural </h5>
-                            <p class="bs-p-1 disc">9828 Myrtle Drive Gainesville, VA 20155</p>
-                            <a href="#" class="link bs-p-1">+22 (0)5 100 80 77</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
+                        <div class="owl-nav">
+                            <a class="btn-prev"></a>
+                            <a class="btn-next"></a>
                         </div>
                     </div>
                 </div>
-
-                <div class="bs-office-1-bg-img wa-fix">
-                    <img class="wa-slideInUp" src="{{ asset('assets/img/office/o1-bg-img-1.png') }}" alt="">
-                </div>
-
             </div>
         </div>
     </section>
-    <!-- office-end -->
+    
+    <section>
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-4 wow fadeInRight" data-wow-delay=".2s">
+                    <h2 class="style-2 id-color">What Client Says</h2>
+                    <h2>The design is <span class="id-color">awesome</span>, modern and minimalist! <span class="id-color">Namaq</span> is our best partner for our construction work.</h2>
+                    {{-- <img src="10_images-architect/people/1.jpg" class="img-circle mb10" alt=""><br> --}}
+                    <strong>Satisfied Client</strong>
+                </div>
+                
+                <div class="col-md-4 wow fadeInRight" data-wow-delay=".4s">
+                    <h3>Project Description</h3>
+                    <div>
+                        @markdown($project->description)
+                    </div>
+                </div>
+            
+                <div class="col-md-4 wow fadeInRight" data-wow-delay=".6s">
+                    <div class="project-details text-light" data-bgcolor="#18191B">
+
+                        <h3>Project Details</h3>
+
+                        @if($project->date)
+                        <div class="info-text">
+                            <span class="title">Date</span>
+                            <span class="val">{{ $project->date->format('F Y') }}</span>
+                        </div>
+                        @endif
+
+                        @if($project->category)
+                        <div class="info-text">
+                            <span class="title">Category</span>
+                            <span class="val">{{ $project->category }}</span>
+                        </div>
+                        @endif
+
+                        @if($project->region)
+                        <div class="info-text">
+                            <span class="title">Region</span>
+                            <span class="val">{{ $project->region }}</span>
+                        </div>
+                        @endif
+
+                        @if($project->size_sqm)
+                        <div class="info-text">
+                            <span class="title">Size</span>
+                            <span class="val">{{ $project->size_sqm }} m<sup>2</sup></span>
+                        </div>
+                        @endif
+                        
+                        {{-- 
+                        <div class="info-text">
+                            <a href="#" class="btn-custom btn-fullwidth text-light text-center">Project URL</a>
+                        </div>
+                        --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </x-layout>

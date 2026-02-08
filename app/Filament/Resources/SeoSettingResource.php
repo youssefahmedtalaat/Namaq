@@ -10,7 +10,6 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Section;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
@@ -29,18 +28,11 @@ class SeoSettingResource extends Resource
     {
         return $schema
             ->components([
-                Select::make('page_identifier')
-                    ->label('Page')
+                TextInput::make('page_identifier')
+                    ->label('Page Identifier')
                     ->required()
                     ->unique(ignoreRecord: true)
-                    ->options([
-                        'home' => 'Home',
-                        'about' => 'About Us',
-                        'contact-us' => 'Contact Us',
-                        'team' => 'Our Team',
-                        'projects.index' => 'Projects List',
-                    ])
-                    ->searchable(),
+                    ->helperText('e.g., home, about, contact'),
                 Section::make('SEO Details')
                     ->schema([
                         TextInput::make('meta_title')

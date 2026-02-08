@@ -13,12 +13,6 @@ return new class extends Migration
     {
         Schema::create('page_sections', function (Blueprint $table) {
             $table->id();
-            $table->string('key')->unique(); // e.g. home_hero
-            $table->string('title')->nullable();
-            $table->text('subtitle')->nullable();
-            $table->text('content')->nullable(); // HTML or JSON
-            $table->string('image')->nullable();
-            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

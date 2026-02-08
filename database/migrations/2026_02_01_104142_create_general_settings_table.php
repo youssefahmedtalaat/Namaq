@@ -13,11 +13,6 @@ return new class extends Migration
     {
         Schema::create('general_settings', function (Blueprint $table) {
             $table->id();
-            $table->string('site_title')->default('Namaq');
-            $table->boolean('maintenance_mode')->default(false);
-            $table->string('primary_color')->default('#d6a354');
-            $table->string('secondary_color')->default('#1a1a1a');
-            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

@@ -34,13 +34,6 @@ class Project extends Model
     protected $casts = [
         'gallery_images' => 'array',
         'description' => 'string',
+        'date' => 'date',
     ];
-
-    protected function date(): Attribute
-    {
-        return Attribute::make(
-            get: fn ($value) => $value ? \Carbon\Carbon::parse($value)->format('Y') : null,
-            set: fn ($value) => $value ? $value . '-01-01' : null,
-        );
-    }
 }

@@ -12,7 +12,10 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('projects.index', ['projects' => Project::all()]);
+        return view('projects.index', [
+            'projects' => Project::all(),
+            'categories' => Project::select('category')->distinct()->pluck('category')
+        ]);
     }
 
     /**

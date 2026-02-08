@@ -2,9 +2,6 @@
 
 namespace App\Filament\Resources\GeneralSettings\Tables;
 
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Columns\IconColumn;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -16,24 +13,15 @@ class GeneralSettingsTable
     {
         return $table
             ->columns([
-                TextColumn::make('site_title')
-                    ->searchable(),
-                ImageColumn::make('logo')
-                    ->disk('public'),
-                IconColumn::make('maintenance_mode')
-                    ->boolean(),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                //
             ])
             ->filters([
                 //
             ])
-            ->actions([
+            ->recordActions([
                 EditAction::make(),
             ])
-            ->bulkActions([
+            ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),

@@ -1,989 +1,141 @@
-<x-layout>
-    <!-- breadcrumb-start -->
-    <section class="breadcrumb-area wa-p-relative" >
-        <div class="breadcrumb-bg-img wa-fix wa-img-cover">
-            <img class="wa-parallax-img" src="{{ asset('assets/img/breadcrumb/breadcrumb-img.png') }}" alt="">
-        </div>
+<x-layout title="About Us">
+    @push('styles')
+        <link rel="stylesheet" href="{{ asset('css/bg.css') }}" type="text/css">
+    @endpush
 
-        <div class="container bs-container-1">
-            <div class="breadcrumb-wrap">
-                <h1 class="breadcrumb-title wa-split-right wa-capitalize" data-split-delay="1.1s" >About Us</h1>
-
-                <div class="breadcrumb-list " >
-                    <svg class="breadcrumb-list-shape" width="88" height="91" viewBox="0 0 88 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M75.3557 83.4825C51.6516 78.2316 30.2731 65.4227 30.8424 38.6307C29.0856 37.5878 27.3642 36.4078 25.6807 35.1082C15.8629 27.5282 7.34269 15.8295 0.970618 3.77828L0 1.94173L3.67259 0L4.64321 1.83605C10.7341 13.3558 18.8345 24.574 28.2197 31.82C29.1853 32.5658 30.1649 33.2687 31.1564 33.9242C31.7447 28.7351 34.2557 18.3221 41.4244 12.7755C53.1965 3.6676 66.5598 9.52271 70.2762 19.1546C74.5799 30.309 65.1659 39.6328 59.589 41.7844C51.0354 45.0846 42.7385 44.3218 35.01 40.8138C35.681 63.7945 54.9747 74.6677 76.0057 79.3717L77.1209 72.3207L87.9707 83.4999L74.2006 90.7853L75.3557 83.4825ZM35.1147 36.2473C42.2964 39.9314 50.0548 41.0102 58.0934 37.9089C62.3617 36.2618 69.6945 29.1868 66.4003 20.6502C63.5203 13.1858 53.0893 9.00325 43.9669 16.0613C37.698 20.9114 35.7338 30.1584 35.2637 34.5703C35.2034 35.1366 35.1536 35.696 35.1147 36.2473Z" fill="white"/>
-                    </svg>
-                        
-                    <a href="/">Home</a>
-                    <span>About us</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- breadcrumb-end -->
-
-    <!-- core-features-start -->
-    <section class="bs-core-features-1-area pt-120">
-        <div class="container bs-container-1">
-            <div class="bs-core-features-1-wrap">
-
-                <!-- single-item -->
-                <div class="bs-core-features-1-item">
-                    <div class="icon">
-                        <img src="{{ asset('assets/img/core-features/cf-icon-1.png') }}" alt="">
-                    </div>
-                    <div class="content">
-                        <h5 class="bs-h-1 item-title">
-                            <a href="#" aria-label="name">architectural building</a>
-                        </h5>
-                        <p class="bs-p-1 item-disc">Favorable orientation</p>
-                    </div>
-
-                </div>
-
-                <div class="shape">
-                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                </div>
-
-                <!-- single-item -->
-                <div class="bs-core-features-1-item">
-                    <div class="icon">
-                        <img src="{{ asset('assets/img/core-features/cf-icon-2.png') }}" alt="">
-                    </div>
-                    <div class="content">
-                        <h5 class="bs-h-1 item-title">
-                            <a href="#" aria-label="name">Development</a>
-                        </h5>
-                        <p class="bs-p-1 item-disc">Growth and progress</p>
-                    </div>
-
-                </div>
-
-                <div class="shape">
-                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                </div>
-
-                <!-- single-item -->
-                <div class="bs-core-features-1-item">
-                    <div class="icon">
-                        <img src="{{ asset('assets/img/core-features/cf-icon-3.png') }}" alt="">
-                    </div>
-                    <div class="content">
-                        <h5 class="bs-h-1 item-title">
-                            <a href="#" aria-label="name">Execution</a>
-                        </h5>
-                        <p class="bs-p-1 item-disc">Effective implementation</p>
-                    </div>
-
-                </div>
-
-                <div class="shape">
-                    <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                </div>
-
-                <!-- single-item -->
-                <div class="bs-core-features-1-item">
-                    <div class="icon">
-                        <img src="{{ asset('assets/img/core-features/cf-icon-4.png') }}" alt="">
-                    </div>
-                    <div class="content">
-                        <h5 class="bs-h-1 item-title">
-                            <a href="#" aria-label="name">Natural Light Home</a>
-                        </h5>
-                        <p class="bs-p-1 item-disc">Bright, Airy,  Tranquil</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- core-features-end -->
-
-    <!-- about-start -->
-    <section class="bs-about-1-area pt-125 pb-100">
-        <div class="container bs-container-1">
-
-            <!-- section-title -->
-            <div class="bs-about-1-sec-title mb-30">
-                <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
-                    <span class="icon">
-                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                    </span>
-                    we're investing SINCE 1990
-                </h6>
-                <h2 class="bs-sec-title-1  wa-split-right wa-capitalize" data-cursor="-opaque">Custom Interiors <br> Award Winning Interior Design</h2>
-            </div>
-
-            <!-- slider -->
-            <div class="bs-about-1-slider mb-40 wa-p-relative">
-                <div class="swiper-container wa-fix bs-a1-active">
-                    <div class="swiper-wrapper">
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-1.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-1.png') }}" alt="">
-                                </a>
-                                
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-2.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-2.png') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-3.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-3.png') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-about-1-item wa-fix ">
-                                <a href="{{ asset('assets/img/about/a1-img-4.png') }}" class="popup-img wa-img-cover">
-                                    <img src="{{ asset('assets/img/about/a1-img-4.png') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="bs-about-1-slider-drag bs-p-1">drag</div>
-
-            </div>
-
-            <!-- content -->
-            <div class="bs-about-1-content">
-                <p class="bs-p-1 disc wa-split-y wa-capitalize">
-                    Our professionals manage every phase of the project 
-                    From start to finish. <b>Save time, reduces stress & ensure</b> a 
-                    cohesive look throughout your space.
-                </p>
-                <div class="btn-wrap wa-fadeInRight">
-                    <a href="#" aria-label="name" class="bs-btn-1">
-                        <span class="text">
-                            learn more about
-                        </span>
-                        <span class="icon">
-                            <i class="fa-solid fa-right-long"></i>
-                            <i class="fa-solid fa-right-long"></i>
-                        </span>
-
-                        <span class="shape"></span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- about-end -->
-
-    <!-- counter-start -->
-    <section class="bs-core-feature-5-area mb-160">
-        <div class="container bs-container-2">
-            <div class="bs-core-feature-4-line wa-scaleXInUp"></div>
-            <div class="bs-core-feature-4-wrap has-5">
-
-                <!-- single-item -->
-                <div class="bs-core-feature-4-item wow fadeInRight" >
-                    <h4 class="bs-h-4 item-title">
-                        Projects Completed
-                    </h4>
-                    <h5 class="bs-h-4 item-counter" data-cursor="-opaque">
-                        <span class="counter wa-counter">15</span>
-                        k+
-                    </h5>
-                    <p class="bs-p-4 item-disc">Showcasing innovative architecture through completed landmark projects.</p>
-                </div>
-
-                <!-- single-item -->
-                <div class="bs-core-feature-4-item wow fadeInRight" data-wow-delay="0.2s">
-                    <h4 class="bs-h-4 item-title">
-                        Years of Experience
-                    </h4>
-                    <h5 class="bs-h-4 item-counter" data-cursor="-opaque">
-                        <span class="counter wa-counter">23</span>
-                        +
-                    </h5>
-                    <p class="bs-p-4 item-disc">Over a decade of expertise crafting innovative architectural solutions.</p>
-                </div>
-
-                <!-- single-item -->
-                <div class="bs-core-feature-4-item wow fadeInRight" data-wow-delay="0.4s">
-                    <h4 class="bs-h-4 item-title">
-                        Client Satisfaction Rate
-                    </h4>
-                    <h5 class="bs-h-4 item-counter" data-cursor="-opaque">
-                        <span class="counter wa-counter">98</span>
-                        %
-                    </h5>
-                    <p class="bs-p-4 item-disc">98% client satisfaction rate achieved through exceptional architectural services.</p>
-                </div>
-
-                <!-- single-item -->
-                <div class="bs-core-feature-4-item wow fadeInRight" data-wow-delay="0.6s">
-                    <h4 class="bs-h-4 item-title">
-                        Award Winning
-                    </h4>
-                    <h5 class="bs-h-4 item-counter" data-cursor="-opaque">
-                        <span class="counter wa-counter">21</span>
-                        +
-                    </h5>
-                    <p class="bs-p-4 item-disc">Transforming visions into award-winning architectural designs timeless elegance.</p>
-                </div>
-
-            </div>
-            <div class="bs-core-feature-4-line wa-scaleXInUp"></div>
-        </div>
-    </section>
-    <!-- counter-end -->            
-
-    <!-- video-start -->
-    <section class="bs-video-1-area wa-fix">
-        <div class="bs-video-1-content wa-p-relative">
-            <div class="bs-video-1-content-img wa-p-relative wa-fix wa-img-cover">
-                <img class="wa-parallax-img" src="{{ asset('assets/img/video/v1-img-1.png') }}" alt="">
-
-                <div class="bs-video-1-play-btn">
-                    <a href="https://www.youtube.com/watch?v=TdTudAOl37s" aria-label="name" class="bs-play-btn-3 wa-magnetic popup-video">
-                        <span class="icon wa-magnetic-btn">
-                            <i class="fa-solid fa-play"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="bs-h-1 title wa-split-down" data-cursor="-opaque">
-                luxury
-                <div class="bs-video-1-content-list">
-                    <div class="main-img wa-fix wa-img-cover">
-                        <img src="{{ asset('assets/img/video/v1-img-2.png') }}" alt="">
-                    </div>
-                    <ul class="list">
-                        <li>
-                            <b>location:</b>
-                            washington, USA
-                        </li>
-                        <li>
-                            <b>year:</b>
-                            2018 SQ.FT: 2,400 m
-                        </li>
+    <!-- subheader -->
+    <section id="subheader" data-speed="8" data-type="background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>About Us</h1>
+                    <ul class="crumb">
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li class="sep">/</li>
+                        <li>About Us</li>
                     </ul>
                 </div>
-                architectural
             </div>
         </div>
     </section>
-    <!-- video-end -->
+    <!-- subheader close -->
 
-    <!-- team-start -->
-    <section class="bs-team-1-area pt-135 pb-140 wa-fix">
-        <div class="container bs-container-1">
+    <!-- content begin -->
+    <div id="content" class="no-top no-bottom">
+        <section id="section-about-us-2" class="side-bg no-padding">
+            <div class="image-container col-md-5 pull-left" data-delay="0"></div>
 
-            <!-- section-title -->
-            <div class="bs-team-1-sec-title text-center mb-30">
-                <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
-                    <span class="icon">
-                        <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                    </span>
-                    our team
-                </h6>
-                <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">Meet Our Team</h2>
-            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-6 " data-animation="fadeInRight" data-delay="200">
+                        <div class="inner-padding">
+                            <h2>Namaq Architects</h2>
 
-            <!-- slider -->
-            <div class="bs-team-1-slider wa-p-relative">
-                <div class="swiper-container wa-fix bs-team1-active">
-                    <div class="swiper-wrapper">
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-team-1-item">
-                                <div class="item-img wa-fix wa-img-cover">
-                                    <img src="{{ asset('assets/img/team/t1-img-1.png') }}" alt="">
-                                </div>
-                                <div class="content-wrap">
-                                    <div class="left">
-                                        <h5 class="bs-h-1 name">
-                                            <a href="#" aria-label="name">marox woller</a>
-                                        </h5>
-                                        <p class="bs-p-1 bio">manager IT support</p>
-                                    </div>
-                                    <div class="social-link">
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-facebook"></i>
-                                        </a>
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <p class="intro">Architecture Design, Visualization, Supervision & Execution.</p>
                         </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-team-1-item">
-                                <div class="item-img wa-fix wa-img-cover">
-                                    <img src="{{ asset('assets/img/team/t1-img-2.png') }}" alt="">
-                                </div>
-                                <div class="content-wrap">
-                                    <div class="left">
-                                        <h5 class="bs-h-1 name">
-                                            <a href="#" aria-label="name">Natalie Lin</a>
-                                        </h5>
-                                        <p class="bs-p-1 bio">IT support</p>
-                                    </div>
-                                    <div class="social-link">
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-facebook"></i>
-                                        </a>
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-team-1-item">
-                                <div class="item-img wa-fix wa-img-cover">
-                                    <img src="{{ asset('assets/img/team/t1-img-3.png') }}" alt="">
-                                </div>
-                                <div class="content-wrap">
-                                    <div class="left">
-                                        <h5 class="bs-h-1 name">
-                                            <a href="#" aria-label="name">Ryann Wade</a>
-                                        </h5>
-                                        <p class="bs-p-1 bio">IT manager</p>
-                                    </div>
-                                    <div class="social-link">
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-facebook"></i>
-                                        </a>
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-team-1-item">
-                                <div class="item-img wa-fix wa-img-cover">
-                                    <img src="{{ asset('assets/img/team/t1-img-4.png') }}" alt="">
-                                </div>
-                                <div class="content-wrap">
-                                    <div class="left">
-                                        <h5 class="bs-h-1 name">
-                                            <a href="#" aria-label="name">Riley Wang</a>
-                                        </h5>
-                                        <p class="bs-p-1 bio">marketing expert</p>
-                                    </div>
-                                    <div class="social-link">
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-facebook"></i>
-                                        </a>
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-team-1-item">
-                                <div class="item-img wa-fix wa-img-cover">
-                                    <img src="{{ asset('assets/img/team/t1-img-5.png') }}" alt="">
-                                </div>
-                                <div class="content-wrap">
-                                    <div class="left">
-                                        <h5 class="bs-h-1 name">
-                                            <a href="#" aria-label="name">Kara McGee</a>
-                                        </h5>
-                                        <p class="bs-p-1 bio">engineer</p>
-                                    </div>
-                                    <div class="social-link">
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-facebook"></i>
-                                        </a>
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- single-slide -->
-                        <div class="swiper-slide">
-                            <div class="bs-team-1-item">
-                                <div class="item-img wa-fix wa-img-cover">
-                                    <img src="{{ asset('assets/img/team/t1-img-6.png') }}" alt="">
-                                </div>
-                                <div class="content-wrap">
-                                    <div class="left">
-                                        <h5 class="bs-h-1 name">
-                                            <a href="#" aria-label="name">Siena Zamora</a>
-                                        </h5>
-                                        <p class="bs-p-1 bio">support manager</p>
-                                    </div>
-                                    <div class="social-link">
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-facebook"></i>
-                                        </a>
-                                        <a class="link" href="#" aria-label="name">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                </div>
-
-                <!-- slider-btn -->
-                <div class="bs-team-1-slider-btn">
-                    <div class="bs-slider-btn-1 lw-team1-prev wa-magnetic-btn">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </div>
-                    <div class="bs-slider-btn-1 lw-team1-next wa-magnetic-btn">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-    </section>
-    <!-- team-end -->
-
-    <!-- award-start -->
-    <section class="bs-award-5-area pt-135 wa-fix">
-        <div class="container bs-container-2">
-            <div class="bs-award-5-wrap">
-
-                <!-- left-content -->
-                <div class="bs-award-5-content">
-
-                    <!-- section-title -->
-                    <div class="bs-award-5-sec-title mb-50">
-                        <h6 class="bs-subtitle-5 wa-capitalize">
-                            <span>08</span>
-                            <span class="wa-split-right ">award</span>
-                        </h6>
-                        <h2 class="bs-sec-title-4 wa-split-right wa-capitalize" data-cursor="-opaque">Showcasing Our Prestigious Achieved Awards</h2>
-                    </div>
-
-                    <!-- img -->
-                    <div class="bs-award-5-img wa-fix wa-img-cover wa-clip-top-bottom" data-cursor="-opaque" data-split-duration="1.5s">
-                        <img src="{{ asset('assets/img/award/a5-img-1.png') }}" alt="">
-                    </div>
-
-                </div>
-
-                <!-- right-list -->
-                <div class="bs-award-5-item">
-
-                    <!-- single-item -->
-                    <a href="#" class="bs-award-5-item-single wa-fadeInUp">
-                        <h3 class="bs-h-4 year">2010</h3>
-                        <h4 class="bs-h-4 title">World Architecture Festival</h4>
-                        <span class="icon">
-                            <i class="flaticon-next-1 flaticon"></i>
-                        </span>
-                        <span class="item-img cursor-follow">
-                            <img src="{{ asset('assets/img/award/a5-item-img-1.png') }}" alt="">
-                        </span>
-                    </a>
-
-                    <!-- single-item -->
-                    <a href="#" class="bs-award-5-item-single wa-fadeInUp">
-                        <h3 class="bs-h-4 year">2012</h3>
-                        <h4 class="bs-h-4 title">International Architecture Awards</h4>
-                        <span class="icon">
-                            <i class="flaticon-next-1 flaticon"></i>
-                        </span>
-                        <span class="item-img cursor-follow">
-                            <img src="{{ asset('assets/img/award/a5-item-img-2.png') }}" alt="">
-                        </span>
-                    </a>
-
-                    <!-- single-item -->
-                    <a href="#" class="bs-award-5-item-single wa-fadeInUp">
-                        <h3 class="bs-h-4 year">2016</h3>
-                        <h4 class="bs-h-4 title">Best in Modern Architecture</h4>
-                        <span class="icon">
-                            <i class="flaticon-next-1 flaticon"></i>
-                        </span>
-                        <span class="item-img cursor-follow">
-                            <img src="{{ asset('assets/img/award/a5-item-img-3.png') }}" alt="">
-                        </span>
-                    </a>
-
-                    <!-- single-item -->
-                    <a href="#" class="bs-award-5-item-single wa-fadeInUp">
-                        <h3 class="bs-h-4 year">2019</h3>
-                        <h4 class="bs-h-4 title">Leading the Way in Design</h4>
-                        <span class="icon">
-                            <i class="flaticon-next-1 flaticon"></i>
-                        </span>
-                        <span class="item-img cursor-follow">
-                            <img src="{{ asset('assets/img/award/a5-item-img-4.png') }}" alt="">
-                        </span>
-                    </a>
-
-                    <!-- single-item -->
-                    <a href="#" class="bs-award-5-item-single wa-fadeInUp">
-                        <h3 class="bs-h-4 year">2022</h3>
-                        <h4 class="bs-h-4 title">Outstanding Architectural Innovations</h4>
-                        <span class="icon">
-                            <i class="flaticon-next-1 flaticon"></i>
-                        </span>
-                        <span class="item-img cursor-follow">
-                            <img src="{{ asset('assets/img/award/a5-item-img-5.png') }}" alt="">
-                        </span>
-                    </a>
-
-                    <!-- single-item -->
-                    <a href="#" class="bs-award-5-item-single wa-fadeInUp">
-                        <h3 class="bs-h-4 year">2024</h3>
-                        <h4 class="bs-h-4 title">Architectural Achievements in Focus</h4>
-                        <span class="icon">
-                            <i class="flaticon-next-1 flaticon"></i>
-                        </span>
-                        <span class="item-img cursor-follow">
-                            <img src="{{ asset('assets/img/award/a5-item-img-1.png') }}" alt="">
-                        </span>
-                    </a>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-    <!-- award-end -->
-    
-    <!-- work-start -->
-    <section class="bs-work-5-area wa-bg-default pt-135 pb-170" data-background="{{ asset('assets/img/work/w5-bg-img.png') }}">
-        <div class="container bs-container-2">
-
-            <!-- section-title -->
-            <div class="bs-work-5-sec-title mb-90">
-                <h6 class="bs-subtitle-5 wa-capitalize">
-                    <span>05</span>
-                    <span class="wa-split-right ">work process</span>
-                </h6>
-                <h2 class="bs-sec-title-4 wa-split-right wa-capitalize" data-cursor="-opaque">Streamlined architecture process for exceptional results.</h2>
-            </div>
-
-            <!-- cards -->
-            <div class="bs-work-5-wrap">
-
-                <!-- single-card -->
-                <div class="bs-work-5-card has-ani-up">
-                    <div class="bg-img wa-img-cover wa-fix">
-                        <img src="{{ asset('assets/img/work/w5-img-1.png') }}" alt="">
-                    </div>
-                    <h4 class="bs-h-1 title">Initial Consultation</h4>
-                    <p class="bs-p-4 disc"> We begin by understanding your vision, goals, and needs, followed brainstor.</p>
-                    <h5 class="bs-h-1 number">01</h5>
-                </div>
-
-                <!-- single-card -->
-                <div class="bs-work-5-card has-ani-down">
-                    <div class="bg-img wa-img-cover wa-fix">
-                        <img src="{{ asset('assets/img/work/w5-img-2.png') }}" alt="">
-                    </div>
-                    <h4 class="bs-h-1 title">Design & Planning</h4>
-                    <p class="bs-p-4 disc"> Our team creates detailed designs that reflect your requirements.</p>
-                    <h5 class="bs-h-1 number">02</h5>
-                </div>
-
-                <!-- single-card -->
-                <div class="bs-work-5-card has-ani-up">
-                    <div class="bg-img wa-img-cover wa-fix">
-                        <img src="{{ asset('assets/img/work/w5-img-3.png') }}" alt="">
-                    </div>
-                    <h4 class="bs-h-1 title">Implementation</h4>
-                    <p class="bs-p-4 disc"> With carefully selected contractors, we manage every phase.</p>
-                    <h5 class="bs-h-1 number">03</h5>
-                </div>
-
-                <!-- single-card -->
-                <div class="bs-work-5-card has-ani-down">
-                    <div class="bg-img wa-img-cover wa-fix">
-                        <img src="{{ asset('assets/img/work/w5-img-4.png') }}" alt="">
-                    </div>
-                    <h4 class="bs-h-1 title">Project Handover</h4>
-                    <p class="bs-p-4 disc"> Upon completion, we conduct a thorough review, making sure all details.</p>
-                    <h5 class="bs-h-1 number">04</h5>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- work-end -->
+        </section>
 
-    <!-- choose-start -->
-    <section class="bs-choose-4-area wa-bg-default wa-fix pb-120" data-background="{{ asset('assets/img/choose/ch4-bg-img-1.png') }}">
-        <div class="container bs-container-2">
-            <div class="bs-choose-4-wrap">
-
-                <div class="bs-choose-4-content-height">
-                    <!-- left-content -->
-                    <div class="bs-choose-4-content-pin">
-                        <div class="bs-choose-4-content">
-
-                            <h5 class="bs-subtitle-4 bs-choose-4-subtitle">
-                                <span class="text">Why choose us</span>
-                                <span class="icon">
-                                    <img src="{{ asset('assets/img/illus/subtitle-4-icon-2.svg') }}" alt="">
-                                </span>
-                            </h5>
-
-                            <h2 class="bs-sec-title-4 title wa-split-right wa-capitalize" data-cursor="-opaque">Trusted Expert in Architectural Design and Innovation.</h2>
-
-                            <p class="bs-p-4 disc wa-fadeInUp">A trusted expert in architectural design and innovation, our team member brings a wealth of knowledge and creativity to every project. Their commitment to excellence.</p>
-
-                            <div class="bs-choose-4-progress">
-
-                                <!-- single-item -->
-                                <div class="bs-choose-4-progress-item">
-                                    <h5 class="bs-p-1 progress-title" style="width: 84%;">
-                                        <span >renovation</span>
-                                        <span class="counter">84</span>%
-                                    </h5>
-                                    <div class="progress-line">
-                                        <div class="progress-line-fill wa-progress" style="width: 84%;"></div>
-                                    </div>
-                                </div>
-
-                                <!-- single-item -->
-                                <div class="bs-choose-4-progress-item">
-                                    <h5 class="bs-p-1 progress-title" style="width: 72%;">
-                                        <span >architecture</span>
-                                        <span class="counter">72</span>%
-                                    </h5>
-                                    <div class="progress-line">
-                                        <div class="progress-line-fill wa-progress" style="width: 72%;"></div>
-                                    </div>
-                                </div>
-
-                                <!-- single-item -->
-                                <div class="bs-choose-4-progress-item">
-                                    <h5 class="bs-p-1 progress-title" style="width: 96%;">
-                                        <span >interior</span>
-                                        <span class="counter">96</span>%
-                                    </h5>
-                                    <div class="progress-line">
-                                        <div class="progress-line-fill wa-progress" style="width: 96%;"></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+        <section id="section-mission-vision">
+            <div class="container">
+                <div class="row align-items-center" style="margin-bottom: 60px;">
+                    <div class="col-md-4">
+                        <h2 class="style-1">OUR STORY</h2>
+                    </div>
+                    <div class="col-md-8">
+                        <p>NAMAQ Design was born from a passion for timeless aesthetics and functional innovation. What began as a creative vision has grown into a multidisciplinary design studio that transforms spaces into stories merging form, material, and emotion. We believe every space deserves character, and every client deserves a personalized journey.</p>
                     </div>
                 </div>
-    
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr style="border-top: 1px solid #ddd; margin: 30px 0;">
+                    </div>
+                </div>
 
-
-
-                <!-- right-play-btn -->
-                <div class="bs-choose-4-right d-flex justify-content-center align-items-center">
-
-                    <a href="https://www.youtube.com/watch?v=TdTudAOl37s" aria-label="name" class="bs-play-btn-4 wa-magnetic popup-video">
-                        <span class="icon wa-magnetic-btn">
-                            <i class="flaticon-play flaticon"></i>
-                        </span>
-                    </a>
-
+                <div class="row align-items-center" style="margin-top: 30px;">
+                    <div class="col-md-4">
+                        <h2 class="style-1">OUR MISSION</h2>
+                    </div>
+                    <div class="col-md-8">
+                        <p>At NAMAQ, our mission is to transform ideas into personalized, timeless spaces. We combine creative design with professional execution to deliver interiors that blend beauty, practicality, and character. We are committed to understanding our clients' needs and exceeding their expectations—every detail, every time.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="bs-choose-4-feature">
-
-                <!-- single-feature -->
-                <div class="item-margin">
-                    <div class="bs-choose-4-feature-single">
-                        <div class="icon">
-                            <i class="flaticon-minimalist flaticon"></i>
-                        </div>
-                        <h4 class="bs-h-4 title">
-                            <a href="#" aria-label="name">visionary design</a>
-                        </h4>
-                        <p class="bs-p-4 disc">Our team is not just about blueprints; we're dream weavers. We bring your visions to life, crafting spaces that inspire and stand.</p>
+        <section id="section-testimonial" class="text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
+                        <h1>Customer Says</h1>
+                        <div class="separator"><span><i class="fa fa-circle"></i></span></div>
+                        <div class="spacer-single"></div>
                     </div>
                 </div>
+                <div id="testimonial-carousel" class="owl-carousel owl-theme de_carousel wow fadeInUp" data-wow-delay=".3s">
 
-                <!-- single-feature -->
-                <div class="item-margin">
-                    <div class="bs-choose-4-feature-single">
-                        <div class="icon">
-                            <i class="flaticon-blueprint flaticon"></i>
-                        </div>
-                        <h4 class="bs-h-4 title">
-                            <a href="#" aria-label="name">Unyielding Excellence</a>
-                        </h4>
-                        <p class="bs-p-4 disc">Excellence is our cornerstone. We approach every project with an unwavering commitment to quality, setting the highest.</p>
-                    </div>
-                </div>
-
-                <!-- single-feature -->
-                <div class="item-margin">
-                    <div class="bs-choose-4-feature-single">
-                        <div class="icon">
-                            <i class="flaticon-property-insurance flaticon"></i>
-                        </div>
-                        <h4 class="bs-h-4 title">
-                            <a href="#" aria-label="name">Seamless Functionality</a>
-                        </h4>
-                        <p class="bs-p-4 disc">We understand that great design should not only inspire but also function seamlessly. Every space we create is designed.</p>
-                    </div>
-                </div>
-
-                <!-- single-feature -->
-                <div class="item-margin">
-                    <div class="bs-choose-4-feature-single">
-                        <div class="icon">
-                            <i class="flaticon-goodwill-1 flaticon"></i>
-                        </div>
-                        <h4 class="bs-h-4 title">
-                            <a href="#" aria-label="name">Time-Tested Trust</a>
-                        </h4>
-                        <p class="bs-p-4 disc">With a track record of success and a portfolio of satisfied clients, Namaq has earned trust through years of delivering on our promises.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- choose-end -->
-
-    <!-- testimonial-start -->
-    <section class="bs-testimonial-1-area pt-135 pb-90">
-        <div class="container bs-container-1">
-            <div class="bs-testimonial-1-wrap">
-
-                <!-- left-slider -->
-                <div class="bs-testimonial-1-slider wa-fix">
-                    <div class="swiper-container bs-t1-active">
-                        <div class="swiper-wrapper">
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-testimonial-1-item">
-                                    <div class="bs-testimonial-1-item-author">
-                                        <div class="main-img wa-fix wa-img-cover">
-                                            <img src="{{ asset('assets/img/testimonial/t1-author-1.png') }}" alt="">
-                                        </div>
-                                        <h5 class="name bs-h-1">daniel smith</h5>
-                                        <p class="bio bs-p-1">
-                                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                                            chef executive
-                                        </p>
-                                    </div>
-                                    <div class="item-img wa-fix wa-img-cover" data-cursor="-opaque">
-                                        <img src="{{ asset('assets/img/testimonial/t1-img-1.png') }}" alt="">
-                                    </div>
+                    <div class="item">
+                        <div class="de_testi">
+                            <blockquote>
+                                <p>I'm always impressed with the services. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                <div class="de_testi_by">
+                                    John, Customer
                                 </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-testimonial-1-item">
-                                    <div class="bs-testimonial-1-item-author">
-                                        <div class="main-img wa-fix wa-img-cover">
-                                            <img src="{{ asset('assets/img/testimonial/t1-author-2.png') }}" alt="">
-                                        </div>
-                                        <h5 class="name bs-h-1">jhenko danial</h5>
-                                        <p class="bio bs-p-1">
-                                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                                            marketing manager
-                                        </p>
-                                    </div>
-                                    <div class="item-img wa-fix wa-img-cover" data-cursor="-opaque">
-                                        <img src="{{ asset('assets/img/testimonial/t1-img-2.png') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single-item -->
-                            <div class="swiper-slide">
-                                <div class="bs-testimonial-1-item">
-                                    <div class="bs-testimonial-1-item-author">
-                                        <div class="main-img wa-fix wa-img-cover">
-                                            <img src="{{ asset('assets/img/testimonial/t1-author-1.png') }}" alt="">
-                                        </div>
-                                        <h5 class="name bs-h-1">daniel smith</h5>
-                                        <p class="bio bs-p-1">
-                                            <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                                            chef executive
-                                        </p>
-                                    </div>
-                                    <div class="item-img wa-fix wa-img-cover" data-cursor="-opaque">
-                                        <img src="{{ asset('assets/img/testimonial/t1-img-1.png') }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                            </blockquote>
 
                         </div>
                     </div>
-                </div>
 
-                <!-- right-content -->
-                <div class="bs-testimonial-1-content wa-fix">
-
-                    <!-- rating -->
-                    <div class="bs-testimonial-1-rating wa-fix mb-60">
-                        <div class="left">
-                            <h5 class="bs-h-1 rating-number" data-cursor="-opaque">
-                                4,8 <span>/5,0</span>
-                            </h5>
-                            <div class="bs-star-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star-half-stroke"></i>
-                            </div>
-                        </div>
-                        <p class="disc bs-p-1">
-                            <img src="{{ asset('assets/img/testimonial/t1-star-shape.png') }}" alt="">
-                            Our professionals manage every 
-                            phase of the project From start to 
-                            finish. Save time, reduces
-                        </p>
-                    </div>
-
-                    <div class="bs-testimonial-1-slider-2 mb-70">
-                        <div class="swiper-container bs-t1-comment-active">
-                            <div class="swiper-wrapper">
-
-                                <!-- single-slider -->
-                                <div class="swiper-slide">
-                                    <p class="bs-p-1 bs-testimonial-1-item-comment" data-cursor="-opaque">
-                                        Our professionals manage every 
-                                        <i>phase of the project</i> From start to 
-                                        finish. Save time, reduces stress 
-                                        & ensure a <i>cohesive look throughout</i> 
-                                        your space.
-                                    </p>
+                    <div class="item">
+                        <div class="de_testi">
+                            <blockquote>
+                                <p>I have very much enjoyed with your services. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                <div class="de_testi_by">
+                                    Michael, Customer
                                 </div>
-
-                                <!-- single-slider -->
-                                <div class="swiper-slide">
-                                    <p class="bs-p-1 bs-testimonial-1-item-comment" data-cursor="-opaque">
-                                        Our professionals manage every 
-                                        <i>phase of the project</i> From start to 
-                                        finish. Save time, reduces stress 
-                                        & ensure a <i>cohesive look throughout</i> 
-                                        your space.
-                                    </p>
-                                </div>
-
-                                <!-- single-slider -->
-                                <div class="swiper-slide">
-                                    <p class="bs-p-1 bs-testimonial-1-item-comment" data-cursor="-opaque">
-                                        Our professionals manage every 
-                                        <i>phase of the project</i> From start to 
-                                        finish. Save time, reduces stress 
-                                        & ensure a <i>cohesive look throughout</i> 
-                                        your space.
-                                    </p>
-                                </div>
-
-                            </div>
+                            </blockquote>
                         </div>
                     </div>
 
-                    <div class="bs-t1-pagi bs-pagination-1"></div>
+                    <div class="item">
+                        <div class="de_testi">
+                            <blockquote>
+                                <p>I totally recommend your services. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                <div class="de_testi_by">
+                                    Patrick, Customer
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="de_testi">
+                            <blockquote>
+                                <p>I have very much enjoyed with your services. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                                <div class="de_testi_by">
+                                    James, Customer
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- testimonial-end -->
+        </section>
 
-    <!-- office-start -->
-    <section class="bs-office-1-area wa-fix">
-        <div class="container bs-container-1">
-            <div class="bs-office-1-wrap">
-
-                <div class="bs-office-1-left">
-
-                    <!-- section-title -->
-                    <div class="bs-faq-1-sec-title mb-35">
-                        <h6 class="bs-subtitle-1 wa-split-clr wa-capitalize">
-                            <span class="icon">
-                                <img src="{{ asset('assets/img/illus/star-shape.png') }}" alt="">
-                            </span>
-                            we're investing SINCE 1990
-                        </h6>
-                        <h2 class="bs-sec-title-1 wa-split-right wa-capitalize" data-cursor="-opaque">as a national leader</h2>
-                    </div>
-
-                    <!-- card -->
-                    <div class="bs-office-1-item">
-
-                        <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-1.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">lyon</h5>
-                            <p class="bs-p-1 disc">25,Rue Saint Jermoe 89883 Lyon . France </p>
-                            <a href="#" class="link bs-p-1">+22 (0)3 789 41 41</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
-                        </div>
-
-                        <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-2.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">Culture</h5>
-                            <p class="bs-p-1 disc">81 Sierra Street Kings Mountain, NC 28086</p>
-                            <a href="#" class="link bs-p-1">+28 (0)3 978 41 97</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
-                        </div>
-
-                        <!-- single-card -->
-                        <div class="bs-office-1-card wa-clip-left-right">
-                            <div class="card-img wa-fix wa-img-cover">
-                                <img src="{{ asset('assets/img/office/o1-img-3.png') }}" alt="">
-                            </div>
-                            <h5 class="bs-h-1 title">Architectural </h5>
-                            <p class="bs-p-1 disc">9828 Myrtle Drive Gainesville, VA 20155</p>
-                            <a href="#" class="link bs-p-1">+22 (0)5 100 80 77</a>
-                            <a href="#" class="link bs-p-1">see on maps</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bs-office-1-bg-img wa-fix">
-                    <img class="wa-slideInUp" src="{{ asset('assets/img/office/o1-bg-img-1.png') }}" alt="">
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- office-end -->
+        <section id="view-all-projects" class="call-to-action bg-color dark text-center" data-speed="5" data-type="background" aria-label="view-all-projects">
+            <a href="{{ route('contact') }}" class="btn btn-line black btn-big">Talk With Us</a>
+        </section>
+    </div>
 </x-layout>

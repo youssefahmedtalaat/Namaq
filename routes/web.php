@@ -1,39 +1,28 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TeamMemberController;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', ['projects' => Project::all()]);
+    return view('home', [
+        'projects' => Project::all(),
+        'categories' => Project::select('category')->distinct()->pluck('category')
+    ]);
 })->name('home');
+
+Route::view('/about', 'about')->name('about');
+
+Route::get('/team', [TeamMemberController::class, 'index'])->name('team');
+Route::redirect('/team/profile-template', '/team/1');
+Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('team.show');
+Route::view('/contact', 'contact')->name('contact');
 
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
 
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-Route::get('/contact-us', function () {
-    return view('contact-us');
-})->name('contact-us');
-
-Route::get('/team', function () {
-    return view('team');
-})->name('team');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
 // Route::get('/artisan/{command}', function ($command) {
 //     Artisan::call($command);
@@ -41,4 +30,3 @@ Route::middleware('auth')->group(function () {
 // });
 
 require __DIR__.'/debug_config.php';
-require __DIR__.'/auth.php';

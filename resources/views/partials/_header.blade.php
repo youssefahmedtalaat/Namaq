@@ -1,54 +1,52 @@
-<!-- header-start -->
-<header class="bs-header-1-area {{ $has_breadcrumb? 'has-breadcrumb-2' : '' }}">
-    <div class="bs-header-1-row d-flex align-items-center justify-content-between">
+        <header class="transparent">
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="column">Working Hours Monday - Friday <span class="id-color"><strong>08:00-16:00</strong></span></div>
+                            <div class="column">Toll Free <span class="id-color"><strong>1800.899.900</strong></span></div>
+                            <!-- social icons -->
+                            <div class="column social">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                                <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                            </div>
+                            <!-- social icons close -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- logo -->
-        <a href="/" aria-label="name" class="bs-header-logo-1">
-            @if($generalSettings?->logo)
-                <img src="{{ asset('storage/' . $generalSettings->logo) }}" alt="{{ $generalSettings->site_title }}" style="max-height: 50px;">
-            @else
-                <img src="{{ asset('assets/img/logo/logo-1.png') }}" alt="" style="filter: brightness(0);">
-            @endif
-        </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <a href="{{ route('home') }}">
+                                <img class="logo" src="{{ asset('assets/img/logo/logo-1.png') }}" alt="" style="max-height: 50px;">
+                            </a>
+                        </div>
+                        <!-- logo close -->
 
-        <!-- action-link -->
-        <div class="bs-header-1-action-link d-flex align-items-center ">
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
 
-            @auth
-                <a href="{{ url('/dashboard') }}" class="bs-h-1" style="margin-right: 20px;">Dashboard</a>
-                <form method="POST" action="{{ route('logout') }}" style="display: inline;">
-                    @csrf
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();" class="bs-h-1" style="margin-right: 20px;">
-                        Logout
-                    </a>
-                </form>
-            @else
-                <a href="{{ route('login') }}" class="bs-h-1" style="margin-right: 20px;">Login</a>
-                <a href="{{ route('register') }}" class="bs-h-1" style="margin-right: 20px;">Register</a>
-            @endauth
-
-            <!-- phone-btn -->
-            <a href="tel:1697875256" aria-label="name" class="bs-h-1 bs-elm-phone">
-                <i class="fa-solid fa-phone"></i>
-                Call Us: (+88) 169 787 5256
-            </a>
-
-            <!-- pr-btn -->
-            <a href="/contact-us" aria-label="name" class="bs-btn-1 header-btn">
-                <span class="text">
-                    contact us
-                </span>
-                <span class="shape"></span>
-            </a>
-            
-            <!-- offcanvas-btn -->
-            <button type="button" aria-label="name" class="bs-offcanvas-btn-1 btn-span offcanvas_toggle">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="shape"></span>
-            </button>
-
-        </div>
-    </div>
-</header>
-<!-- header-end -->
+                        <!-- mainmenu begin -->
+                        <nav class="md-flex">
+                            <ul id="mainmenu">
+                                <li><a href="{{ route('home') }}">Home<span></span></a></li>
+                                <li><a href="{{ route('projects.index') }}">Projects</a></li>
+                                <li><a href="{{ route('team') }}">Our Team</a></li>
+                                <li><a href="{{ route('about') }}">About Us</a></li>
+                                <li><a href="{{ route('contact') }}">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <!-- mainmenu close -->
+                    </div>
+                </div>
+            </div>
+        </header>

@@ -1,0 +1,1 @@
+<img src="{{ asset('assets/img/logo/admin-logo.png') }}" alt="Namaq" style="height: 2rem; filter: brightness(0);">

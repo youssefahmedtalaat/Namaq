@@ -22,10 +22,8 @@ class ProjectForm
                 TextInput::make('region')
                     ->label('Location')
                     ->required(),
-                Select::make('date')
-                    ->label('Year')
-                    ->options(array_combine(range(date('Y'), 1950), range(date('Y'), 1950)))
-                    ->searchable()
+                DatePicker::make('date')
+                    ->label('Completion Date')
                     ->required(),
                 Select::make('category')
                     ->options([
@@ -47,6 +45,7 @@ class ProjectForm
                 FileUpload::make('gallery_images')
                     ->image()
                     ->multiple()
+                    ->reorderable()
                     ->required()
                 ->disk('public')
                     ->columnSpanFull(),
@@ -54,14 +53,24 @@ class ProjectForm
                     ->required()
                     ->columnSpanFull(),
                 Section::make('SEO Details')
+                    ->description('Optimize your project for search engines like Google.')
                     ->schema([
                         TextInput::make('meta_title')
-                            ->maxLength(255),
+                            ->label('Meta Title')
+                            ->maxLength(60)
+                            ->placeholder('e.g. Modern Villa Design in Khobar - Namaq')
+                            ->helperText('Ideal length: 50-60 characters.'),
                         Textarea::make('meta_description')
-                            ->rows(3),
+                            ->label('Meta Description')
+                            ->maxLength(160)
+                            ->rows(3)
+                            ->placeholder('e.g. Explore our latest modern villa project in Khobar, featuring minimalist design and sustainable materials.')
+                            ->helperText('Ideal length: 150-160 characters.'),
                         Textarea::make('meta_keywords')
+                            ->label('Keywords')
                             ->rows(2)
-                            ->helperText('Separate keywords with commas'),
+                            ->placeholder('interior design, khobar, villa, modern')
+                            ->helperText('Separate keywords with commas. Example: architecture, design, saudi arabia'),
                     ])
                     ->collapsible(),
             ]);

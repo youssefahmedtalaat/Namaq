@@ -22,10 +22,5 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@namaq.com',
             'password' => bcrypt('nexus_Namaq_2025@26000')
         ]);
-
-        $this->call([
-            PageSectionSeeder::class,
-            SeoSettingSeeder::class,
-        ]);
     }
 }
