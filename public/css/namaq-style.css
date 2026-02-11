@@ -12333,3 +12333,16 @@ ul#slide-list{
 	    padding: 5px;
 	}
 	}
+/* Mobile Fix for H2 Style 3 - Safari Force */
+@media only screen and (max-width: 767px) {
+    h2.style-3 {
+        text-align: center !important;
+        font-size: 22px !important;
+        line-height: 1.3em !important;
+        letter-spacing: 2px !important;
+        width: 100% !important;
+        transform: none !important;
+        -webkit-text-size-adjust: 100% !important;
+    }
+}
+

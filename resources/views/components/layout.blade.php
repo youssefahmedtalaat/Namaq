@@ -52,7 +52,7 @@
     ================================================== -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" id="bootstrap" />
     <link href="{{ asset('css/plugins.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/style.css?v=2.1') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/namaq-style.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/color.css') }}" rel="stylesheet" type="text/css">
 
     <!-- color scheme -->
