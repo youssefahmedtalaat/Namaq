@@ -52,6 +52,14 @@ class ProjectForm
                 MarkdownEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
+                FileUpload::make('pdf_file')
+                    ->label('Project Layout (PDF)')
+                    ->acceptedFileTypes(['application/pdf'])
+                    ->directory('project-layouts')
+                    ->downloadable()
+                    ->openable()
+                    ->disk('public')
+                    ->columnSpanFull(),
                 Section::make('SEO Details')
                     ->description('Optimize your project for search engines like Google.')
                     ->schema([

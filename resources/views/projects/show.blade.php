@@ -104,6 +104,15 @@
                             <span class="val">{{ $project->size_sqm }} m<sup>2</sup></span>
                         </div>
                         @endif
+
+                        @if($project->pdf_file)
+                        <div class="info-text">
+                            <span class="title">Project Layout</span>
+                            <span class="val">
+                                <a href="{{ Storage::url($project->pdf_file) }}" target="_blank" style="color: #fff; text-decoration: underline;">View PDF</a>
+                            </span>
+                        </div>
+                        @endif
                         
                         {{-- 
                         <div class="info-text">
