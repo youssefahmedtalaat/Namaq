@@ -19,7 +19,7 @@ class TeamMemberSeeder extends Seeder
             [
                 'name' => 'John Smith',
                 'role' => 'Project Director',
-                'photo' => 'images/team/team_pic_1.jpg',
+                'photo' => 'assets/img/team/t1-img-1.png',
                 'bio' => 'As the Project Director at Namaq, John oversees the execution of large-scale commercial and residential developments across the UAE. With over 15 years of experience in the region, he ensures that every project meets our rigorous standards for quality and sustainability.',
                 'age' => 42,
                 'joined_year' => 2015,
@@ -48,7 +48,7 @@ class TeamMemberSeeder extends Seeder
             [
                 'name' => 'Michael Dennis',
                 'role' => 'Creative Director',
-                'photo' => 'images/team/team_pic_2.jpg',
+                'photo' => 'assets/img/team/t1-img-2.png',
                 'bio' => 'Michael is the visionary force behind Namaq’s design philosophy. His avant-garde approach to interior design and architecture has redefined luxury living in Dubai. He specializes in blending modern aesthetics with functional living spaces.',
                 'age' => 38,
                 'joined_year' => 2016,
@@ -77,7 +77,7 @@ class TeamMemberSeeder extends Seeder
             [
                 'name' => 'Sarah Michelle',
                 'role' => 'Lead Interior Designer',
-                'photo' => 'images/team/team_pic_3.jpg',
+                'photo' => 'assets/img/team/t1-img-3.png',
                 'bio' => 'Sarah brings elegance and warmth to every space she touches. Specializing in high-end residential interiors, she works closely with clients to translate their personalities into their homes. Her expertise in color theory and textiles is unmatched.',
                 'age' => 32,
                 'joined_year' => 2019,
