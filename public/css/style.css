@@ -7740,6 +7740,7 @@ footer.style-3{
     background: rgba(0, 0, 0, .1);
 }
 
+
 /* ================================================== */
 /* Custom Mobile Fixes for h2.style-3 */
 /* ================================================== */
@@ -7756,9 +7757,11 @@ footer.style-3{
         padding-right: 10px !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
-        transform: none !important; /* Reset any scaling */
+        transform: none !important;
+        -webkit-text-size-adjust: 100% !important;
     }
 }
+
 
 .de-card-poster .d-content{
     color: #ffffff;
