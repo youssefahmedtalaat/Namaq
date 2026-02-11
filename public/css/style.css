@@ -41,14 +41,7 @@
 	* testimonial
 * media query
 
-/* Media query for mobile devices */
-@media only screen and (max-width: 767px) {
-    h2.style-3 {
-        text-align: center !important;
-        font-size: 22px !important;
-        letter-spacing: 5px !important;
-    }
-}
+/* Media query for mobile devices - REMOVED and MOVED to bottom */
 
 /* import fonts */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,600,600i,700,700i,800,800i);
@@ -7745,6 +7738,26 @@ footer.style-3{
     width: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, .1);
+}
+
+/* ================================================== */
+/* Custom Mobile Fixes for h2.style-3 */
+/* ================================================== */
+@media only screen and (max-width: 767px) {
+    h2.style-3 {
+        text-align: center !important;
+        font-size: 22px !important;
+        line-height: 1.3em !important;
+        letter-spacing: 2px !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        transform: none !important; /* Reset any scaling */
+    }
 }
 
 .de-card-poster .d-content{
