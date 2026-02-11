@@ -2,6 +2,9 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
+    
+    # Ensure Symlinks are followed (Critical for storage link)
+    Options +FollowSymLinks
 
     RewriteEngine On
 
