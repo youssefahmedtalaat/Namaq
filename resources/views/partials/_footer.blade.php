@@ -2,9 +2,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <h3>About Us</h3> We are a team based in Manchester, Kentucky. Our expertise
-                        is in Interior Design. We are dedicated to creating unique and functional spaces 
-                        that reflect our clients' personal style and needs.
+                        <h3>About Us</h3>
+                        NAMAQ Design is a creative studio that approaches every project as a story waiting to be told. We work at the intersection of design, material, and emotion, shaping spaces that feel personal, expressive, and alive.
+                        <br><br>
+                        At NAMAQ, design is not just about how a space looks, but how it feels to live in.
                     </div>
 
                     <div class="col-md-3">
@@ -24,7 +25,7 @@
                         <h3>Contact Us</h3>
                         <div class="widget widget-address">
                             <address>
-                                <span>4517 Washington Ave. Manchester, Kentucky 39495</span>
+                                <span>Riyadh, Saudi Arabia</span>
                                 <span><strong>Phone:</strong>(406) 555-0120</span>
                                 <span><strong>Fax:</strong>(208) 333 9298</span>
                                 <span><strong>Email:</strong><a href="mailto:Architecture@Namaq.com">Architecture@Namaq.com</a></span>
