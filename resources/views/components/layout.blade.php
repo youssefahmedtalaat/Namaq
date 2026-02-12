@@ -62,6 +62,7 @@
     @php
         $primaryColor = $footerSettings?->primary_color ?? '#bf9156';
         $secondaryColor = $footerSettings?->secondary_color ?? '#18191b';
+        $themeMode = $footerSettings?->theme_mode ?? 'light';
         
         // Convert hex to rgb for --primary-color-1-rgb
         // Fallback to default rgb if hex is invalid or default
@@ -79,6 +80,30 @@
             --primary-color-1-rgb: {{ $primaryColorRgb }};
             --secondary-color: {{ $secondaryColor }};
             --bg-dark-1: {{ $secondaryColor }};
+        }
+        
+        /* Dark Mode Global Overrides */
+        body.dark, body.dark #content {
+            background-color: #1a1a1a; /* Dark background */
+            color: #eeeeee; /* Light text */
+        }
+        body.dark footer {
+            background-color: #000000;
+            color: #bbbbbb;
+        }
+        body.dark header {
+            background-color: rgba(0,0,0,0.9);
+        }
+        body.dark section {
+            background-color: #1a1a1a;
+            color: #eeeeee;
+        }
+        body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+            color: #ffffff;
+        }
+        /* Specific overrides for existing classes if needed */
+        body.dark .bg-color-2 {
+            background-color: #2a2a2a;
         }
     </style>
         
@@ -130,7 +155,7 @@
     @stack('styles')
 </head>
 
-<body class="de_light">
+<body class="{{ ($themeMode ?? 'light') === 'dark' ? 'dark' : 'de_light' }}">
 
     <div id="wrapper">
         <!-- header begin -->

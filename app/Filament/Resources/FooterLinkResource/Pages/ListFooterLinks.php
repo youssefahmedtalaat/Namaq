@@ -7,6 +7,7 @@ use App\Models\GeneralSetting;
 use Filament\Actions;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\ListRecords;
 
@@ -18,10 +19,18 @@ class ListFooterLinks extends ListRecords
     {
         return [
             Actions\Action::make('editTheme')
-                ->label('Theme Colors')
+                ->label('Theme Settings')
                 ->icon('heroicon-o-paint-brush')
                 ->fillForm(fn () => GeneralSetting::first()?->toArray() ?? [])
                 ->form([
+                    Select::make('theme_mode')
+                        ->label('Theme Mode')
+                        ->options([
+                            'light' => 'Light Mode',
+                            'dark' => 'Dark Mode',
+                        ])
+                        ->default('light')
+                        ->required(),
                     ColorPicker::make('primary_color')
                         ->label('Primary Color')
                         ->required(),
