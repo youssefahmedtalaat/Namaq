@@ -7,7 +7,7 @@ use App\Filament\Resources\FooterLinkResource\Schemas\FooterLinkForm;
 use App\Filament\Resources\FooterLinkResource\Tables\FooterLinksTable;
 use App\Models\FooterLink;
 use Filament\Resources\Resource;
-use Filament\Forms\Form;
+use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 
 class FooterLinkResource extends Resource
@@ -18,9 +18,9 @@ class FooterLinkResource extends Resource
     
     protected static string|\UnitEnum|null $navigationGroup = 'Footer Settings';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return FooterLinkForm::configure($form);
+        return FooterLinkForm::configure($schema);
     }
 
     public static function table(Table $table): Table
