@@ -186,7 +186,7 @@
                         enable: true
                     },
                     bullets: {
-                        enable: true,
+                        enable: false,
                         hide_onmobile: false,
                         style: "hermes",
                         hide_onleave: false,
