@@ -52,6 +52,7 @@ Route::get('/fix-system', function () {
                 <li><strong>Database Fixes:</strong>
                     <ul>
                         <li><a href='?action=seed'>Update Team Data (Run Seeder)</a> - Refreshes team members from code.</li>
+                        <li><a href='?action=seed-footer'>Update Footer Data (Run Seeder)</a> - Resets footer content.</li>
                         <li><a href='?action=migrate'>Run Migrations (Force)</a> - Updates database structure.</li>
                         <li><a href='?action=cache'>Clear All Caches</a> - Fixes config/view issues.</li>
                     </ul>
@@ -81,6 +82,16 @@ Route::get('/fix-system', function () {
             $log[] = "<span style='color:green'>Team Member Database Updated!</span> Output:<br>" . nl2br(Artisan::output());
         } catch (\Exception $e) {
             $log[] = "<span style='color:red'>Seeding Failed: " . $e->getMessage() . "</span>";
+        }
+    }
+
+    // --- SEED FOOTER ---
+    if ($action === 'seed-footer') {
+        try {
+            Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\FooterSeeder', '--force' => true]);
+            $log[] = "<span style='color:green'>Footer Data Updated!</span> Output:<br>" . nl2br(Artisan::output());
+        } catch (\Exception $e) {
+            $log[] = "<span style='color:red'>Footer Seeding Failed: " . $e->getMessage() . "</span>";
         }
     }
     
