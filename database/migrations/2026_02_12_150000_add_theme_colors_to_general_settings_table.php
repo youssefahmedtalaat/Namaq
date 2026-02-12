@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('general_settings', function (Blueprint $table) {
-            //
+            $table->string('primary_color')->default('#bf9156');
+            $table->string('secondary_color')->default('#18191b');
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('general_settings', function (Blueprint $table) {
-            //
+            $table->dropColumn(['primary_color', 'secondary_color']);
         });
     }
 };
