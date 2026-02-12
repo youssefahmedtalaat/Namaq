@@ -57,6 +57,30 @@
 
     <!-- color scheme -->
     <link rel="stylesheet" href="{{ asset('css/colors/brown.css') }}" type="text/css" id="colors">
+    
+    <!-- Dynamic Theme Colors -->
+    @php
+        $primaryColor = $footerSettings?->primary_color ?? '#bf9156';
+        $secondaryColor = $footerSettings?->secondary_color ?? '#18191b';
+        
+        // Convert hex to rgb for --primary-color-1-rgb
+        // Fallback to default rgb if hex is invalid or default
+        $r = 191; $g = 145; $b = 86; // Default #bf9156
+        if (preg_match('/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i', $primaryColor, $matches)) {
+            $r = hexdec($matches[1]);
+            $g = hexdec($matches[2]);
+            $b = hexdec($matches[3]);
+        }
+        $primaryColorRgb = "$r, $g, $b";
+    @endphp
+    <style>
+        :root {
+            --primary-color-1: {{ $primaryColor }};
+            --primary-color-1-rgb: {{ $primaryColorRgb }};
+            --secondary-color: {{ $secondaryColor }};
+            --bg-dark-1: {{ $secondaryColor }};
+        }
+    </style>
         
     <!-- RS5.0 Stylesheet -->
     <link rel="stylesheet" href="{{ asset('revolution/css/settings.css') }}" type="text/css">
@@ -98,125 +122,113 @@
         <style>#custom-preloader { display: none !important; }</style>
     </noscript>
     <script>
-        // Check if intro has been shown in this session
-        if (sessionStorage.getItem('introShown')) {
+        // Check for 'no-preloader' query param immediately
+        if (new URLSearchParams(window.location.search).has('no-preloader')) {
             document.documentElement.classList.add('no-preloader');
         }
     </script>
-
     @stack('styles')
 </head>
 
-<body id="homepage">
-
-    <div id="custom-preloader">
-        <video id="video_background" preload="auto" autoplay muted playsinline>
-            <source src="{{ asset('videos/intro-white.mp4') }}" type="video/mp4">
-        </video>
-    </div>
+<body class="de_light">
 
     <div id="wrapper">
-
         <!-- header begin -->
         @include('partials._header')
         <!-- header close -->
 
         <!-- content begin -->
-        <div id="content" class="no-bottom no-top">
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            
             {{ $slot }}
+            
         </div>
         <!-- content close -->
 
+        <a href="#" id="back-to-top"></a>
+        
         <!-- footer begin -->
         @include('partials._footer')
         <!-- footer close -->
         
     </div>
-
+    
     <!-- Javascript Files
     ================================================== -->
     <script src="{{ asset('js/plugins.js') }}"></script>
-    <script src="{{ asset('js/designesia.js') }}"></script>    
-    <script src="{{ asset('js/jquery.event.move.js') }}"></script>
-    <script src="{{ asset('js/jquery.twentytwenty.js') }}"></script>    
-
+    <script src="{{ asset('js/designesia.js') }}"></script>
+    <script src="{{ asset('js/validation.js') }}"></script>
+    
     <!-- RS5.0 Core JS Files -->
     <script src="{{ asset('revolution/js/jquery.themepunch.tools.min.js?rev=5.0') }}"></script>
     <script src="{{ asset('revolution/js/jquery.themepunch.revolution.min.js?rev=5.0') }}"></script>
-
+    
     <!-- RS5.0 Extensions Files -->
     <script src="{{ asset('revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
-    <script src="{{ asset('revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script src="{{ asset('revolution/js/extensions/revolution.extension.kenburns.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-
-    <!-- Page Specific Scripts -->
-    @stack('scripts')
-
+    
     <script>
-    $(window).on("load", function(){
-      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
-      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
-      
-      // Custom Video Preloader Logic
-      var video = document.getElementById('video_background');
-      var preloader = $('#custom-preloader');
-
-      // Helper to finish the intro sequence
-      function finishIntro() {
-          // Set flag so it doesn't show again in this session
-          try {
-              sessionStorage.setItem('introShown', 'true');
-          } catch(e) {}
-          
-          preloader.fadeOut(500, function() {
-              $(this).remove();
-          });
-      }
-
-      // 1. Check if we already decided to hide it (via head script)
-      if ($('html').hasClass('no-preloader')) {
-          preloader.remove();
-      } else {
-          // 2. If no video element, just hide
-          if (!video) {
-              finishIntro();
-          } else {
-              // 3. Attempt to play video
-              var playPromise = video.play();
-              
-              if (playPromise !== undefined) {
-                playPromise.then(_ => {
-                  // Play started
-                  
-                  // Helper to hide after video ends or timeout
-                  var onComplete = function() {
-                      finishIntro();
-                      // Remove listeners to avoid double calling
-                      video.onended = null;
-                  };
-
-                  video.onended = onComplete;
-                  
-                  // Safety timeout (e.g. 5 seconds)
-                  setTimeout(onComplete, 5000); 
-                })
-                .catch(error => {
-                  // Auto-play prevented or error
-                  console.log("Autoplay prevented");
-                  finishIntro();
-                });
-              } else {
-                  // Video play not supported
-                  finishIntro();
-              }
-          }
-      }
-    });
+        jQuery(document).ready(function() {
+            // revolution slider
+            jQuery("#slider-revolution").revolution({
+                sliderType: "standard",
+                sliderLayout: "fullwidth",
+                delay: 5000,
+                navigation: {
+                    arrows: {
+                        enable: true
+                    },
+                    bullets: {
+                        enable: true,
+                        hide_onmobile: false,
+                        style: "hermes",
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        h_align: "center",
+                        v_align: "bottom",
+                        h_offset: 20,
+                        v_offset: 30,
+                        space: 5,
+                    },
+                },
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                },
+                responsiveLevels: [1240, 1024, 778, 480],
+                visibilityLevels: [1240, 1024, 778, 480],
+                gridwidth: [1240, 1024, 778, 480],
+                gridheight: [800, 700, 600, 500],
+                spinner: "off",
+                stopLoop: "on",
+                stopAfterLoops: 0,
+                stopAtSlide: 1,
+                shuffle: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                }
+            });
+        });
     </script>
+    @stack('scripts')
 </body>
+
 </html>

@@ -5,6 +5,7 @@ namespace App\Filament\Resources\FooterLinkResource\Pages;
 use App\Filament\Resources\FooterLinkResource;
 use App\Models\GeneralSetting;
 use Filament\Actions;
+use Filament\Forms\Components\ColorPicker;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\ListRecords;
@@ -16,6 +17,24 @@ class ListFooterLinks extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            Actions\Action::make('editTheme')
+                ->label('Theme Colors')
+                ->icon('heroicon-o-paint-brush')
+                ->fillForm(fn () => GeneralSetting::first()?->toArray() ?? [])
+                ->form([
+                    ColorPicker::make('primary_color')
+                        ->label('Primary Color')
+                        ->required(),
+                    ColorPicker::make('secondary_color')
+                        ->label('Secondary Color')
+                        ->required(),
+                ])
+                ->action(function (array $data) {
+                    $settings = GeneralSetting::firstOrNew(['id' => 1]);
+                    $settings->fill($data);
+                    $settings->save();
+                }),
+
             Actions\Action::make('editAbout')
                 ->label('Edit About Us')
                 ->icon('heroicon-o-pencil-square')
