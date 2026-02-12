@@ -130,7 +130,7 @@
         </section>
 
     <!-- section begin -->
-    <section id="section-services" class="pt60 pb20" data-bgcolor="#ffffff">
+    <section id="section-services" class="pt60 pb20">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -332,7 +332,7 @@
     </section>
     <!-- section close -->
 
-    <section id="section-why-choose-us-2" class="de_light" data-bgcolor="#ffffff">
+    <section id="section-why-choose-us-2">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">

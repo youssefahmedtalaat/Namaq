@@ -130,7 +130,7 @@
     @stack('styles')
 </head>
 
-<body class="de_light">
+<body class="">
 
     <div id="wrapper">
         <!-- header begin -->
