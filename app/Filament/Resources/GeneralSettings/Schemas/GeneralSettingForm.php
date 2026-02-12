@@ -2,18 +2,18 @@
 
 namespace App\Filament\Resources\GeneralSettings\Schemas;
 
-use Filament\Schemas\Schema;
+use Filament\Forms\Form;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\RichEditor;
-use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\Section;
 
 class GeneralSettingForm
 {
-    public static function configure(Schema $schema): Schema
+    public static function configure(Form $form): Form
     {
-        return $schema
-            ->components([
+        return $form
+            ->schema([
                 Section::make('Footer: About Us')
                     ->schema([
                         TextInput::make('footer_about_title')

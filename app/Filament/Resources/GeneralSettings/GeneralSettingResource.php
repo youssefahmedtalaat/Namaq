@@ -10,7 +10,7 @@ use App\Filament\Resources\GeneralSettings\Tables\GeneralSettingsTable;
 use App\Models\GeneralSetting;
 use BackedEnum;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
+use Filament\Forms\Form;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
@@ -22,9 +22,9 @@ class GeneralSettingResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'footer_about_title';
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return GeneralSettingForm::configure($schema);
+        return GeneralSettingForm::configure($form);
     }
 
     public static function table(Table $table): Table
