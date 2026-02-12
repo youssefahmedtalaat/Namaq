@@ -4,6 +4,10 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Schema;
+use App\Models\GeneralSetting;
+use App\Models\FooterLink;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,6 +24,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Share Footer Data
+        if (!app()->runningInConsole() && Schema::hasTable('general_settings') && Schema::hasTable('footer_links')) {
+            $footerSettings = GeneralSetting::first();
+            $footerLinks = FooterLink::orderBy('order')->get();
+            
+            View::share('footerSettings', $footerSettings);
+            View::share('footerLinks', $footerLinks);
+        }
+
         // AUTOMATIC STORAGE FIXER
         // This runs on every request to ensure images are accessible.
         // It handles both Symlinks (Standard) and Copy (Hostinger/Shared) modes.
