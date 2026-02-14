@@ -15,12 +15,14 @@
                     <!--  BACKGROUND IMAGE -->
                     <img alt="" class="rev-slidebg" data-bgparallax="0" src="{{ asset('images/background/bg-1.jpg') }}">
 
-                    <div class="tp-caption font-weight-thin text-white text-center text-3xl md:text-5xl lg:text-7xl leading-tight px-4" 
+                    <div class="tp-caption font-weight-thin text-white text-center px-4" 
                         data-x="center" 
                         data-y="270" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
-                        data-whitespace="normal"  
+                        data-whitespace="normal"
+                        data-fontsize="['72','60','50','32']"
+                        data-lineheight="['80','70','60','40']"
                         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-speed="1200" 
@@ -30,12 +32,14 @@
                         All Time Best Selling
                     </div>
 
-                    <div class="tp-caption font-weight-bold text-white text-center text-3xl md:text-5xl lg:text-7xl leading-tight px-4" 
+                    <div class="tp-caption font-weight-bold text-white text-center px-4" 
                         data-x="center" 
                         data-y="350" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
-                        data-whitespace="normal"  
+                        data-whitespace="normal"
+                        data-fontsize="['72','60','50','32']"
+                        data-lineheight="['80','70','60','40']"
                         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-speed="1200" 
@@ -45,12 +49,15 @@
                         Interior Design
                     </div>
 
-                    <div class="tp-caption ls-20px sft text-center text-sm md:text-base lg:text-xl px-4" 
+                    <div class="tp-caption sft text-center px-4" 
                         data-x="center" 
                         data-y="430" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
-                        data-whitespace="normal"  
+                        data-whitespace="normal"
+                        data-fontsize="['20','18','16','14']"
+                        data-lineheight="['30','25','20','20']"
+                        data-letterspacing="['20','15','10','5']"
                         data-speed="1200" 
                         data-start="400" 
                         data-easing="easeInOutExpo">
@@ -63,12 +70,14 @@
                     <!--  BACKGROUND IMAGE -->
                     <img alt="" class="rev-slidebg" data-bgparallax="0" src="{{ asset('images/background/bg-2.jpg') }}">
 
-                    <div class="tp-caption font-weight-thin text-white text-center text-3xl md:text-5xl lg:text-7xl leading-tight px-4" 
+                    <div class="tp-caption font-weight-thin text-white text-center px-4" 
                         data-x="center" 
                         data-y="270" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
-                        data-whitespace="normal"  
+                        data-whitespace="normal"
+                        data-fontsize="['72','60','50','32']"
+                        data-lineheight="['80','70','60','40']"
                         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-speed="1200" 
@@ -78,12 +87,14 @@
                         Beatiful Design
                     </div>
 
-                    <div class="tp-caption font-weight-bold text-white text-center text-3xl md:text-5xl lg:text-7xl leading-tight px-4" 
+                    <div class="tp-caption font-weight-bold text-white text-center px-4" 
                         data-x="center" 
                         data-y="350" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
-                        data-whitespace="normal"  
+                        data-whitespace="normal"
+                        data-fontsize="['72','60','50','32']"
+                        data-lineheight="['80','70','60','40']"
                         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:2;scaleY:2;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.85;scaleY:0.85;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                         data-speed="1200" 
@@ -93,12 +104,15 @@
                         Modern Technology
                     </div>
 
-                    <div class="tp-caption ls-20px sft text-center text-sm md:text-base lg:text-xl px-4" 
+                    <div class="tp-caption sft text-center px-4" 
                         data-x="center" 
                         data-y="430" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
-                        data-whitespace="normal"  
+                        data-whitespace="normal"
+                        data-fontsize="['20','18','16','14']"
+                        data-lineheight="['30','25','20','20']"
+                        data-letterspacing="['20','15','10','5']"
                         data-speed="1200" 
                         data-start="400" 
                         data-easing="easeInOutExpo">
