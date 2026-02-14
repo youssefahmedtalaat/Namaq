@@ -17,7 +17,7 @@
 
                     <div class="tp-caption font-weight-thin text-white text-center px-4" 
                         data-x="center" 
-                        data-y="270" 
+                        data-y="['270','270','270','270']" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
                         data-whitespace="normal"
@@ -34,7 +34,7 @@
 
                     <div class="tp-caption font-weight-bold text-white text-center px-4" 
                         data-x="center" 
-                        data-y="350" 
+                        data-y="['350','350','350','390']" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
                         data-whitespace="normal"
@@ -51,7 +51,7 @@
 
                     <div class="tp-caption sft text-center px-4" 
                         data-x="center" 
-                        data-y="430" 
+                        data-y="['430','430','430','470']" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
                         data-whitespace="normal"
@@ -72,7 +72,7 @@
 
                     <div class="tp-caption font-weight-thin text-white text-center px-4" 
                         data-x="center" 
-                        data-y="270" 
+                        data-y="['270','270','270','270']" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
                         data-whitespace="normal"
@@ -89,7 +89,7 @@
 
                     <div class="tp-caption font-weight-bold text-white text-center px-4" 
                         data-x="center" 
-                        data-y="350" 
+                        data-y="['350','350','350','350']" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
                         data-whitespace="normal"
@@ -106,7 +106,7 @@
 
                     <div class="tp-caption sft text-center px-4" 
                         data-x="center" 
-                        data-y="430" 
+                        data-y="['430','430','430','430']" 
                         data-width="['auto','auto','auto','300']" 
                         data-height="none" 
                         data-whitespace="normal"
