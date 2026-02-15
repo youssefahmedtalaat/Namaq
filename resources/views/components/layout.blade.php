@@ -132,16 +132,17 @@
     
     <!-- Mobile Overrides (Inline to ensure priority) -->
     <style>
-        /* iPhone 14 / Mobile Viewport Fixes (max-width: 430px) */
-        @media only screen and (max-width: 430px) {
-            /* 1. Flex Container for Slide Items (Forces vertical stacking) */
+        /* Mobile Viewport Fixes (max-width: 768px) */
+        @media only screen and (max-width: 768px) {
+            /* 1. Flex Container for Slide Items (Forces vertical centering) */
             .rev_slider ul li,
             .rev_slider .tp-revslider-slidesli {
                 display: flex !important;
                 flex-direction: column !important;
-                justify-content: flex-start !important;
+                justify-content: center !important;
                 align-items: center !important;
-                padding-top: 35vh !important;
+                padding-top: 0 !important;
+                height: 100% !important;
             }
 
             /* 2. Reset RS Wrappers (The hidden containers causing overlap) */
@@ -170,8 +171,18 @@
                 left: 0 !important;
                 top: 0 !important;
             }
+            
+            /* 6. Fix Hero Height */
+            .rev_slider_wrapper, 
+            .tp-banner-container {
+                height: auto !important;
+                min-height: 60vh !important;
+            }
+        }
 
-            /* 4. Typography Adjustments (Matched to "Good" Slide) */
+        /* Smaller Screens Typography Fixes (max-width: 480px) */
+        @media only screen and (max-width: 480px) {
+            /* 4. Typography Adjustments */
             .tp-caption.size-72 {
                 font-size: 18px !important;
                 line-height: 1.3 !important;
@@ -192,13 +203,6 @@
             }
             .de_count.ultra-big h3.timer {
                 font-size: 40px !important;
-            }
-
-            /* 6. Fix Hero Height */
-            .rev_slider_wrapper, 
-            .tp-banner-container {
-                height: auto !important;
-                min-height: 60vh !important;
             }
         }
     </style>
