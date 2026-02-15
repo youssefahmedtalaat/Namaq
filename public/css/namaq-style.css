@@ -12349,27 +12349,58 @@ ul#slide-list{
 
 /* Mobile Responsiveness Fixes */
 @media only screen and (max-width: 768px) {
-    /* 1. Typography & 3. Padding */
-    .tp-caption.size-72 {
-        font-size: 32px !important;
-        line-height: 1.2 !important;
-        white-space: normal !important;
-        width: 90% !important;
-        left: 5% !important;
-        text-align: center !important;
-    }
-    
-    /* 2. Letter Spacing */
+    /* 1. Reset Positioning & Stack Flow */
+    .tp-caption.size-72, 
     .tp-caption.ls-20px {
-        letter-spacing: 5px !important;
-        font-size: 14px !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+    }
+
+    /* 2. Fix Overlap & Typography */
+    .tp-caption.size-72 {
+        display: block !important;
+        line-height: 1.2em !important;
+        margin-bottom: 10px !important;
+        font-size: 32px !important;
         white-space: normal !important;
         width: 90% !important;
-        left: 5% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
         text-align: center !important;
     }
-    
-    /* 4. Component Fix: Years of Experience */
+
+    /* 3. Letter Spacing */
+    .tp-caption.ls-20px {
+        letter-spacing: 2px !important;
+        margin-bottom: 0 !important;
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 14px !important;
+    }
+
+    /* 4. Refine Hero Container */
+    /* Attempting to target likely containers to enable flex centering */
+    .rev_slider ul li, 
+    .rev_slider .tp-revslider-slidesli,
+    .tp-static-layers {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* 5. Experience Box Fix */
+    .de_count.ultra-big h3.timer {
+        font-size: 60px !important;
+        line-height: 1;
+        margin-bottom: 10px;
+        display: block;
+        color: #ffffff;
+    }
+
     .de_count.ultra-big {
         padding: 30px 10px;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -12379,21 +12410,13 @@ ul#slide-list{
         max-width: 300px;
     }
     
-    .de_count.ultra-big h3.timer {
-        font-size: 80px !important;
-        line-height: 1;
-        margin-bottom: 10px;
-        display: block;
-        color: #ffffff;
-    }
-    
     .de_count.ultra-big span {
         display: block;
         font-size: 16px;
         margin-top: 5px;
     }
 
-    /* 5. Navigation Alignment */
+    /* 6. Navigation Alignment */
     header #menu-btn {
         float: right;
         margin-top: 20px; 
