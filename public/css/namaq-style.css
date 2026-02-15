@@ -12447,10 +12447,10 @@ ul#slide-list{
 
     /* 2. Headline (Smaller & Centered) */
     .tp-caption.size-72 {
-        font-size: 22px !important;
+        font-size: 18px !important;
         line-height: 1.25 !important;
         white-space: normal !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 8px !important;
         width: 90% !important;
         display: block !important;
     }
@@ -12458,8 +12458,8 @@ ul#slide-list{
     /* 3. Sub-headline (Smaller & Centered) */
     .tp-caption.ls-20px {
         letter-spacing: 1px !important;
-        font-size: 11px !important;
-        margin-top: 10px !important;
+        font-size: 10px !important;
+        margin-top: 8px !important;
         white-space: normal !important;
         display: block !important;
         width: 100% !important;
@@ -12473,7 +12473,7 @@ ul#slide-list{
     }
 
     .de_count.ultra-big h3.timer {
-        font-size: 50px !important;
+        font-size: 40px !important;
     }
 
     /* 5. Fix Hero Height */
