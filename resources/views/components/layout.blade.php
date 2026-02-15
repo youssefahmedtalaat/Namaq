@@ -57,6 +57,9 @@
 
     <!-- color scheme -->
     <link rel="stylesheet" href="{{ asset('css/colors/brown.css') }}" type="text/css" id="colors">
+    
+    <!-- Custom Mobile Styles -->
+    <link rel="stylesheet" href="{{ asset('css/custom-mobile.css') }}" type="text/css">
 
     
     <!-- Dynamic Theme Colors -->
