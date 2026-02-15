@@ -134,48 +134,67 @@
     <style>
         /* iPhone 14 / Mobile Viewport Fixes (max-width: 430px) */
         @media only screen and (max-width: 430px) {
-            /* 1. Break Inline Styles & Force Stack */
+            /* 1. Flex Container for Slide Items (Forces vertical stacking) */
+            .rev_slider ul li,
+            .rev_slider .tp-revslider-slidesli {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding-top: 40px !important;
+            }
+
+            /* 2. Reset RS Wrappers (The hidden containers causing overlap) */
+            .tp-parallax-wrap,
+            .tp-loop-wrap,
+            .tp-mask-wrap {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auto !important;
+                transform: none !important;
+                width: 100% !important;
+                text-align: center !important;
+                margin-bottom: 5px !important;
+                height: auto !important;
+            }
+
+            /* 3. Reset Captions */
             .tp-caption {
                 position: relative !important;
-                top: 0 !important;
-                left: 0 !important;
-                transform: none !important;
-                margin: 0 auto !important;
+                display: block !important;
+                white-space: normal !important;
                 text-align: center !important;
+                margin: 0 auto !important;
+                left: 0 !important;
+                top: 0 !important;
             }
 
-            /* 2. Headline (Smaller & Centered) */
+            /* 4. Typography Adjustments (Matched to "Good" Slide) */
             .tp-caption.size-72 {
                 font-size: 18px !important;
-                line-height: 1.25 !important;
-                white-space: normal !important;
-                margin-bottom: 8px !important;
+                line-height: 1.3 !important;
                 width: 90% !important;
-                display: block !important;
             }
 
-            /* 3. Sub-headline (Smaller & Centered) */
             .tp-caption.ls-20px {
-                letter-spacing: 1px !important;
                 font-size: 10px !important;
-                margin-top: 8px !important;
-                white-space: normal !important;
-                display: block !important;
-                width: 100% !important;
+                letter-spacing: 2px !important;
+                margin-top: 10px !important;
             }
 
-            /* 4. Experience Box Fix */
+            /* 5. Experience Box Fix */
             .de_count.ultra-big {
                 width: 100% !important;
                 box-sizing: border-box !important;
                 padding: 20px !important;
             }
-
             .de_count.ultra-big h3.timer {
                 font-size: 40px !important;
             }
 
-            /* 5. Fix Hero Height */
+            /* 6. Fix Hero Height */
             .rev_slider_wrapper, 
             .tp-banner-container {
                 height: auto !important;
