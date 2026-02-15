@@ -12432,3 +12432,54 @@ ul#slide-list{
         display: none;
     }
 }
+
+/* iPhone 14 / Mobile Viewport Fixes (max-width: 430px) */
+@media only screen and (max-width: 430px) {
+    /* 1. Break Inline Styles & Force Stack */
+    .tp-caption {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+
+    /* 2. Headline (Smaller & Centered) */
+    .tp-caption.size-72 {
+        font-size: 22px !important;
+        line-height: 1.25 !important;
+        white-space: normal !important;
+        margin-bottom: 10px !important;
+        width: 90% !important;
+        display: block !important;
+    }
+
+    /* 3. Sub-headline (Smaller & Centered) */
+    .tp-caption.ls-20px {
+        letter-spacing: 1px !important;
+        font-size: 11px !important;
+        margin-top: 10px !important;
+        white-space: normal !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* 4. Experience Box Fix */
+    .de_count.ultra-big {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px !important;
+    }
+
+    .de_count.ultra-big h3.timer {
+        font-size: 50px !important;
+    }
+
+    /* 5. Fix Hero Height */
+    .rev_slider_wrapper, 
+    .tp-banner-container {
+        height: auto !important;
+        min-height: 400px !important;
+    }
+}
