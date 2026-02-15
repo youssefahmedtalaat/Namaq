@@ -122,7 +122,7 @@
 
                     <div class="col-lg-4 wow fadeInRight" data-wow-delay=".6s">
                         <p>
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.
+                            We deliver innovative architectural and construction solutions that combine precision, creativity, and reliability to bring your vision to life with exceptional quality and detail. Our team works seamlessly across every phase of the project, ensuring clarity, efficiency, and outstanding results from concept to completion. We are committed to building lasting partnerships through trust, craftsmanship, and a passion for excellence in every structure we create
                         </p>
                     </div>
                 </div>
