@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="tp-caption size-20 ls-20px sft" data-x="center" data-y="430" data-width="none" data-height="none" data-whitespace="nowrap"  data-speed="1200" data-start="400" data-easing="easeInOutExpo">
-                        SOLD 10000+ COPIES
+                        SOLD 500+ COPIES
                     </div>
                   
                 </li>
@@ -82,7 +82,7 @@
                                     <i class="icon_house_alt id-color"></i>
                                     <div class="info-box_text">
                                         <div class="info-box_title">Our Location</div>
-                                        <div class="info-box_subtite">100 S Main St, Los Angeles, CA</div>
+                                        <div class="info-box_subtite">Riyadh , Saudi Arabia</div>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                                     <i class="icon_headphones id-color"></i>
                                     <div class="info-box_text">
                                         <div class="info-box_title">Customer Support</div>
-                                        <div class="info-box_subtite">+208 333 9296</div>
+                                        <div class="info-box_subtite">+966 53 090 8971</div>
                                     </div>
                                 </div>
                             </div>

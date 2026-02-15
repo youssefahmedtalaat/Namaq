@@ -79,7 +79,7 @@
                         <h3>Contact Info</h3>
                         <address>
                             <span>Riyadh, Saudi Arabia</span>
-                            <span><strong>Phone:</strong>(406) 555-0120</span>
+                            <span><strong>Phone:</strong>+966 53 090 8971</span>
                             <span><strong>Fax:</strong>(208) 333 9298</span>
                             <span><strong>Email:</strong><a href="mailto:Architecture@Namaq.com">Architecture@Namaq.com</a></span>
                             <span><strong>Web:</strong><a href="{{ route('home') }}">http://namaq.com</a></span>
