@@ -24,6 +24,11 @@ class SeoSettingResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-globe-alt';
     protected static ?string $navigationLabel = 'SEO Settings';
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'SEO Settings';
+    }
+
     public static function form(Schema $schema): Schema
     {
         return $schema
