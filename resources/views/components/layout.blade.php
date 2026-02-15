@@ -268,62 +268,64 @@
     <script src="{{ asset('revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
-    <script src="{{ asset('revolution/js/extensions/revolution.extension.kenburns.min.js') }}"></script>
+    <script src="{{ asset('revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
     <script src="{{ asset('revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
     
     <script>
         jQuery(document).ready(function() {
             // revolution slider
-            jQuery("#slider-revolution").revolution({
-                sliderType: "standard",
-                sliderLayout: "fullwidth",
-                delay: 5000,
-                navigation: {
-                    arrows: {
-                        enable: true
+            if (jQuery("#slider-revolution").length > 0) {
+                jQuery("#slider-revolution").revolution({
+                    sliderType: "standard",
+                    sliderLayout: "fullwidth",
+                    delay: 5000,
+                    navigation: {
+                        arrows: {
+                            enable: true
+                        },
+                        bullets: {
+                            enable: false,
+                            hide_onmobile: false,
+                            style: "hermes",
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 20,
+                            v_offset: 30,
+                            space: 5,
+                        },
                     },
-                    bullets: {
-                        enable: false,
-                        hide_onmobile: false,
-                        style: "hermes",
-                        hide_onleave: false,
-                        direction: "horizontal",
-                        h_align: "center",
-                        v_align: "bottom",
-                        h_offset: 20,
-                        v_offset: 30,
-                        space: 5,
+                    parallax: {
+                        type: "mouse",
+                        origo: "slidercenter",
+                        speed: 2000,
+                        levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
                     },
-                },
-                parallax: {
-                    type: "mouse",
-                    origo: "slidercenter",
-                    speed: 2000,
-                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
-                },
-                responsiveLevels: [1240, 1024, 778, 480],
-                visibilityLevels: [1240, 1024, 778, 480],
-                gridwidth: [1240, 1024, 778, 480],
-                gridheight: [800, 700, 600, 500],
-                spinner: "off",
-                stopLoop: "on",
-                stopAfterLoops: 0,
-                stopAtSlide: 1,
-                shuffle: "off",
-                autoHeight: "off",
-                disableProgressBar: "on",
-                hideThumbsOnMobile: "off",
-                hideSliderAtLimit: 0,
-                hideCaptionAtLimit: 0,
-                hideAllCaptionAtLilmit: 0,
-                debugMode: false,
-                fallbacks: {
-                    simplifyAll: "off",
-                    nextSlideOnWindowFocus: "off",
-                    disableFocusListener: false,
-                }
-            });
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: [1240, 1024, 778, 480],
+                    gridheight: [800, 700, 600, 500],
+                    spinner: "off",
+                    stopLoop: "on",
+                    stopAfterLoops: 0,
+                    stopAtSlide: 1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
         });
     </script>
     @stack('scripts')
