@@ -18,6 +18,8 @@ class GeneralSettingResource extends Resource
 {
     protected static ?string $model = GeneralSetting::class;
 
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'footer_about_title';
