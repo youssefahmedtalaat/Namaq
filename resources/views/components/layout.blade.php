@@ -142,15 +142,14 @@
                 transform: none !important;
                 margin: 0 auto !important;
                 text-align: center !important;
-                height: auto !important;
             }
 
             /* 2. Headline (Smaller & Centered) */
             .tp-caption.size-72 {
                 font-size: 18px !important;
-                line-height: 1.4 !important;
+                line-height: 1.25 !important;
                 white-space: normal !important;
-                margin-bottom: 12px !important;
+                margin-bottom: 8px !important;
                 width: 90% !important;
                 display: block !important;
             }
@@ -159,7 +158,7 @@
             .tp-caption.ls-20px {
                 letter-spacing: 1px !important;
                 font-size: 10px !important;
-                margin-top: 5px !important;
+                margin-top: 8px !important;
                 white-space: normal !important;
                 display: block !important;
                 width: 100% !important;
