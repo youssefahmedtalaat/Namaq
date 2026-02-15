@@ -12346,3 +12346,66 @@ ul#slide-list{
     }
 }
 
+
+/* Mobile Responsiveness Fixes */
+@media only screen and (max-width: 768px) {
+    /* 1. Typography & 3. Padding */
+    .tp-caption.size-72 {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        white-space: normal !important;
+        width: 90% !important;
+        left: 5% !important;
+        text-align: center !important;
+    }
+    
+    /* 2. Letter Spacing */
+    .tp-caption.ls-20px {
+        letter-spacing: 5px !important;
+        font-size: 14px !important;
+        white-space: normal !important;
+        width: 90% !important;
+        left: 5% !important;
+        text-align: center !important;
+    }
+    
+    /* 4. Component Fix: Years of Experience */
+    .de_count.ultra-big {
+        padding: 30px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 0 auto 30px auto;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .de_count.ultra-big h3.timer {
+        font-size: 80px !important;
+        line-height: 1;
+        margin-bottom: 10px;
+        display: block;
+        color: #ffffff;
+    }
+    
+    .de_count.ultra-big span {
+        display: block;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    /* 5. Navigation Alignment */
+    header #menu-btn {
+        float: right;
+        margin-top: 20px; 
+        display: block;
+    }
+    
+    header #logo {
+        float: left;
+        margin-top: 15px;
+    }
+    
+    header .info {
+        display: none;
+    }
+}

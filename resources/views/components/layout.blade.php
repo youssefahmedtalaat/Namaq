@@ -57,6 +57,7 @@
 
     <!-- color scheme -->
     <link rel="stylesheet" href="{{ asset('css/colors/brown.css') }}" type="text/css" id="colors">
+
     
     <!-- Dynamic Theme Colors -->
     @php
