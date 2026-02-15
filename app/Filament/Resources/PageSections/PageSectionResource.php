@@ -18,6 +18,8 @@ class PageSectionResource extends Resource
 {
     protected static ?string $model = PageSection::class;
 
+    protected static ?string $navigationLabel = 'Pages Section';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'title';
