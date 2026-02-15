@@ -134,7 +134,8 @@
     <style>
         /* Mobile Viewport Fixes (max-width: 768px) */
         @media only screen and (max-width: 768px) {
-            /* 1. Flex Container for Slide Items (Forces vertical centering) */
+            /* 1. Force Flexbox on Slide Container */
+            #slider-revolution ul li,
             .rev_slider ul li,
             .rev_slider .tp-revslider-slidesli {
                 display: flex !important;
@@ -143,9 +144,13 @@
                 align-items: center !important;
                 padding-top: 0 !important;
                 height: 100% !important;
+                min-height: 60vh !important;
             }
 
-            /* 2. Reset RS Wrappers (The hidden containers causing overlap) */
+            /* 2. Reset ALL Revolution Slider Wrappers to Static/Relative */
+            #slider-revolution .tp-parallax-wrap,
+            #slider-revolution .tp-loop-wrap,
+            #slider-revolution .tp-mask-wrap,
             .tp-parallax-wrap,
             .tp-loop-wrap,
             .tp-mask-wrap {
@@ -157,11 +162,13 @@
                 transform: none !important;
                 width: 100% !important;
                 text-align: center !important;
-                margin-bottom: 5px !important;
+                margin-bottom: 0px !important;
                 height: auto !important;
+                vertical-align: middle !important;
             }
 
-            /* 3. Reset Captions */
+            /* 3. Caption Styling */
+            #slider-revolution .tp-caption,
             .tp-caption {
                 position: relative !important;
                 display: block !important;
@@ -170,11 +177,24 @@
                 margin: 0 auto !important;
                 left: 0 !important;
                 top: 0 !important;
+                padding-bottom: 10px !important;
             }
             
-            /* 6. Fix Hero Height */
+            /* 4. Ensure Background Image Stays Behind */
+            .slotholder,
+            .tp-bgimg {
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                z-index: 0 !important;
+            }
+
+            /* 5. Fix Hero Height */
             .rev_slider_wrapper, 
-            .tp-banner-container {
+            .tp-banner-container,
+            #slider-revolution {
                 height: auto !important;
                 min-height: 60vh !important;
             }
