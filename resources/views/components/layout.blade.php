@@ -139,9 +139,9 @@
             .rev_slider .tp-revslider-slidesli {
                 display: flex !important;
                 flex-direction: column !important;
-                justify-content: center !important;
+                justify-content: flex-start !important;
                 align-items: center !important;
-                padding-top: 40px !important;
+                padding-top: 35vh !important;
             }
 
             /* 2. Reset RS Wrappers (The hidden containers causing overlap) */
@@ -198,7 +198,7 @@
             .rev_slider_wrapper, 
             .tp-banner-container {
                 height: auto !important;
-                min-height: 400px !important;
+                min-height: 60vh !important;
             }
         }
     </style>
